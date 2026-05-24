@@ -98,7 +98,7 @@ A `transaction_parser` then unifies email bodies, image OCR results, and documen
 
 ## The Reward Function
 
-The hackathon guide says it best: *"your reward function is your task specification."* We built a multi-component reward to make reward hacking expensive.
+The ai guide says it best: *"your reward function is your task specification."* We built a multi-component reward to make reward hacking expensive.
 
 | # | Component | What it rewards | Max |
 |---|---|---|---|
@@ -365,7 +365,6 @@ python inference.py --url http://localhost:8000
 ```
 Hugging Face deployment is one Docker build — secrets (`GCP_CREDENTIALS_B64`, `GMAIL_TOKEN_B64`, `SHEETS_TOKEN_B64`) go in Space settings, and `generate_secrets.py` produces them all in one shot.
 ---
-## Judging Criteria — How We Mapped to It
 | Criterion | What we built |
 |---|---|
 | **Environment Innovation (40%)** | Federated multi-source retrieval + zero-knowledge SWM; schema-drift curriculum; 7-component reward stack with explicit anti-hack guard |
@@ -381,5 +380,5 @@ A few things we'd build with another week:
 - **Self-improvement loop** — the model proposes new curriculum tasks based on its own failures (Theme #4, deeper)
 - **Adversarial cases** — our `dataset/is_adversarial_case` channel is wired up but currently flat at 0; populating it is the obvious next stress test
 ---
-<!-- *Built with care at the **Meta OpenEnv Hackathon 2026**.* -->
+
 *Stack: OpenEnv · TRL (SFT + GRPO) · Unsloth · Qwen2.5-3B-Instruct · FastAPI · Google APIs · LLaMA 4 Scout · Weights & Biases*
