@@ -1,0 +1,45 @@
+_wandb:
+    value:
+        cli_version: 0.26.1
+        e:
+            4u8de32dk4c8z2n4ekbdveleetjdtso0:
+                codePath: scripts\wandb_sft_dataset_analyzer.py
+                codePathLocal: scripts\wandb_sft_dataset_analyzer.py
+                cpu_count: 12
+                cpu_count_logical: 16
+                disk:
+                    /:
+                        total: "1001228595200"
+                        used: "419382579200"
+                email: 22bce084@nirmauni.ac.in
+                executable: C:\Users\harvy\AppData\Local\Programs\Python\Python312\python.exe
+                host: DESKTOP-3BOGI92
+                memory:
+                    total: "16849256448"
+                os: Windows-11-10.0.22631-SP0
+                program: C:\Users\harvy\Downloads\trace_project\trace\scripts\wandb_sft_dataset_analyzer.py
+                python: CPython 3.12.5
+                root: C:\Users\harvy\Downloads\trace_project\trace
+                startedAt: "2026-04-26T07:44:28.731222Z"
+                writerId: 4u8de32dk4c8z2n4ekbdveleetjdtso0
+        m: []
+        python_version: 3.12.5
+        t:
+            "3":
+                - 2
+                - 13
+                - 16
+                - 61
+                - 62
+            "4": 3.12.5
+            "5": 0.26.1
+            "8":
+                - 3
+            "12": 0.26.1
+            "13": windows-amd64
+dataset:
+    value: data/sft_demos_v2.jsonl
+note:
+    value: Analysis of the generated expert trajectories including adversarial cases.
+type:
+    value: Supervised Fine-Tuning Demonstrations

@@ -1,0 +1,24 @@
+2026-04-26 13:14:28,735 INFO    MainThread:25624 [wandb_setup.py:_flush():81] Current SDK version is 0.26.1
+2026-04-26 13:14:28,735 INFO    MainThread:25624 [wandb_setup.py:_flush():81] Configure stats pid to 25624
+2026-04-26 13:14:28,736 INFO    MainThread:25624 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-04-26 13:14:28,736 INFO    MainThread:25624 [wandb_init.py:setup_run_log_directory():723] Logging user logs to C:\Users\harvy\Downloads\trace_project\trace\wandb\run-20260426_131428-3ce6n6ke\logs\debug.log
+2026-04-26 13:14:28,736 INFO    MainThread:25624 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to C:\Users\harvy\Downloads\trace_project\trace\wandb\run-20260426_131428-3ce6n6ke\logs\debug-internal.log
+2026-04-26 13:14:28,739 INFO    MainThread:25624 [wandb_init.py:init():850] calling init triggers
+2026-04-26 13:14:28,740 INFO    MainThread:25624 [wandb_init.py:init():855] wandb.init called with sweep_config: {}
+config: {'dataset': 'data/sft_demos_v2.jsonl', 'type': 'Supervised Fine-Tuning Demonstrations', 'note': 'Analysis of the generated expert trajectories including adversarial cases.', '_wandb': {}}
+2026-04-26 13:14:28,740 INFO    MainThread:25624 [wandb_init.py:init():898] starting backend
+2026-04-26 13:14:31,312 INFO    MainThread:25624 [wandb_init.py:init():913] sending inform_init request
+2026-04-26 13:14:31,997 INFO    MainThread:25624 [wandb_init.py:init():918] backend started and connected
+2026-04-26 13:14:32,081 INFO    MainThread:25624 [wandb_init.py:init():988] updated telemetry
+2026-04-26 13:14:32,086 INFO    MainThread:25624 [wandb_init.py:init():1011] communicating run to backend with 90.0 second timeout
+2026-04-26 13:14:32,827 INFO    MainThread:25624 [wandb_init.py:init():1056] starting run threads in backend
+2026-04-26 13:14:33,340 INFO    MainThread:25624 [wandb_run.py:_console_start():2554] atexit reg
+2026-04-26 13:14:33,340 INFO    MainThread:25624 [wandb_run.py:_redirect():2403] redirect: wrap_raw
+2026-04-26 13:14:33,340 INFO    MainThread:25624 [wandb_run.py:_redirect():2472] Wrapping output streams.
+2026-04-26 13:14:33,340 INFO    MainThread:25624 [wandb_run.py:_redirect():2495] Redirects installed.
+2026-04-26 13:14:33,345 INFO    MainThread:25624 [wandb_init.py:init():1094] run started, returning control to user process
+2026-04-26 13:14:33,699 INFO    MainThread:25624 [wandb_run.py:_finish():2321] finishing run 22bce084-nirma/trace-grpo/3ce6n6ke
+2026-04-26 13:14:33,700 INFO    MainThread:25624 [wandb_run.py:_atexit_cleanup():2520] got exitcode: 0
+2026-04-26 13:14:33,701 INFO    MainThread:25624 [wandb_run.py:_restore():2502] restore
+2026-04-26 13:14:33,701 INFO    MainThread:25624 [wandb_run.py:_restore():2508] restore done
+2026-04-26 13:14:36,315 INFO    MainThread:25624 [wandb_run.py:_footer_sync_info():3889] logging synced files

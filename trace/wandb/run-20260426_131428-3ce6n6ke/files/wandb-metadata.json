@@ -1,0 +1,24 @@
+{
+  "os":  "Windows-11-10.0.22631-SP0",
+  "python":  "CPython 3.12.5",
+  "startedAt":  "2026-04-26T07:44:28.731222Z",
+  "program":  "C:\\Users\\harvy\\Downloads\\trace_project\\trace\\scripts\\wandb_sft_dataset_analyzer.py",
+  "codePath":  "scripts\\wandb_sft_dataset_analyzer.py",
+  "codePathLocal":  "scripts\\wandb_sft_dataset_analyzer.py",
+  "email":  "22bce084@nirmauni.ac.in",
+  "root":  "C:\\Users\\harvy\\Downloads\\trace_project\\trace",
+  "host":  "DESKTOP-3BOGI92",
+  "executable":  "C:\\Users\\harvy\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "cpu_count":  12,
+  "cpu_count_logical":  16,
+  "disk":  {
+    "/":  {
+      "total":  "1001228595200",
+      "used":  "419382579200"
+    }
+  },
+  "memory":  {
+    "total":  "16849256448"
+  },
+  "writerId":  "4u8de32dk4c8z2n4ekbdveleetjdtso0"
+}

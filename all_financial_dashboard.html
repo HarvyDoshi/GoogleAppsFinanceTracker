@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trace · Transaction Dashboard</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,wght@0,300;0,600;1,300&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #f0ebe3;
+  --card: #ffffff;
+  --border: #d4cec7;
+  --ink: #1a1a1a;
+  --muted: #6b6560;
+  --cream: #f0ebe3;
+}
+
+body { font-family: 'DM Mono', monospace; background: var(--bg); color: var(--ink); }
+.app { max-width: 900px; margin: 0 auto; padding: 24px 20px; }
+
+/* Header */
+.header { display: flex; justify-content: space-between; align-items: flex-end;
+  border-bottom: 2px solid var(--ink); padding-bottom: 14px; margin-bottom: 20px; }
+.logo { font-family: 'Fraunces', serif; font-size: 26px; font-weight: 600; }
+.subtitle { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+.badge { font-size: 10px; background: var(--ink); color: white; padding: 4px 10px; border-radius: 2px; letter-spacing: 1px; }
+
+/* Episode bar */
+.episode-bar { background: var(--card); border: 1px solid var(--border); border-radius: 4px;
+  padding: 12px 16px; margin-bottom: 20px; }
+.ep-label { font-size: 9px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 10px; }
+.steps-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.step-chip { font-size: 10px; padding: 4px 10px; border-radius: 2px; border: 1px solid var(--border); background: var(--cream); }
+.step-chip.done { background: #d4f0e0; border-color: #1a7a4a; color: #1a7a4a; }
+.step-chip.active { background: #fdf0d5; border-color: #c97b1a; color: #c97b1a; }
+.step-sep { color: var(--border); font-size: 12px; }
+
+/* Summary */
+.summary-strip { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-bottom: 20px; }
+.sum-card { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 14px 16px; }
+.sum-card.total { border-top: 3px solid var(--ink); }
+.sum-label { font-size: 9px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 6px; }
+.sum-value { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; line-height: 1; }
+.sum-sub { font-size: 10px; color: var(--muted); margin-top: 4px; }
+
+/* Chart */
+.chart-section { margin-bottom: 24px; }
+.chart { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 16px; }
+.chart-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.chart-row:last-child { margin-bottom: 0; }
+.chart-label { width: 120px; font-size: 11px; flex-shrink: 0; }
+.chart-bar-wrap { flex: 1; height: 8px; background: var(--cream); border-radius: 2px; overflow: hidden; }
+.chart-bar { height: 100%; border-radius: 2px; transition: width 1s cubic-bezier(0.4,0,0.2,1); }
+.chart-amount { width: 80px; text-align: right; font-size: 11px; font-weight: 500; }
+
+/* Sheets Banner */
+.sheets-banner { display: flex; align-items: center; gap: 14px; background: #e8f0fe; border: 1px solid #d2e3fc; border-radius: 4px; padding: 14px 18px; margin-bottom: 24px; cursor: pointer; transition: background 0.2s, transform 0.2s; }
+.sheets-banner:hover { background: #d2e3fc; transform: translateY(-1px); }
+.sheets-icon { font-size: 24px; }
+.sheets-text { flex: 1; }
+.sheets-title { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; color: #174ea6; }
+.sheets-sub { font-size: 11px; color: #1967d2; margin-top: 4px; }
+.sheets-btn { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #174ea6; background: rgba(23,78,166,0.1); padding: 6px 12px; border-radius: 2px; }
+
+/* Section title */
+.section-title { display: flex; align-items: center; gap: 12px; font-size: 9px;
+  text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 14px; }
+.section-line { flex: 1; height: 1px; background: var(--border); }
+.count { color: var(--ink); }
+
+/* Cards */
+.cards { display: flex; flex-direction: column; gap: 16px; }
+
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 4px;
+  overflow: hidden; animation: slideIn 0.4s ease both; }
+@keyframes slideIn { from { opacity:0; transform: translateY(12px); } to { opacity:1; transform:translateY(0); } }
+
+.card-header { display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 18px; color: white; }
+.card-header-left { display: flex; align-items: center; gap: 12px; }
+.card-icon { font-size: 22px; }
+.card-vendor { font-family: 'Fraunces', serif; font-size: 16px; font-style: italic; }
+.card-meta { font-size: 10px; opacity: 0.65; margin-top: 2px; }
+.card-total { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; text-align: right; }
+.order-id { font-size: 10px; opacity: 0.6; text-align: right; display: block; margin-top: 2px; }
+
+.card-subject { padding: 10px 18px; font-size: 11px; border-bottom: 1px solid var(--border);
+  background: #fafaf8; color: var(--muted); }
+
+.card-body { display: grid; grid-template-columns: 1fr 1fr; }
+.card-section { padding: 14px 18px; border-right: 1px solid var(--border); }
+.card-section:last-child { border-right: none; }
+.section-header { font-size: 9px; text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--muted); margin-bottom: 10px; }
+
+.detail-row { display: flex; justify-content: space-between; padding: 4px 0;
+  border-bottom: 1px dashed var(--border); font-size: 11px; }
+.detail-row:last-child { border-bottom: none; }
+.dk { color: var(--muted); }
+.dv { font-weight: 500; text-align: right; max-width: 60%; }
+.detail-snippet { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+.amounts-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.amount-chip { font-size: 10px; background: #f0ebe3; border: 1px solid var(--border);
+  padding: 3px 8px; border-radius: 2px; }
+
+.card-image-analysis { padding: 12px 18px; border-top: 1px solid var(--border); background: #fafaf8; }
+.img-analysis { font-size: 11px; color: var(--muted); line-height: 1.5; margin-top: 6px; }
+.img-type { background: var(--ink); color: white; font-size: 9px; padding: 1px 6px;
+  border-radius: 2px; margin-right: 6px; text-transform: uppercase; }
+
+.card-footer { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 18px;
+  border-top: 1px solid var(--border); background: #fafaf8; }
+.tag { font-size: 9px; padding: 3px 8px; border-radius: 2px; text-transform: uppercase;
+  letter-spacing: 0.5px; border: 1px solid var(--border); background: var(--cream); color: var(--muted); }
+.tag.reimb { background: #d4f0e0; border-color: #1a7a4a; color: #1a7a4a; }
+.tag.pay { background: #fdf0d5; border-color: #c97b1a; color: #c97b1a; }
+
+/* Insights */
+.insights-panel { background: var(--card); border: 1px solid var(--border); border-radius: 4px;
+  overflow: hidden; margin-top: 24px; }
+.insights-header { background: var(--ink); color: white; padding: 12px 18px;
+  font-size: 10px; text-transform: uppercase; letter-spacing: 2px; }
+.insight-row { display: flex; align-items: flex-start; gap: 10px; padding: 12px 18px;
+  border-top: 1px solid var(--border); font-size: 11px; line-height: 1.6; }
+.insight-icon { width: 24px; height: 24px; border-radius: 2px; display: flex;
+  align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; }
+.insight-icon.good { background: #d4f0e0; }
+.insight-icon.warn { background: #fdf0d5; }
+.insight-icon.info { background: #e8f0fe; }
+
+@media (max-width: 600px) {
+  .summary-strip { grid-template-columns: 1fr 1fr; }
+  .card-body { grid-template-columns: 1fr; }
+  .card-section { border-right: none; border-bottom: 1px solid var(--border); }
+}
+
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <div class="logo">🕵️ Trace</div>
+      <div class="subtitle">Gmail Transaction Intelligence</div>
+    </div>
+    <div class="header-right">
+      <div class="badge">REAL DATA · LIVE</div>
+    </div>
+  </header>
+
+  <!-- Episode bar -->
+  
+
+  <!-- Summary strip -->
+  
+<div class="summary-strip">
+  <div class="sum-card total">
+    <div class="sum-label">Total Spend</div>
+    <div class="sum-value">₹187,894.28</div>
+    <div class="sum-sub">Across 46 transactions</div>
+  </div>
+  <div class="sum-card">
+    <div class="sum-label">Transactions</div>
+    <div class="sum-value">46</div>
+    <div class="sum-sub">Gmail emails parsed</div>
+  </div>
+  <div class="sum-card">
+    <div class="sum-label">Top Category</div>
+    <div class="sum-value">Travel</div>
+    <div class="sum-sub">₹179,434.48 spent</div>
+  </div>
+  <div class="sum-card">
+    <div class="sum-label">Categories</div>
+    <div class="sum-value">8</div>
+    <div class="sum-sub">Detected</div>
+  </div>
+</div>
+  
+  
+  <!-- Sheets banner -->
+  <div class="sheets-banner" onclick="window.open('https://docs.google.com/spreadsheets/d/1gOmUw0ruWqkGSE1Myw4yI3TTOAI4OOwA4POydT000hE', '_blank')">
+    <div class="sheets-icon">📊</div>
+    <div class="sheets-text">
+      <div class="sheets-title">Live Google Sheets Ledger Connected</div>
+      <div class="sheets-sub">The summary above includes all historical data synced from your spreadsheet.</div>
+    </div>
+    <div class="sheets-btn">Open Sheet ›</div>
+  </div>
+
+  <!-- Spend by category chart (simple CSS bars) -->
+  
+<div class="chart-section">
+  <div class="section-title"><span>Spend by Category</span><div class="section-line"></div></div>
+  <div class="chart">
+      <div class="chart-row">
+        <div class="chart-label">✈️ Travel</div>
+        <div class="chart-bar-wrap">
+          <div class="chart-bar" style="width:95.5%;background:#6d4c41"></div>
+        </div>
+        <div class="chart-amount">₹179,434</div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-label">🚗 Ride</div>
+        <div class="chart-bar-wrap">
+          <div class="chart-bar" style="width:2.4%;background:#1a1a1a"></div>
+        </div>
+        <div class="chart-amount">₹4,481</div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-label">🛍️ Shopping</div>
+        <div class="chart-bar-wrap">
+          <div class="chart-bar" style="width:0.6%;background:#7c6fcd"></div>
+        </div>
+        <div class="chart-amount">₹1,200</div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-label">⚡ Utility</div>
+        <div class="chart-bar-wrap">
+          <div class="chart-bar" style="width:0.4%;background:#4a6741"></div>
+        </div>
+        <div class="chart-amount">₹799</div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-label">🍔 Food</div>
+        <div class="chart-bar-wrap">
+          <div class="chart-bar" style="width:0.4%;background:#e85d04"></div>
+        </div>
+        <div class="chart-amount">₹660</div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-label">💸 Payment</div>
+        <div class="chart-bar-wrap">
+          <div class="chart-bar" style="width:0.3%;background:#1a7a4a"></div>
+        </div>
+        <div class="chart-amount">₹500</div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-label">🔄 Subscription</div>
+        <div class="chart-bar-wrap">
+          <div class="chart-bar" style="width:0.3%;background:#0077b6"></div>
+        </div>
+        <div class="chart-amount">₹499</div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-label">💊 Healthcare</div>
+        <div class="chart-bar-wrap">
+          <div class="chart-bar" style="width:0.2%;background:#d62828"></div>
+        </div>
+        <div class="chart-amount">₹320</div>
+      </div></div>
+</div>
+
+  <!-- Transaction cards -->
+  <div class="section-title">
+    <span>Retrieved Transactions</span>
+    <div class="section-line"></div>
+    <span class="count">10 emails</span>
+  </div>
+
+  <div class="cards">
+    
+<div class="card" style="animation-delay:0ms" data-category="unknown">
+  <div class="card-header" style="background:#6b6560">
+    <div class="card-header-left">
+      <div class="card-icon">📧</div>
+      <div>
+        <div class="card-vendor">Unknown</div>
+        <div class="card-meta">Transactional · Sat, 25 Apr 2026 22:31</div>
+      </div>
+    </div>
+    <div class="card-header-right">
+      <div class="card-total">—</div>
+      
+    </div>
+  </div>
+
+  <div class="card-subject">(No subject)</div>
+
+  <div class="card-body">
+    <div class="card-section">
+      <div class="section-header">Details</div>
+      <div class="detail-snippet">No details extracted.</div>
+    </div>
+    
+  </div>
+
+  
+
+  <div class="card-footer">
+    <span class="tag cat" style="background:#6b656022;color:#6b6560">📧 Transactional</span>
+    
+    <span class="tag pay">Unknown</span>
+    <span class="tag from">doshimeenal3@gmail.com</span>
+  </div>
+</div>
+
+<div class="card" style="animation-delay:80ms" data-category="unknown">
+  <div class="card-header" style="background:#6b6560">
+    <div class="card-header-left">
+      <div class="card-icon">📧</div>
+      <div>
+        <div class="card-vendor">Unknown</div>
+        <div class="card-meta">Transactional · Sat, 25 Apr 2026 07:52</div>
+      </div>
+    </div>
+    <div class="card-header-right">
+      <div class="card-total">—</div>
+      <span class="order-id">#MessageViewBody</span>
+    </div>
+  </div>
+
+  <div class="card-subject">Get started with Google Antigravity</div>
+
+  <div class="card-body">
+    <div class="card-section">
+      <div class="section-header">Details</div>
+      <div class="detail-snippet">Welcome to Google Antigravity! Unlock the full potential of your workflow and experience liftoff. Here are 3 ways to start elevating your development </div>
+    </div>
+    
+  </div>
+
+  
+
+  <div class="card-footer">
+    <span class="tag cat" style="background:#6b656022;color:#6b6560">📧 Transactional</span>
+    
+    <span class="tag pay">Unknown</span>
+    <span class="tag from">antigravity-noreply@google.com</span>
+  </div>
+</div>
+
+<div class="card" style="animation-delay:160ms" data-category="travel">
+  <div class="card-header" style="background:#6d4c41">
+    <div class="card-header-left">
+      <div class="card-icon">✈️</div>
+      <div>
+        <div class="card-vendor">IndiGo</div>
+        <div class="card-meta">Travel · Sat, 25 Apr 2026 17:35</div>
+      </div>
+    </div>
+    <div class="card-header-right">
+      <div class="card-total">₹22,312</div>
+      
+    </div>
+  </div>
+
+  <div class="card-subject">Fwd: TaxInvoice - GJ1262704AB36056</div>
+
+  <div class="card-body">
+    <div class="card-section">
+      <div class="section-header">Details</div>
+      <div class="detail-snippet">---------- Forwarded message --------- From: &lt;6EGSTInvoice@goindigo.in&gt; Date: Fri, 17 Apr 2026 at 17:55 Subject: TaxInvoice - GJ1262704AB36056 T</div>
+    </div>
+    <div class="card-section"><div class="section-header">All Amounts</div><div class="amounts-row"><span class="amount-chip">rs
+2</span><span class="amount-chip">996425</span><span class="amount-chip">22,312</span></div></div>
+  </div>
+
+  
+
+  <div class="card-footer">
+    <span class="tag cat" style="background:#6d4c4122;color:#6d4c41">✈️ Travel</span>
+    <span class="tag reimb">✓ Reimbursable</span>
+    <span class="tag pay">Credit Card</span>
+    <span class="tag from">harvymeenal@gmail.com</span>
+  </div>
+</div>
+
+<div class="card" style="animation-delay:240ms" data-category="travel">
+  <div class="card-header" style="background:#6d4c41">
+    <div class="card-header-left">
+      <div class="card-icon">✈️</div>
+      <div>
+        <div class="card-vendor">MakeMyTrip</div>
+        <div class="card-meta">Travel · Sat, 25 Apr 2026 17:34</div>
+      </div>
+    </div>
+    <div class="card-header-right">
+      <div class="card-total">₹3504.58</div>
+      <span class="order-id">#NH78206479216648</span>
+    </div>
+  </div>
+
+  <div class="card-subject">Fwd: Tax Invoice for your Hotel Booking id NH78206479216648</div>
+
+  <div class="card-body">
+    <div class="card-section">
+      <div class="section-header">Details</div>
+      <div class="detail-snippet">---------- Forwarded message --------- From: MakeMyTrip &lt;noreply@makemytrip.com&gt; Date: Fri, 24 Apr 2026 at 12:04 Subject: Tax Invoice for your H</div>
+    </div>
+    <div class="card-section"><div class="section-header">All Amounts</div><div class="amounts-row"><span class="amount-chip">₹4201.48</span><span class="amount-chip">₹280.1</span><span class="amount-chip">₹3504.58</span><span class="amount-chip">3504.58</span></div></div>
+  </div>
+
+  
+
+  <div class="card-footer">
+    <span class="tag cat" style="background:#6d4c4122;color:#6d4c41">✈️ Travel</span>
+    <span class="tag reimb">✓ Reimbursable</span>
+    <span class="tag pay">Credit Card</span>
+    <span class="tag from">harvymeenal@gmail.com</span>
+  </div>
+</div>
+
+<div class="card" style="animation-delay:320ms" data-category="travel">
+  <div class="card-header" style="background:#6d4c41">
+    <div class="card-header-left">
+      <div class="card-icon">✈️</div>
+      <div>
+        <div class="card-vendor">MakeMyTrip</div>
+        <div class="card-meta">Travel · Sat, 25 Apr 2026 17:33</div>
+      </div>
+    </div>
+    <div class="card-header-right">
+      <div class="card-total">₹3,505</div>
+      <span class="order-id">#NH78206479216648</span>
+    </div>
+  </div>
+
+  <div class="card-subject">Fwd: Your Booking Confirmation Voucher for Hotel Wellsuites Electronic City</div>
+
+  <div class="card-body">
+    <div class="card-section">
+      <div class="section-header">Details</div>
+      <div class="detail-snippet">---------- Forwarded message --------- From: MakeMyTrip &lt;noreply@makemytrip.com&gt; Date: Sat, 18 Apr 2026 at 22:21 Subject: Your Booking Confirmat</div>
+    </div>
+    <div class="card-section"><div class="section-header">All Amounts</div><div class="amounts-row"><span class="amount-chip">INR 3,504</span><span class="amount-chip">INR 1,198</span><span class="amount-chip">INR 3,505</span><span class="amount-chip">INR 697</span><span class="amount-chip">INR 280</span><span class="amount-chip">INR 221</span></div></div>
+  </div>
+
+  
+
+  <div class="card-footer">
+    <span class="tag cat" style="background:#6d4c4122;color:#6d4c41">✈️ Travel</span>
+    <span class="tag reimb">✓ Reimbursable</span>
+    <span class="tag pay">Unknown</span>
+    <span class="tag from">harvymeenal@gmail.com</span>
+  </div>
+</div>
+
+<div class="card" style="animation-delay:400ms" data-category="ride">
+  <div class="card-header" style="background:#1a1a1a">
+    <div class="card-header-left">
+      <div class="card-icon">🚗</div>
+      <div>
+        <div class="card-vendor">Rapido</div>
+        <div class="card-meta">Ride · Sat, 25 Apr 2026 15:43</div>
+      </div>
+    </div>
+    <div class="card-header-right">
+      <div class="card-total">₹28.00</div>
+      
+    </div>
+  </div>
+
+  <div class="card-subject">Fwd: Rapido Invoice</div>
+
+  <div class="card-body">
+    <div class="card-section">
+      <div class="section-header">Details</div>
+      <div class="detail-row"><span class="dk">Distance</span><span class="dv">2.42 km</span></div>
+<div class="detail-row"><span class="dk">Duration</span><span class="dv">40 min</span></div>
+<div class="detail-row"><span class="dk">Plate</span><span class="dv">GJ27DJ3600</span></div>
+<div class="detail-row"><span class="dk">From</span><span class="dv"><partner@rapido.bike></span></div>
+<div class="detail-row"><span class="dk">To</span><span class="dv"><ayushd2910@gmail.com></span></div>
+    </div>
+    <div class="card-section"><div class="section-header">All Amounts</div><div class="amounts-row"><span class="amount-chip">₹ 28.00</span><span class="amount-chip">₹ 20.23</span><span class="amount-chip">₹ 7.77</span><span class="amount-chip">₹ 19.27</span><span class="amount-chip">₹ 0.48</span><span class="amount-chip">₹ 0.00</span></div></div>
+  </div>
+
+  
+
+  <div class="card-footer">
+    <span class="tag cat" style="background:#1a1a1a22;color:#1a1a1a">🚗 Ride</span>
+    <span class="tag reimb">✓ Reimbursable</span>
+    <span class="tag pay">Unknown</span>
+    <span class="tag from">ayushd2910@gmail.com</span>
+  </div>
+</div>
+
+<div class="card" style="animation-delay:480ms" data-category="ride">
+  <div class="card-header" style="background:#1a1a1a">
+    <div class="card-header-left">
+      <div class="card-icon">🚗</div>
+      <div>
+        <div class="card-vendor">Uber</div>
+        <div class="card-meta">Ride · Sat, 25 Apr 2026 14:36</div>
+      </div>
+    </div>
+    <div class="card-header-right">
+      <div class="card-total">₹496.20</div>
+      
+    </div>
+  </div>
+
+  <div class="card-subject">Fwd: Your Friday evening trip with Uber</div>
+
+  <div class="card-body">
+    <div class="card-section">
+      <div class="section-header">Details</div>
+      <div class="detail-row"><span class="dk">Distance</span><span class="dv">10.99 km</span></div>
+<div class="detail-row"><span class="dk">Duration</span><span class="dv">23 min</span></div>
+<div class="detail-row"><span class="dk">Plate</span><span class="dv">KA03AL6042</span></div>
+<div class="detail-row"><span class="dk">From</span><span class="dv">Uber Receipts <noreply@uber.com></span></div>
+<div class="detail-row"><span class="dk">To</span><span class="dv"><ayushd2910@gmail.com></span></div>
+    </div>
+    <div class="card-section"><div class="section-header">All Amounts</div><div class="amounts-row"><span class="amount-chip">₹496.20</span><span class="amount-chip">₹491.30</span><span class="amount-chip">₹4.90</span><span class="amount-chip">RS1</span><span class="amount-chip">496.20</span></div></div>
+  </div>
+
+  
+
+  <div class="card-footer">
+    <span class="tag cat" style="background:#1a1a1a22;color:#1a1a1a">🚗 Ride</span>
+    <span class="tag reimb">✓ Reimbursable</span>
+    <span class="tag pay">Cash</span>
+    <span class="tag from">ayushd2910@gmail.com</span>
+  </div>
+</div>
+
+<div class="card" style="animation-delay:560ms" data-category="ride">
+  <div class="card-header" style="background:#1a1a1a">
+    <div class="card-header-left">
+      <div class="card-icon">🚗</div>
+      <div>
+        <div class="card-vendor">Uber</div>
+        <div class="card-meta">Ride · Sat, 25 Apr 2026 14:36</div>
+      </div>
+    </div>
+    <div class="card-header-right">
+      <div class="card-total">₹125.75</div>
+      
+    </div>
+  </div>
+
+  <div class="card-subject">Fwd: Your Saturday morning trip with Uber</div>
+
+  <div class="card-body">
+    <div class="card-section">
+      <div class="section-header">Details</div>
+      <div class="detail-row"><span class="dk">Distance</span><span class="dv">4.85 km</span></div>
+<div class="detail-row"><span class="dk">Duration</span><span class="dv">11 min</span></div>
+<div class="detail-row"><span class="dk">Plate</span><span class="dv">KA51AL7164</span></div>
+<div class="detail-row"><span class="dk">From</span><span class="dv">Uber Receipts <noreply@uber.com></span></div>
+<div class="detail-row"><span class="dk">To</span><span class="dv"><ayushd2910@gmail.com></span></div>
+    </div>
+    <div class="card-section"><div class="section-header">All Amounts</div><div class="amounts-row"><span class="amount-chip">₹125.75</span><span class="amount-chip">₹120.85</span><span class="amount-chip">₹4.90</span><span class="amount-chip">125.75</span></div></div>
+  </div>
+
+  
+
+  <div class="card-footer">
+    <span class="tag cat" style="background:#1a1a1a22;color:#1a1a1a">🚗 Ride</span>
+    <span class="tag reimb">✓ Reimbursable</span>
+    <span class="tag pay">Cash</span>
+    <span class="tag from">ayushd2910@gmail.com</span>
+  </div>
+</div>
+
+<div class="card" style="animation-delay:640ms" data-category="unknown">
+  <div class="card-header" style="background:#6b6560">
+    <div class="card-header-left">
+      <div class="card-icon">📧</div>
+      <div>
+        <div class="card-vendor">Unknown</div>
+        <div class="card-meta">Transactional · Sat, 25 Apr 2026 10:30</div>
+      </div>
+    </div>
+    <div class="card-header-right">
+      <div class="card-total">—</div>
+      
+    </div>
+  </div>
+
+  <div class="card-subject">Hackathon</div>
+
+  <div class="card-body">
+    <div class="card-section">
+      <div class="section-header">Details</div>
+      <div class="detail-snippet">Trace models this as a reinforcement learning environment where an agent: Interacts with a Gmail-like system via MCP tools Incrementally retrieves and</div>
+    </div>
+    
+  </div>
+
+  
+
+  <div class="card-footer">
+    <span class="tag cat" style="background:#6b656022;color:#6b6560">📧 Transactional</span>
+    
+    <span class="tag pay">Unknown</span>
+    <span class="tag from">ayushd2910@gmail.com</span>
+  </div>
+</div>
+
+<div class="card" style="animation-delay:720ms" data-category="unknown">
+  <div class="card-header" style="background:#6b6560">
+    <div class="card-header-left">
+      <div class="card-icon">📧</div>
+      <div>
+        <div class="card-vendor">Unknown</div>
+        <div class="card-meta">Transactional · Sat, 25 Apr 2026 10:00</div>
+      </div>
+    </div>
+    <div class="card-header-right">
+      <div class="card-total">—</div>
+      
+    </div>
+  </div>
+
+  <div class="card-subject">Fwd: Meta Hackthon</div>
+
+  <div class="card-body">
+    <div class="card-section">
+      <div class="section-header">Details</div>
+      <div class="detail-snippet">Core Problem Modern users accumulate years of fragmented information in email, but extracting meaningful insights—such as financial summaries, travel </div>
+    </div>
+    
+  </div>
+
+  
+
+  <div class="card-footer">
+    <span class="tag cat" style="background:#6b656022;color:#6b6560">📧 Transactional</span>
+    
+    <span class="tag pay">Unknown</span>
+    <span class="tag from">ayushd2910@gmail.com</span>
+  </div>
+</div>
+  </div>
+
+  <!-- Analysis footer -->
+  
+<div class="insights-panel">
+  <div class="insights-header">🧠 Trace Intelligence Insights</div>
+  <div class="insight-row"><div class="insight-icon good">💡</div><div>Total retrievable spend: <strong>₹187,894.28</strong> across 46 transactions.</div></div><div class="insight-row"><div class="insight-icon good">🧾</div><div><strong>6 reimbursable</strong> receipts found totaling ₹29,971.53.</div></div><div class="insight-row"><div class="insight-icon info">📊</div><div>Highest spending category: <strong>Travel</strong> at ₹179,434.48.</div></div><div class="insight-row"><div class="insight-icon warn">⚠️</div><div>2 cash payment(s) detected — no digital trail for these transactions.</div></div>
+</div>
+
+</div>
+
+<script>
+
+// Animate chart bars on load
+document.addEventListener('DOMContentLoaded', function() {
+  const bars = document.querySelectorAll('.chart-bar');
+  bars.forEach(b => {
+    const w = b.style.width;
+    b.style.width = '0%';
+    setTimeout(() => { b.style.width = w; }, 300);
+  });
+});
+
+</script>
+</body>
+</html>

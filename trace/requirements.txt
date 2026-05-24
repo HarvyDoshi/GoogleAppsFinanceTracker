@@ -1,0 +1,46 @@
+# requirements.txt — Trace: Your Digital Footprint
+# Meta OpenEnv Hackathon 2026
+
+# ── Core RL stack (Unsloth + TRL + GRPO) ─────────────────────────────────────
+unsloth>=2025.4.0             # 2-4x faster training + inference
+trl>=0.15.0                   # GRPO trainer, SFT trainer
+transformers>=4.46.0          # latest model support
+datasets>=2.18.0              # HuggingFace datasets
+torch>=2.2.0                  # PyTorch backend
+peft>=0.10.0                  # LoRA adapter management
+bitsandbytes>=0.43.0          # 4-bit quantization support
+accelerate>=0.29.0            # distributed training + model loading
+
+# ── OpenEnv environment server ────────────────────────────────────────────────
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.0.0
+
+# ── Config & utilities ────────────────────────────────────────────────────────
+pyyaml>=6.0
+requests>=2.31.0
+
+# ── Optional: experiment tracking ────────────────────────────────────────────
+wandb>=0.16.0
+
+# ── Optional: fast rollout generation ────────────────────────────────────────
+# vllm>=0.4.0                 # uncomment for vLLM-accelerated rollouts
+
+# ── Optional: notebook ────────────────────────────────────────────────────────
+jupyter
+ipywidgets
+
+# ── Image Analysis — Hybrid Local Pipeline (via Ollama) ──────────────────────
+# Install Ollama server: https://ollama.com
+# Then pull models:
+#   ollama pull moondream        (~2GB  — router/classifier)
+#   ollama pull qwen2.5vl:3b    (~3GB  — financial OCR)
+Pillow>=10.0.0       # image loading and format handling
+ollama>=0.2.0        # Ollama Python client (local VLM server)
+
+# ── Document Extraction — Docling (IBM) Universal Parser ─────────────────────
+# Primary: Docling converts PDF/DOCX/PPTX → Markdown (layout-aware)
+# Fallbacks: PyMuPDF (fast PDF text), python-docx (DOCX text)
+docling>=2.0.0       # IBM universal document parser (PDF/DOCX/PPTX → Markdown)
+PyMuPDF>=1.24.0      # fast PDF text + image extraction (fallback)
+python-docx>=1.1.0   # DOCX text extraction (fallback)

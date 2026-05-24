@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+
+# Trace specific
+.ledger_id
+token_*.pkl
+credentials.json
+all_financial_dashboard.html
+all_financial_response.json
+all_financial_transactions.json
+all_financial_transactions.csv
+*_dashboard.html
+*_response.json
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/

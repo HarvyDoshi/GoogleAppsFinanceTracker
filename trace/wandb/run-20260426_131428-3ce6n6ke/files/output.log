@@ -1,0 +1,6 @@
+
+✅ Dataset Analysis Complete!
+Total Examples: 502
+Action Distribution: {'PLAN': 0, 'RETRIEVE': 0, 'VERIFY': 0, 'ANSWER': 0, 'MEMORIZE': 0}
+Adversarial Cases Found: 0 (0.0%)
+Adversarial Breakdown: {'noise': 0, 'refund': 0, 'schema_drift': 0, 'conflict': 0, 'multi_item': 0}

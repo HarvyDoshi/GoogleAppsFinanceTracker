@@ -1,0 +1,27 @@
+2026-04-26 16:40:17,553 INFO    MainThread:25200 [wandb_setup.py:_flush():81] Current SDK version is 0.26.1
+2026-04-26 16:40:17,553 INFO    MainThread:25200 [wandb_setup.py:_flush():81] Configure stats pid to 25200
+2026-04-26 16:40:17,553 INFO    MainThread:25200 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-04-26 16:40:17,553 INFO    MainThread:25200 [wandb_init.py:setup_run_log_directory():723] Logging user logs to C:\Users\harvy\Downloads\trace_project\trace\scripts\wandb\run-20260426_164017-tbmngdct\logs\debug.log
+2026-04-26 16:40:17,553 INFO    MainThread:25200 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to C:\Users\harvy\Downloads\trace_project\trace\scripts\wandb\run-20260426_164017-tbmngdct\logs\debug-internal.log
+2026-04-26 16:40:17,553 INFO    MainThread:25200 [wandb_init.py:init():850] calling init triggers
+2026-04-26 16:40:17,553 INFO    MainThread:25200 [wandb_init.py:init():855] wandb.init called with sweep_config: {}
+config: {'dataset': '../data/sft_demos_v2.jsonl', 'type': 'Supervised Fine-Tuning Demonstrations', 'note': 'Analysis of the generated expert trajectories including adversarial cases.', '_wandb': {}}
+2026-04-26 16:40:17,553 INFO    MainThread:25200 [wandb_init.py:init():898] starting backend
+2026-04-26 16:40:20,131 INFO    MainThread:25200 [wandb_init.py:init():913] sending inform_init request
+2026-04-26 16:40:20,807 INFO    MainThread:25200 [wandb_init.py:init():918] backend started and connected
+2026-04-26 16:40:20,835 INFO    MainThread:25200 [wandb_init.py:init():988] updated telemetry
+2026-04-26 16:40:20,864 INFO    MainThread:25200 [wandb_init.py:init():1011] communicating run to backend with 90.0 second timeout
+2026-04-26 16:40:21,396 INFO    MainThread:25200 [wandb_init.py:init():1056] starting run threads in backend
+2026-04-26 16:40:21,876 INFO    MainThread:25200 [wandb_run.py:_console_start():2554] atexit reg
+2026-04-26 16:40:21,876 INFO    MainThread:25200 [wandb_run.py:_redirect():2403] redirect: wrap_raw
+2026-04-26 16:40:21,876 INFO    MainThread:25200 [wandb_run.py:_redirect():2472] Wrapping output streams.
+2026-04-26 16:40:21,876 INFO    MainThread:25200 [wandb_run.py:_redirect():2495] Redirects installed.
+2026-04-26 16:40:21,880 INFO    MainThread:25200 [wandb_init.py:init():1094] run started, returning control to user process
+2026-04-26 16:40:22,814 INFO    MainThread:25200 [wandb_run.py:_config_callback():1415] config_cb ('_wandb', 'visualize', 'summary/action_dist') {'panel_type': 'Vega2', 'panel_config': {'panelDefId': 'wandb/bar/v0', 'fieldSettings': {'label': 'action', 'value': 'count'}, 'stringSettings': {'title': 'Action distribution (final)'}, 'transform': {'name': 'tableWithLeafColNames'}, 'userQuery': {'queryFields': [{'name': 'runSets', 'args': [{'name': 'runSets', 'value': '${runSets}'}], 'fields': [{'name': 'id', 'fields': []}, {'name': 'name', 'fields': []}, {'name': '_defaultColorIndex', 'fields': []}, {'name': 'summaryTable', 'args': [{'name': 'tableKey', 'value': 'summary/action_dist_table'}], 'fields': []}]}]}}} None
+2026-04-26 16:40:22,814 INFO    MainThread:25200 [wandb_run.py:_config_callback():1415] config_cb ('_wandb', 'visualize', 'summary/source_dist') {'panel_type': 'Vega2', 'panel_config': {'panelDefId': 'wandb/bar/v0', 'fieldSettings': {'label': 'source', 'value': 'count'}, 'stringSettings': {'title': 'Source distribution (final)'}, 'transform': {'name': 'tableWithLeafColNames'}, 'userQuery': {'queryFields': [{'name': 'runSets', 'args': [{'name': 'runSets', 'value': '${runSets}'}], 'fields': [{'name': 'id', 'fields': []}, {'name': 'name', 'fields': []}, {'name': '_defaultColorIndex', 'fields': []}, {'name': 'summaryTable', 'args': [{'name': 'tableKey', 'value': 'summary/source_dist_table'}], 'fields': []}]}]}}} None
+2026-04-26 16:40:22,815 INFO    MainThread:25200 [wandb_run.py:_config_callback():1415] config_cb ('_wandb', 'visualize', 'summary/difficulty_dist') {'panel_type': 'Vega2', 'panel_config': {'panelDefId': 'wandb/bar/v0', 'fieldSettings': {'label': 'difficulty', 'value': 'count'}, 'stringSettings': {'title': 'Curriculum mix (inferred from goals)'}, 'transform': {'name': 'tableWithLeafColNames'}, 'userQuery': {'queryFields': [{'name': 'runSets', 'args': [{'name': 'runSets', 'value': '${runSets}'}], 'fields': [{'name': 'id', 'fields': []}, {'name': 'name', 'fields': []}, {'name': '_defaultColorIndex', 'fields': []}, {'name': 'summaryTable', 'args': [{'name': 'tableKey', 'value': 'summary/difficulty_dist_table'}], 'fields': []}]}]}}} None
+2026-04-26 16:40:26,976 INFO    MainThread:25200 [wandb_run.py:_finish():2321] finishing run 22bce084-nirma/trace-grpo/tbmngdct
+2026-04-26 16:40:26,976 INFO    MainThread:25200 [wandb_run.py:_atexit_cleanup():2520] got exitcode: 0
+2026-04-26 16:40:26,977 INFO    MainThread:25200 [wandb_run.py:_restore():2502] restore
+2026-04-26 16:40:26,977 INFO    MainThread:25200 [wandb_run.py:_restore():2508] restore done
+2026-04-26 16:40:32,443 INFO    MainThread:25200 [wandb_run.py:_footer_sync_info():3889] logging synced files

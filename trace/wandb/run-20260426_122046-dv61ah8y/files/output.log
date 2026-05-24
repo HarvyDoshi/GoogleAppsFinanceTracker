@@ -1,0 +1,240 @@
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=000 target=42057.48 answer=992.23 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=001 target=4227.90 answer=9208.15 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=002 target=42057.48 answer=4305.93 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.200 | format_compliance=0.050 step_efficiency=0.150
+step=003 target=187894.28 answer=711.25 reward=0.200
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=004 target=187894.28 answer=2764.08 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=005 target=133872.00 answer=7872.10 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=006 target=42057.48 answer=9460.80 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=007 target=133872.00 answer=7860.98 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=008 target=42057.48 answer=6389.69 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=009 target=187894.28 answer=1683.53 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=010 target=42057.48 answer=2126.97 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=011 target=42057.48 answer=2190.88 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=012 target=42057.48 answer=1388.82 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=013 target=253.00 answer=1747.96 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.200 | format_compliance=0.050 step_efficiency=0.150
+step=014 target=133872.00 answer=4791.48 reward=0.200
+[REWARD] ep=wandb-de step=3 total=0.200 | format_compliance=0.050 step_efficiency=0.150
+step=015 target=133872.00 answer=9271.51 reward=0.200
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=016 target=253.00 answer=8349.15 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=017 target=133872.00 answer=1126.62 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=018 target=179434.48 answer=807.68 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=019 target=42057.48 answer=6186.80 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=020 target=253.00 answer=1924.77 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=021 target=4227.90 answer=8375.88 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=022 target=133872.00 answer=3247.71 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=023 target=253.00 answer=4905.21 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=024 target=187894.28 answer=1090.36 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=025 target=187894.28 answer=2742.73 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.350 | answer_correctness=0.200 step_efficiency=0.150
+step=026 target=4227.90 answer=3204.97 reward=0.350
+[REWARD] ep=wandb-de step=3 total=0.200 | format_compliance=0.050 step_efficiency=0.150
+step=027 target=253.00 answer=9511.97 reward=0.200
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=028 target=1200.00 answer=4617.49 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=029 target=4227.90 answer=2677.67 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=030 target=187894.28 answer=2873.99 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=031 target=187894.28 answer=1187.64 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=032 target=133872.00 answer=5916.58 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=033 target=1200.00 answer=2059.48 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=034 target=42057.48 answer=6103.30 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=035 target=1200.00 answer=3065.74 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=036 target=4227.90 answer=452.67 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=037 target=187894.28 answer=9424.78 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.150 | step_efficiency=0.150
+step=038 target=133872.00 answer=22.75 reward=0.150
+[REWARD] ep=wandb-de step=3 total=0.200 | format_compliance=0.050 step_efficiency=0.150
+step=039 target=4227.90 answer=8871.79 reward=0.200
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=040 target=42057.48 answer=42175.60 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=041 target=4227.90 answer=4166.70 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=042 target=1200.00 answer=1212.55 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=043 target=187894.28 answer=188555.17 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=044 target=1200.00 answer=1207.47 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=045 target=1200.00 answer=1187.78 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=046 target=42057.48 answer=42157.88 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=047 target=179434.48 answer=181309.58 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=048 target=42057.48 answer=42047.40 reward=0.950
+[REWARD] ep=wandb-de step=3 total=1.000 | answer_correctness=0.800 format_compliance=0.050 step_efficiency=0.150
+step=049 target=253.00 answer=251.84 reward=1.000
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=050 target=187894.28 answer=188184.45 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=051 target=253.00 answer=254.19 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=052 target=133872.00 answer=135523.30 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=053 target=253.00 answer=253.48 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=054 target=1200.00 answer=1185.77 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=055 target=253.00 answer=253.56 reward=0.950
+[REWARD] ep=wandb-de step=3 total=1.000 | answer_correctness=0.800 format_compliance=0.050 step_efficiency=0.150
+step=056 target=253.00 answer=251.61 reward=1.000
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=057 target=253.00 answer=254.15 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=058 target=42057.48 answer=41896.57 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=059 target=187894.28 answer=186462.31 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=060 target=1200.00 answer=1195.49 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=061 target=42057.48 answer=41774.69 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=062 target=1200.00 answer=1189.92 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=063 target=133872.00 answer=135596.76 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=064 target=4227.90 answer=4196.48 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=065 target=42057.48 answer=41454.94 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=066 target=253.00 answer=254.56 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=067 target=1200.00 answer=1186.17 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=068 target=133872.00 answer=134612.03 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=069 target=187894.28 answer=189878.31 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=070 target=187894.28 answer=186597.22 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=071 target=1200.00 answer=1188.16 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=072 target=253.00 answer=256.51 reward=0.950
+[REWARD] ep=wandb-de step=3 total=1.000 | answer_correctness=0.800 format_compliance=0.050 step_efficiency=0.150
+step=073 target=133872.00 answer=133641.82 reward=1.000
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=074 target=4227.90 answer=4182.68 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=075 target=133872.00 answer=132443.30 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=076 target=1200.00 answer=1184.37 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=077 target=4227.90 answer=4223.20 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=078 target=187894.28 answer=188248.03 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=079 target=179434.48 answer=180686.22 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=080 target=253.00 answer=253.31 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=081 target=179434.48 answer=179434.48 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=082 target=42057.48 answer=42057.48 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=083 target=42057.48 answer=42057.48 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=084 target=4227.90 answer=4227.90 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=085 target=42057.48 answer=42057.48 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=086 target=187894.28 answer=188095.15 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=087 target=1200.00 answer=1200.00 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=088 target=187894.28 answer=187894.28 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=089 target=187894.28 answer=187894.28 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=090 target=1200.00 answer=1200.00 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=091 target=1200.00 answer=1200.00 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=092 target=179434.48 answer=179434.48 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=093 target=42057.48 answer=42193.91 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=094 target=253.00 answer=253.00 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=095 target=133872.00 answer=133872.00 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=096 target=4227.90 answer=4227.90 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=097 target=1200.00 answer=1200.00 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=098 target=42057.48 answer=42057.48 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=099 target=1200.00 answer=1204.31 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=100 target=179434.48 answer=179434.48 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=101 target=1200.00 answer=1200.00 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=102 target=253.00 answer=253.00 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=103 target=4227.90 answer=4227.90 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=104 target=1200.00 answer=1200.00 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=105 target=253.00 answer=253.00 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=106 target=42057.48 answer=42057.48 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=107 target=1200.00 answer=1200.00 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=108 target=253.00 answer=253.00 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=109 target=179434.48 answer=179434.48 reward=0.950
+[REWARD] ep=wandb-de step=3 total=1.000 | answer_correctness=0.800 format_compliance=0.050 step_efficiency=0.150
+step=110 target=4227.90 answer=4231.82 reward=1.000
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=111 target=133872.00 answer=133872.00 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=112 target=1200.00 answer=1200.00 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=113 target=4227.90 answer=4227.90 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=114 target=4227.90 answer=4227.80 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=115 target=1200.00 answer=1200.00 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=116 target=4227.90 answer=4227.90 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=117 target=133872.00 answer=133626.99 reward=0.950
+[REWARD] ep=wandb-de step=3 total=0.950 | answer_correctness=0.800 step_efficiency=0.150
+step=118 target=187894.28 answer=188410.03 reward=0.950
+[REWARD] ep=wandb-de step=3 total=1.000 | answer_correctness=0.800 format_compliance=0.050 step_efficiency=0.150
+step=119 target=4227.90 answer=4231.49 reward=1.000

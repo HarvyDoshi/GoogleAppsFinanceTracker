@@ -1,0 +1,1501 @@
+{
+  "quick_pass": {
+    "observation": {
+      "episode_id": "fe58432e-ecb4-4c5d-926c-8bff7638bd9d",
+      "step": 2,
+      "instruction": "Scan latest Gmail messages, identify transactional/financial emails, read content from body + attachments (images/docs/PDF when present), and generate consolidated transaction history summary dashboard.",
+      "available_sources": [
+        "gmail"
+      ],
+      "context": "Retrieved 10 Gmail items. Parsed 10 transactions | Total spend: ₹0.00 | Top category: unknown (₹0.00)",
+      "memory_summary": "(empty memory)",
+      "world_state": {
+        "visible_items": 10,
+        "hidden_counts": {
+          "gmail": 10
+        },
+        "schema_version": 1,
+        "retrieved_preview": [
+          {
+            "id": "19dc5970e7c5abb6",
+            "date": "Sat, 25 Apr 2026 22:31:42 +0530",
+            "from": "Harvy Doshi <doshimeenal3@gmail.com>",
+            "subject": "",
+            "snippet": ""
+          },
+          {
+            "id": "19dc520ba8c710ec",
+            "date": "Sat, 25 Apr 2026 07:52:29 -0700",
+            "from": "Google Antigravity <antigravity-noreply@google.com>",
+            "subject": "Get started with Google Antigravity",
+            "snippet": "Welcome to Google Antigravity! Unlock the full potential of your workflow and experience liftoff. Here are 3 ways to start elevating your development with Antigravity: Build with Browser Antigravity is"
+          },
+          {
+            "id": "19dc48839a675910",
+            "date": "Sat, 25 Apr 2026 17:35:40 +0530",
+            "from": "Harvy Doshi <harvymeenal@gmail.com>",
+            "subject": "Fwd: TaxInvoice - GJ1262704AB36056",
+            "snippet": "---------- Forwarded message --------- From: &lt;6EGSTInvoice@goindigo.in&gt; Date: Fri, 17 Apr 2026 at 17:55 Subject: TaxInvoice - GJ1262704AB36056 To: &lt;harvymeenal@gmail.com&gt; Dear IndiGo"
+          }
+        ],
+        "total_sources": [
+          "gmail"
+        ],
+        "total_items": 20,
+        "image_analyses": [],
+        "doc_analyses": []
+      }
+    },
+    "reward": 0.2,
+    "done": false,
+    "info": {
+      "gmail_query": "newer_than:90d  -category:promotions -in:chats",
+      "transactions_summary": {
+        "total_spend": 0.0,
+        "count": 10,
+        "by_category": {},
+        "by_vendor": {}
+      },
+      "transactions": [
+        {
+          "id": "19dc5970e7c5abb6",
+          "category": "unknown",
+          "vendor": "Unknown",
+          "category_config": {
+            "icon": "📧",
+            "color": "#6b6560",
+            "label": "Transactional"
+          },
+          "subject": "",
+          "from_email": "Harvy Doshi <doshimeenal3@gmail.com>",
+          "date": "Sat, 25 Apr 2026 22:31:42 +0530",
+          "total": null,
+          "amounts": [],
+          "dates": [],
+          "order_id": null,
+          "details": {},
+          "snippet": "",
+          "body_preview": "",
+          "image_analyses": [],
+          "doc_analyses": [],
+          "attachment_count": 0,
+          "reimbursable": false,
+          "payment_method": "Unknown"
+        },
+        {
+          "id": "19dc520ba8c710ec",
+          "category": "unknown",
+          "vendor": "Unknown",
+          "category_config": {
+            "icon": "📧",
+            "color": "#6b6560",
+            "label": "Transactional"
+          },
+          "subject": "Get started with Google Antigravity",
+          "from_email": "Google Antigravity <antigravity-noreply@google.com>",
+          "date": "Sat, 25 Apr 2026 07:52:29 -0700",
+          "total": null,
+          "amounts": [],
+          "dates": [],
+          "order_id": null,
+          "details": {},
+          "snippet": "Welcome to Google Antigravity! Unlock the full potential of your workflow and experience liftoff. Here are 3 ways to start elevating your development with Antigravity: Build with Browser Antigravity i",
+          "body_preview": "Welcome to Google Antigravity! Unlock the full potential of your workflow and experience liftoff. Here are 3 ways to start elevating your development with Antigravity: Build with Browser Antigravity is",
+          "image_analyses": [],
+          "doc_analyses": [],
+          "attachment_count": 0,
+          "reimbursable": false,
+          "payment_method": "Unknown"
+        },
+        {
+          "id": "19dc48839a675910",
+          "category": "travel",
+          "vendor": "IndiGo",
+          "category_config": {
+            "icon": "✈️",
+            "color": "#6d4c41",
+            "label": "Travel"
+          },
+          "subject": "Fwd: TaxInvoice - GJ1262704AB36056",
+          "from_email": "Harvy Doshi <harvymeenal@gmail.com>",
+          "date": "Sat, 25 Apr 2026 17:35:40 +0530",
+          "total": null,
+          "amounts": [],
+          "dates": [
+            "17 Apr 2026"
+          ],
+          "order_id": null,
+          "details": {},
+          "snippet": "---------- Forwarded message --------- From: &lt;6EGSTInvoice@goindigo.in&gt; Date: Fri, 17 Apr 2026 at 17:55 Subject: TaxInvoice - GJ1262704AB36056 To: &lt;harvymeenal@gmail.com&gt; Dear IndiGo",
+          "body_preview": "---------- Forwarded message --------- From: &lt;6EGSTInvoice@goindigo.in&gt; Date: Fri, 17 Apr 2026 at 17:55 Subject: TaxInvoice - GJ1262704AB36056 To: &lt;harvymeenal@gmail.com&gt; Dear IndiGo",
+          "image_analyses": [],
+          "doc_analyses": [],
+          "attachment_count": 0,
+          "reimbursable": true,
+          "payment_method": "Unknown"
+        },
+        {
+          "id": "19dc486ce6732794",
+          "category": "travel",
+          "vendor": "MakeMyTrip",
+          "category_config": {
+            "icon": "✈️",
+            "color": "#6d4c41",
+            "label": "Travel"
+          },
+          "subject": "Fwd: Tax Invoice for your Hotel Booking id NH78206479216648",
+          "from_email": "Harvy Doshi <harvymeenal@gmail.com>",
+          "date": "Sat, 25 Apr 2026 17:34:08 +0530",
+          "total": null,
+          "amounts": [],
+          "dates": [
+            "24 Apr 2026"
+          ],
+          "order_id": "NH78206479216648",
+          "details": {},
+          "snippet": "---------- Forwarded message --------- From: MakeMyTrip &lt;noreply@makemytrip.com&gt; Date: Fri, 24 Apr 2026 at 12:04 Subject: Tax Invoice for your Hotel Booking id NH78206479216648 To: &lt;",
+          "body_preview": "---------- Forwarded message --------- From: MakeMyTrip &lt;noreply@makemytrip.com&gt; Date: Fri, 24 Apr 2026 at 12:04 Subject: Tax Invoice for your Hotel Booking id NH78206479216648 To: &lt;",
+          "image_analyses": [],
+          "doc_analyses": [],
+          "attachment_count": 0,
+          "reimbursable": true,
+          "payment_method": "Unknown"
+        },
+        {
+          "id": "19dc486a540b98c6",
+          "category": "travel",
+          "vendor": "MakeMyTrip",
+          "category_config": {
+            "icon": "✈️",
+            "color": "#6d4c41",
+            "label": "Travel"
+          },
+          "subject": "Fwd: Your Booking Confirmation Voucher for Hotel Wellsuites Electronic City",
+          "from_email": "Harvy Doshi <harvymeenal@gmail.com>",
+          "date": "Sat, 25 Apr 2026 17:33:56 +0530",
+          "total": null,
+          "amounts": [],
+          "dates": [
+            "18 Apr 2026"
+          ],
+          "order_id": null,
+          "details": {},
+          "snippet": "---------- Forwarded message --------- From: MakeMyTrip &lt;noreply@makemytrip.com&gt; Date: Sat, 18 Apr 2026 at 22:21 Subject: Your Booking Confirmation Voucher for Hotel Wellsuites Electronic City T",
+          "body_preview": "---------- Forwarded message --------- From: MakeMyTrip &lt;noreply@makemytrip.com&gt; Date: Sat, 18 Apr 2026 at 22:21 Subject: Your Booking Confirmation Voucher for Hotel Wellsuites Electronic City To",
+          "image_analyses": [],
+          "doc_analyses": [],
+          "attachment_count": 0,
+          "reimbursable": false,
+          "payment_method": "Unknown"
+        },
+        {
+          "id": "19dc4212a0e493c0",
+          "category": "ride",
+          "vendor": "Rapido",
+          "category_config": {
+            "icon": "🚗",
+            "color": "#1a1a1a",
+            "label": "Ride"
+          },
+          "subject": "Fwd: Rapido Invoice",
+          "from_email": "Ayush Dharaiya <ayushd2910@gmail.com>",
+          "date": "Sat, 25 Apr 2026 15:43:07 +0530",
+          "total": null,
+          "amounts": [],
+          "dates": [
+            "25 Apr 2026"
+          ],
+          "order_id": null,
+          "details": {
+            "to": "&lt;ayushd2910@gmail.com&gt; Payment Summary Ride ID"
+          },
+          "snippet": "---------- Forwarded message --------- From: &lt;partner@rapido.bike&gt; Date: Sat, 25 Apr 2026 at 15:42 Subject: Rapido Invoice To: &lt;ayushd2910@gmail.com&gt; Payment Summary Ride ID",
+          "body_preview": "---------- Forwarded message --------- From: &lt;partner@rapido.bike&gt; Date: Sat, 25 Apr 2026 at 15:42 Subject: Rapido Invoice To: &lt;ayushd2910@gmail.com&gt; Payment Summary Ride ID",
+          "image_analyses": [],
+          "doc_analyses": [],
+          "attachment_count": 0,
+          "reimbursable": false,
+          "payment_method": "Unknown"
+        },
+        {
+          "id": "19dc3e47915e79c9",
+          "category": "ride",
+          "vendor": "Uber",
+          "category_config": {
+            "icon": "🚗",
+            "color": "#1a1a1a",
+            "label": "Ride"
+          },
+          "subject": "Fwd: Your Friday evening trip with Uber",
+          "from_email": "Ayush Dharaiya <ayushd2910@gmail.com>",
+          "date": "Sat, 25 Apr 2026 14:36:50 +0530",
+          "total": null,
+          "amounts": [],
+          "dates": [
+            "24 Apr 2026"
+          ],
+          "order_id": null,
+          "details": {
+            "to": "&lt;ayushd2910@gmail.com&gt; 24 Apr"
+          },
+          "snippet": "---------- Forwarded message --------- From: Uber Receipts &lt;noreply@uber.com&gt; Date: Fri, 24 Apr 2026 at 23:04 Subject: Your Friday evening trip with Uber To: &lt;ayushd2910@gmail.com&gt; 24 Apr",
+          "body_preview": "---------- Forwarded message --------- From: Uber Receipts &lt;noreply@uber.com&gt; Date: Fri, 24 Apr 2026 at 23:04 Subject: Your Friday evening trip with Uber To: &lt;ayushd2910@gmail.com&gt; 24 Apr",
+          "image_analyses": [],
+          "doc_analyses": [],
+          "attachment_count": 0,
+          "reimbursable": false,
+          "payment_method": "Unknown"
+        },
+        {
+          "id": "19dc3e3dd15a6a27",
+          "category": "ride",
+          "vendor": "Uber",
+          "category_config": {
+            "icon": "🚗",
+            "color": "#1a1a1a",
+            "label": "Ride"
+          },
+          "subject": "Fwd: Your Saturday morning trip with Uber",
+          "from_email": "Ayush Dharaiya <ayushd2910@gmail.com>",
+          "date": "Sat, 25 Apr 2026 14:36:11 +0530",
+          "total": null,
+          "amounts": [],
+          "dates": [
+            "25 Apr 2026"
+          ],
+          "order_id": null,
+          "details": {
+            "to": "&lt;ayushd2910@gmail.com&gt; 25 Apr"
+          },
+          "snippet": "---------- Forwarded message --------- From: Uber Receipts &lt;noreply@uber.com&gt; Date: Sat, 25 Apr 2026 at 07:27 Subject: Your Saturday morning trip with Uber To: &lt;ayushd2910@gmail.com&gt; 25 Ap",
+          "body_preview": "---------- Forwarded message --------- From: Uber Receipts &lt;noreply@uber.com&gt; Date: Sat, 25 Apr 2026 at 07:27 Subject: Your Saturday morning trip with Uber To: &lt;ayushd2910@gmail.com&gt; 25 Apr",
+          "image_analyses": [],
+          "doc_analyses": [],
+          "attachment_count": 0,
+          "reimbursable": false,
+          "payment_method": "Unknown"
+        },
+        {
+          "id": "19dc302e6978400d",
+          "category": "unknown",
+          "vendor": "Unknown",
+          "category_config": {
+            "icon": "📧",
+            "color": "#6b6560",
+            "label": "Transactional"
+          },
+          "subject": "Hackathon",
+          "from_email": "Ayush Dharaiya <ayushd2910@gmail.com>",
+          "date": "Sat, 25 Apr 2026 10:30:28 +0530",
+          "total": null,
+          "amounts": [],
+          "dates": [],
+          "order_id": null,
+          "details": {},
+          "snippet": "Trace models this as a reinforcement learning environment where an agent: Interacts with a Gmail-like system via MCP tools Incrementally retrieves and processes email data Builds a semantic world mode",
+          "body_preview": "Trace models this as a reinforcement learning environment where an agent: Interacts with a Gmail-like system via MCP tools Incrementally retrieves and processes email data Builds a semantic world model",
+          "image_analyses": [],
+          "doc_analyses": [],
+          "attachment_count": 0,
+          "reimbursable": false,
+          "payment_method": "Unknown"
+        },
+        {
+          "id": "19dc2e7b29ae5dd4",
+          "category": "unknown",
+          "vendor": "Unknown",
+          "category_config": {
+            "icon": "📧",
+            "color": "#6b6560",
+            "label": "Transactional"
+          },
+          "subject": "Fwd: Meta Hackthon",
+          "from_email": "Ayush Dharaiya <ayushd2910@gmail.com>",
+          "date": "Sat, 25 Apr 2026 10:00:45 +0530",
+          "total": null,
+          "amounts": [],
+          "dates": [],
+          "order_id": null,
+          "details": {},
+          "snippet": "Core Problem Modern users accumulate years of fragmented information in email, but extracting meaningful insights—such as financial summaries, travel timelines, or key relationships—requires multi-ste",
+          "body_preview": "Core Problem Modern users accumulate years of fragmented information in email, but extracting meaningful insights—such as financial summaries, travel timelines, or key relationships—requires multi-step",
+          "image_analyses": [],
+          "doc_analyses": [],
+          "attachment_count": 0,
+          "reimbursable": false,
+          "payment_method": "Unknown"
+        }
+      ],
+      "dashboard_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Trace · Transaction Dashboard</title>\n<style>\n\n@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,wght@0,300;0,600;1,300&display=swap');\n\n*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }\n\n:root {\n  --bg: #f0ebe3;\n  --card: #ffffff;\n  --border: #d4cec7;\n  --ink: #1a1a1a;\n  --muted: #6b6560;\n  --cream: #f0ebe3;\n}\n\nbody { font-family: 'DM Mono', monospace; background: var(--bg); color: var(--ink); }\n.app { max-width: 900px; margin: 0 auto; padding: 24px 20px; }\n\n/* Header */\n.header { display: flex; justify-content: space-between; align-items: flex-end;\n  border-bottom: 2px solid var(--ink); padding-bottom: 14px; margin-bottom: 20px; }\n.logo { font-family: 'Fraunces', serif; font-size: 26px; font-weight: 600; }\n.subtitle { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }\n.badge { font-size: 10px; background: var(--ink); color: white; padding: 4px 10px; border-radius: 2px; letter-spacing: 1px; }\n\n/* Episode bar */\n.episode-bar { background: var(--card); border: 1px solid var(--border); border-radius: 4px;\n  padding: 12px 16px; margin-bottom: 20px; }\n.ep-label { font-size: 9px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 10px; }\n.steps-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }\n.step-chip { font-size: 10px; padding: 4px 10px; border-radius: 2px; border: 1px solid var(--border); background: var(--cream); }\n.step-chip.done { background: #d4f0e0; border-color: #1a7a4a; color: #1a7a4a; }\n.step-chip.active { background: #fdf0d5; border-color: #c97b1a; color: #c97b1a; }\n.step-sep { color: var(--border); font-size: 12px; }\n\n/* Summary */\n.summary-strip { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-bottom: 20px; }\n.sum-card { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 14px 16px; }\n.sum-card.total { border-top: 3px solid var(--ink); }\n.sum-label { font-size: 9px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 6px; }\n.sum-value { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; line-height: 1; }\n.sum-sub { font-size: 10px; color: var(--muted); margin-top: 4px; }\n\n/* Chart */\n.chart-section { margin-bottom: 24px; }\n.chart { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 16px; }\n.chart-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }\n.chart-row:last-child { margin-bottom: 0; }\n.chart-label { width: 120px; font-size: 11px; flex-shrink: 0; }\n.chart-bar-wrap { flex: 1; height: 8px; background: var(--cream); border-radius: 2px; overflow: hidden; }\n.chart-bar { height: 100%; border-radius: 2px; transition: width 1s cubic-bezier(0.4,0,0.2,1); }\n.chart-amount { width: 80px; text-align: right; font-size: 11px; font-weight: 500; }\n\n/* Sheets Banner */\n.sheets-banner { display: flex; align-items: center; gap: 14px; background: #e8f0fe; border: 1px solid #d2e3fc; border-radius: 4px; padding: 14px 18px; margin-bottom: 24px; cursor: pointer; transition: background 0.2s, transform 0.2s; }\n.sheets-banner:hover { background: #d2e3fc; transform: translateY(-1px); }\n.sheets-icon { font-size: 24px; }\n.sheets-text { flex: 1; }\n.sheets-title { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; color: #174ea6; }\n.sheets-sub { font-size: 11px; color: #1967d2; margin-top: 4px; }\n.sheets-btn { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #174ea6; background: rgba(23,78,166,0.1); padding: 6px 12px; border-radius: 2px; }\n\n/* Section title */\n.section-title { display: flex; align-items: center; gap: 12px; font-size: 9px;\n  text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 14px; }\n.section-line { flex: 1; height: 1px; background: var(--border); }\n.count { color: var(--ink); }\n\n/* Cards */\n.cards { display: flex; flex-direction: column; gap: 16px; }\n\n.card { background: var(--card); border: 1px solid var(--border); border-radius: 4px;\n  overflow: hidden; animation: slideIn 0.4s ease both; }\n@keyframes slideIn { from { opacity:0; transform: translateY(12px); } to { opacity:1; transform:translateY(0); } }\n\n.card-header { display: flex; justify-content: space-between; align-items: center;\n  padding: 14px 18px; color: white; }\n.card-header-left { display: flex; align-items: center; gap: 12px; }\n.card-icon { font-size: 22px; }\n.card-vendor { font-family: 'Fraunces', serif; font-size: 16px; font-style: italic; }\n.card-meta { font-size: 10px; opacity: 0.65; margin-top: 2px; }\n.card-total { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; text-align: right; }\n.order-id { font-size: 10px; opacity: 0.6; text-align: right; display: block; margin-top: 2px; }\n\n.card-subject { padding: 10px 18px; font-size: 11px; border-bottom: 1px solid var(--border);\n  background: #fafaf8; color: var(--muted); }\n\n.card-body { display: grid; grid-template-columns: 1fr 1fr; }\n.card-section { padding: 14px 18px; border-right: 1px solid var(--border); }\n.card-section:last-child { border-right: none; }\n.section-header { font-size: 9px; text-transform: uppercase; letter-spacing: 1.5px;\n  color: var(--muted); margin-bottom: 10px; }\n\n.detail-row { display: flex; justify-content: space-between; padding: 4px 0;\n  border-bottom: 1px dashed var(--border); font-size: 11px; }\n.detail-row:last-child { border-bottom: none; }\n.dk { color: var(--muted); }\n.dv { font-weight: 500; text-align: right; max-width: 60%; }\n.detail-snippet { font-size: 11px; color: var(--muted); line-height: 1.5; }\n\n.amounts-row { display: flex; flex-wrap: wrap; gap: 6px; }\n.amount-chip { font-size: 10px; background: #f0ebe3; border: 1px solid var(--border);\n  padding: 3px 8px; border-radius: 2px; }\n\n.card-image-analysis { padding: 12px 18px; border-top: 1px solid var(--border); background: #fafaf8; }\n.img-analysis { font-size: 11px; color: var(--muted); line-height: 1.5; margin-top: 6px; }\n.img-type { background: var(--ink); color: white; font-size: 9px; padding: 1px 6px;\n  border-radius: 2px; margin-right: 6px; text-transform: uppercase; }\n\n.card-footer { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 18px;\n  border-top: 1px solid var(--border); background: #fafaf8; }\n.tag { font-size: 9px; padding: 3px 8px; border-radius: 2px; text-transform: uppercase;\n  letter-spacing: 0.5px; border: 1px solid var(--border); background: var(--cream); color: var(--muted); }\n.tag.reimb { background: #d4f0e0; border-color: #1a7a4a; color: #1a7a4a; }\n.tag.pay { background: #fdf0d5; border-color: #c97b1a; color: #c97b1a; }\n\n/* Insights */\n.insights-panel { background: var(--card); border: 1px solid var(--border); border-radius: 4px;\n  overflow: hidden; margin-top: 24px; }\n.insights-header { background: var(--ink); color: white; padding: 12px 18px;\n  font-size: 10px; text-transform: uppercase; letter-spacing: 2px; }\n.insight-row { display: flex; align-items: flex-start; gap: 10px; padding: 12px 18px;\n  border-top: 1px solid var(--border); font-size: 11px; line-height: 1.6; }\n.insight-icon { width: 24px; height: 24px; border-radius: 2px; display: flex;\n  align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; }\n.insight-icon.good { background: #d4f0e0; }\n.insight-icon.warn { background: #fdf0d5; }\n.insight-icon.info { background: #e8f0fe; }\n\n@media (max-width: 600px) {\n  .summary-strip { grid-template-columns: 1fr 1fr; }\n  .card-body { grid-template-columns: 1fr; }\n  .card-section { border-right: none; border-bottom: 1px solid var(--border); }\n}\n\n</style>\n</head>\n<body>\n<div class=\"app\">\n\n  <!-- Header -->\n  <header class=\"header\">\n    <div class=\"header-left\">\n      <div class=\"logo\">🕵️ Trace</div>\n      <div class=\"subtitle\">Gmail Transaction Intelligence</div>\n    </div>\n    <div class=\"header-right\">\n      <div class=\"badge\">REAL DATA · LIVE</div>\n    </div>\n  </header>\n\n  <!-- Episode bar -->\n  \n\n  <!-- Summary strip -->\n  \n<div class=\"summary-strip\">\n  <div class=\"sum-card total\">\n    <div class=\"sum-label\">Total Spend</div>\n    <div class=\"sum-value\">₹0.00</div>\n    <div class=\"sum-sub\">Across 10 transactions</div>\n  </div>\n  <div class=\"sum-card\">\n    <div class=\"sum-label\">Transactions</div>\n    <div class=\"sum-value\">10</div>\n    <div class=\"sum-sub\">Gmail emails parsed</div>\n  </div>\n  <div class=\"sum-card\">\n    <div class=\"sum-label\">Top Category</div>\n    <div class=\"sum-value\">—</div>\n    <div class=\"sum-sub\">₹0.00 spent</div>\n  </div>\n  <div class=\"sum-card\">\n    <div class=\"sum-label\">Categories</div>\n    <div class=\"sum-value\">0</div>\n    <div class=\"sum-sub\">Detected</div>\n  </div>\n</div>\n  \n  \n\n  <!-- Spend by category chart (simple CSS bars) -->\n  \n\n  <!-- Transaction cards -->\n  <div class=\"section-title\">\n    <span>Retrieved Transactions</span>\n    <div class=\"section-line\"></div>\n    <span class=\"count\">10 emails</span>\n  </div>\n\n  <div class=\"cards\">\n    \n<div class=\"card\" style=\"animation-delay:0ms\" data-category=\"unknown\">\n  <div class=\"card-header\" style=\"background:#6b6560\">\n    <div class=\"card-header-left\">\n      <div class=\"card-icon\">📧</div>\n      <div>\n        <div class=\"card-vendor\">Unknown</div>\n        <div class=\"card-meta\">Transactional · Sat, 25 Apr 2026 22:31</div>\n      </div>\n    </div>\n    <div class=\"card-header-right\">\n      <div class=\"card-total\">—</div>\n      \n    </div>\n  </div>\n\n  <div class=\"card-subject\">(No subject)</div>\n\n  <div class=\"card-body\">\n    <div class=\"card-section\">\n      <div class=\"section-header\">Details</div>\n      <div class=\"detail-snippet\">No details extracted.</div>\n    </div>\n    \n  </div>\n\n  \n\n  <div class=\"card-footer\">\n    <span class=\"tag cat\" style=\"background:#6b656022;color:#6b6560\">📧 Transactional</span>\n    \n    <span class=\"tag pay\">Unknown</span>\n    <span class=\"tag from\">doshimeenal3@gmail.com</span>\n  </div>\n</div>\n\n<div class=\"card\" style=\"animation-delay:80ms\" data-category=\"unknown\">\n  <div class=\"card-header\" style=\"background:#6b6560\">\n    <div class=\"card-header-left\">\n      <div class=\"card-icon\">📧</div>\n      <div>\n        <div class=\"card-vendor\">Unknown</div>\n        <div class=\"card-meta\">Transactional · Sat, 25 Apr 2026 07:52</div>\n      </div>\n    </div>\n    <div class=\"card-header-right\">\n      <div class=\"card-total\">—</div>\n      \n    </div>\n  </div>\n\n  <div class=\"card-subject\">Get started with Google Antigravity</div>\n\n  <div class=\"card-body\">\n    <div class=\"card-section\">\n      <div class=\"section-header\">Details</div>\n      <div class=\"detail-snippet\">Welcome to Google Antigravity! Unlock the full potential of your workflow and experience liftoff. Here are 3 ways to start elevating your development </div>\n    </div>\n    \n  </div>\n\n  \n\n  <div class=\"card-footer\">\n    <span class=\"tag cat\" style=\"background:#6b656022;color:#6b6560\">📧 Transactional</span>\n    \n    <span class=\"tag pay\">Unknown</span>\n    <span class=\"tag from\">antigravity-noreply@google.com</span>\n  </div>\n</div>\n\n<div class=\"card\" style=\"animation-delay:160ms\" data-category=\"travel\">\n  <div class=\"card-header\" style=\"background:#6d4c41\">\n    <div class=\"card-header-left\">\n      <div class=\"card-icon\">✈️</div>\n      <div>\n        <div class=\"card-vendor\">IndiGo</div>\n        <div class=\"card-meta\">Travel · Sat, 25 Apr 2026 17:35</div>\n      </div>\n    </div>\n    <div class=\"card-header-right\">\n      <div class=\"card-total\">—</div>\n      \n    </div>\n  </div>\n\n  <div class=\"card-subject\">Fwd: TaxInvoice - GJ1262704AB36056</div>\n\n  <div class=\"card-body\">\n    <div class=\"card-section\">\n      <div class=\"section-header\">Details</div>\n      <div class=\"detail-snippet\">---------- Forwarded message --------- From: &lt;6EGSTInvoice@goindigo.in&gt; Date: Fri, 17 Apr 2026 at 17:55 Subject: TaxInvoice - GJ1262704AB36056 T</div>\n    </div>\n    \n  </div>\n\n  \n\n  <div class=\"card-footer\">\n    <span class=\"tag cat\" style=\"background:#6d4c4122;color:#6d4c41\">✈️ Travel</span>\n    <span class=\"tag reimb\">✓ Reimbursable</span>\n    <span class=\"tag pay\">Unknown</span>\n    <span class=\"tag from\">harvymeenal@gmail.com</span>\n  </div>\n</div>\n\n<div class=\"card\" style=\"animation-delay:240ms\" data-category=\"travel\">\n  <div class=\"card-header\" style=\"background:#6d4c41\">\n    <div class=\"card-header-left\">\n      <div class=\"card-icon\">✈️</div>\n      <div>\n        <div class=\"card-vendor\">MakeMyTrip</div>\n        <div class=\"card-meta\">Travel · Sat, 25 Apr 2026 17:34</div>\n      </div>\n    </div>\n    <div class=\"card-header-right\">\n      <div class=\"card-total\">—</div>\n      <span class=\"order-id\">#NH78206479216648</span>\n    </div>\n  </div>\n\n  <div class=\"card-subject\">Fwd: Tax Invoice for your Hotel Booking id NH78206479216648</div>\n\n  <div class=\"card-body\">\n    <div class=\"card-section\">\n      <div class=\"section-header\">Details</div>\n      <div class=\"detail-snippet\">---------- Forwarded message --------- From: MakeMyTrip &lt;noreply@makemytrip.com&gt; Date: Fri, 24 Apr 2026 at 12:04 Subject: Tax Invoice for your H</div>\n    </div>\n    \n  </div>\n\n  \n\n  <div class=\"card-footer\">\n    <span class=\"tag cat\" style=\"background:#6d4c4122;color:#6d4c41\">✈️ Travel</span>\n    <span class=\"tag reimb\">✓ Reimbursable</span>\n    <span class=\"tag pay\">Unknown</span>\n    <span class=\"tag from\">harvymeenal@gmail.com</span>\n  </div>\n</div>\n\n<div class=\"card\" style=\"animation-delay:320ms\" data-category=\"travel\">\n  <div class=\"card-header\" style=\"background:#6d4c41\">\n    <div class=\"card-header-left\">\n      <div class=\"card-icon\">✈️</div>\n      <div>\n        <div class=\"card-vendor\">MakeMyTrip</div>\n        <div class=\"card-meta\">Travel · Sat, 25 Apr 2026 17:33</div>\n      </div>\n    </div>\n    <div class=\"card-header-right\">\n      <div class=\"card-total\">—</div>\n      \n    </div>\n  </div>\n\n  <div class=\"card-subject\">Fwd: Your Booking Confirmation Voucher for Hotel Wellsuites Electronic City</div>\n\n  <div class=\"card-body\">\n    <div class=\"card-section\">\n      <div class=\"section-header\">Details</div>\n      <div class=\"detail-snippet\">---------- Forwarded message --------- From: MakeMyTrip &lt;noreply@makemytrip.com&gt; Date: Sat, 18 Apr 2026 at 22:21 Subject: Your Booking Confirmat</div>\n    </div>\n    \n  </div>\n\n  \n\n  <div class=\"card-footer\">\n    <span class=\"tag cat\" style=\"background:#6d4c4122;color:#6d4c41\">✈️ Travel</span>\n    \n    <span class=\"tag pay\">Unknown</span>\n    <span class=\"tag from\">harvymeenal@gmail.com</span>\n  </div>\n</div>\n\n<div class=\"card\" style=\"animation-delay:400ms\" data-category=\"ride\">\n  <div class=\"card-header\" style=\"background:#1a1a1a\">\n    <div class=\"card-header-left\">\n      <div class=\"card-icon\">🚗</div>\n      <div>\n        <div class=\"card-vendor\">Rapido</div>\n        <div class=\"card-meta\">Ride · Sat, 25 Apr 2026 15:43</div>\n      </div>\n    </div>\n    <div class=\"card-header-right\">\n      <div class=\"card-total\">—</div>\n      \n    </div>\n  </div>\n\n  <div class=\"card-subject\">Fwd: Rapido Invoice</div>\n\n  <div class=\"card-body\">\n    <div class=\"card-section\">\n      <div class=\"section-header\">Details</div>\n      <div class=\"detail-row\"><span class=\"dk\">To</span><span class=\"dv\">&lt;ayushd2910@gmail.com&gt; Payment Summary Ride ID</span></div>\n    </div>\n    \n  </div>\n\n  \n\n  <div class=\"card-footer\">\n    <span class=\"tag cat\" style=\"background:#1a1a1a22;color:#1a1a1a\">🚗 Ride</span>\n    \n    <span class=\"tag pay\">Unknown</span>\n    <span class=\"tag from\">ayushd2910@gmail.com</span>\n  </div>\n</div>\n\n<div class=\"card\" style=\"animation-delay:480ms\" data-category=\"ride\">\n  <div class=\"card-header\" style=\"background:#1a1a1a\">\n    <div class=\"card-header-left\">\n      <div class=\"card-icon\">🚗</div>\n      <div>\n        <div class=\"card-vendor\">Uber</div>\n        <div class=\"card-meta\">Ride · Sat, 25 Apr 2026 14:36</div>\n      </div>\n    </div>\n    <div class=\"card-header-right\">\n      <div class=\"card-total\">—</div>\n      \n    </div>\n  </div>\n\n  <div class=\"card-subject\">Fwd: Your Friday evening trip with Uber</div>\n\n  <div class=\"card-body\">\n    <div class=\"card-section\">\n      <div class=\"section-header\">Details</div>\n      <div class=\"detail-row\"><span class=\"dk\">To</span><span class=\"dv\">&lt;ayushd2910@gmail.com&gt; 24 Apr</span></div>\n    </div>\n    \n  </div>\n\n  \n\n  <div class=\"card-footer\">\n    <span class=\"tag cat\" style=\"background:#1a1a1a22;color:#1a1a1a\">🚗 Ride</span>\n    \n    <span class=\"tag pay\">Unknown</span>\n    <span class=\"tag from\">ayushd2910@gmail.com</span>\n  </div>\n</div>\n\n<div class=\"card\" style=\"animation-delay:560ms\" data-category=\"ride\">\n  <div class=\"card-header\" style=\"background:#1a1a1a\">\n    <div class=\"card-header-left\">\n      <div class=\"card-icon\">🚗</div>\n      <div>\n        <div class=\"card-vendor\">Uber</div>\n        <div class=\"card-meta\">Ride · Sat, 25 Apr 2026 14:36</div>\n      </div>\n    </div>\n    <div class=\"card-header-right\">\n      <div class=\"card-total\">—</div>\n      \n    </div>\n  </div>\n\n  <div class=\"card-subject\">Fwd: Your Saturday morning trip with Uber</div>\n\n  <div class=\"card-body\">\n    <div class=\"card-section\">\n      <div class=\"section-header\">Details</div>\n      <div class=\"detail-row\"><span class=\"dk\">To</span><span class=\"dv\">&lt;ayushd2910@gmail.com&gt; 25 Apr</span></div>\n    </div>\n    \n  </div>\n\n  \n\n  <div class=\"card-footer\">\n    <span class=\"tag cat\" style=\"background:#1a1a1a22;color:#1a1a1a\">🚗 Ride</span>\n    \n    <span class=\"tag pay\">Unknown</span>\n    <span class=\"tag from\">ayushd2910@gmail.com</span>\n  </div>\n</div>\n\n<div class=\"card\" style=\"animation-delay:640ms\" data-category=\"unknown\">\n  <div class=\"card-header\" style=\"background:#6b6560\">\n    <div class=\"card-header-left\">\n      <div class=\"card-icon\">📧</div>\n      <div>\n        <div class=\"card-vendor\">Unknown</div>\n        <div class=\"card-meta\">Transactional · Sat, 25 Apr 2026 10:30</div>\n      </div>\n    </div>\n    <div class=\"card-header-right\">\n      <div class=\"card-total\">—</div>\n      \n    </div>\n  </div>\n\n  <div class=\"card-subject\">Hackathon</div>\n\n  <div class=\"card-body\">\n    <div class=\"card-section\">\n      <div class=\"section-header\">Details</div>\n      <div class=\"detail-snippet\">Trace models this as a reinforcement learning environment where an agent: Interacts with a Gmail-like system via MCP tools Incrementally retrieves and</div>\n    </div>\n    \n  </div>\n\n  \n\n  <div class=\"card-footer\">\n    <span class=\"tag cat\" style=\"background:#6b656022;color:#6b6560\">📧 Transactional</span>\n    \n    <span class=\"tag pay\">Unknown</span>\n    <span class=\"tag from\">ayushd2910@gmail.com</span>\n  </div>\n</div>\n\n<div class=\"card\" style=\"animation-delay:720ms\" data-category=\"unknown\">\n  <div class=\"card-header\" style=\"background:#6b6560\">\n    <div class=\"card-header-left\">\n      <div class=\"card-icon\">📧</div>\n      <div>\n        <div class=\"card-vendor\">Unknown</div>\n        <div class=\"card-meta\">Transactional · Sat, 25 Apr 2026 10:00</div>\n      </div>\n    </div>\n    <div class=\"card-header-right\">\n      <div class=\"card-total\">—</div>\n      \n    </div>\n  </div>\n\n  <div class=\"card-subject\">Fwd: Meta Hackthon</div>\n\n  <div class=\"card-body\">\n    <div class=\"card-section\">\n      <div class=\"section-header\">Details</div>\n      <div class=\"detail-snippet\">Core Problem Modern users accumulate years of fragmented information in email, but extracting meaningful insights—such as financial summaries, travel </div>\n    </div>\n    \n  </div>\n\n  \n\n  <div class=\"card-footer\">\n    <span class=\"tag cat\" style=\"background:#6b656022;color:#6b6560\">📧 Transactional</span>\n    \n    <span class=\"tag pay\">Unknown</span>\n    <span class=\"tag from\">ayushd2910@gmail.com</span>\n  </div>\n</div>\n  </div>\n\n  <!-- Analysis footer -->\n  \n<div class=\"insights-panel\">\n  <div class=\"insights-header\">🧠 Trace Intelligence Insights</div>\n  <div class=\"insight-row\"><div class=\"insight-icon good\">🧾</div><div><strong>2 reimbursable</strong> receipts found totaling ₹0.00.</div></div>\n</div>\n\n</div>\n\n<script>\n\n// Animate chart bars on load\ndocument.addEventListener('DOMContentLoaded', function() {\n  const bars = document.querySelectorAll('.chart-bar');\n  bars.forEach(b => {\n    const w = b.style.width;\n    b.style.width = '0%';\n    setTimeout(() => { b.style.width = w; }, 300);\n  });\n});\n\n</script>\n</body>\n</html>",
+      "dashboard_generated": true
+    }
+  },
+  "deep_pass": {
+    "observation": {
+      "episode_id": "fe58432e-ecb4-4c5d-926c-8bff7638bd9d",
+      "step": 3,
+      "instruction": "Scan latest Gmail messages, identify transactional/financial emails, read content from body + attachments (images/docs/PDF when present), and generate consolidated transaction history summary dashboard.",
+      "available_sources": [
+        "gmail"
+      ],
+      "context": "Retrieved 10 Gmail items. Parsed 10 transactions | Total spend: ₹29,971.53 | Top category: travel (₹29,321.58)",
+      "memory_summary": "(empty memory)",
+      "world_state": {
+        "visible_items": 10,
+        "hidden_counts": {
+          "gmail": 10
+        },
+        "schema_version": 1,
+        "retrieved_preview": [
+          {
+            "id": "19dc5970e7c5abb6",
+            "date": "Sat, 25 Apr 2026 22:31:42 +0530",
+            "from": "Harvy Doshi <doshimeenal3@gmail.com>",
+            "subject": "",
+            "snippet": ""
+          },
+          {
+            "id": "19dc520ba8c710ec",
+            "date": "Sat, 25 Apr 2026 07:52:29 -0700",
+            "from": "Google Antigravity <antigravity-noreply@google.com>",
+            "subject": "Get started with Google Antigravity",
+            "snippet": "Welcome to Google Antigravity! Unlock the full potential of your workflow and experience liftoff. Here are 3 ways to start elevating your development with Antigravity: Build with Browser Antigravity is"
+          },
+          {
+            "id": "19dc48839a675910",
+            "date": "Sat, 25 Apr 2026 17:35:40 +0530",
+            "from": "Harvy Doshi <harvymeenal@gmail.com>",
+            "subject": "Fwd: TaxInvoice - GJ1262704AB36056",
+            "snippet": "---------- Forwarded message --------- From: &lt;6EGSTInvoice@goindigo.in&gt; Date: Fri, 17 Apr 2026 at 17:55 Subject: TaxInvoice - GJ1262704AB36056 To: &lt;harvymeenal@gmail.com&gt; Dear IndiGo"
+          }
+        ],
+        "total_sources": [
+          "gmail"
+        ],
+        "total_items": 20,
+        "image_analyses": [],
+        "doc_analyses": []
+      }
+    },
+    "reward": 0.25,
+    "done": false,
+    "info": {
+      "gmail_query": "newer_than:90d  -category:promotions -in:chats",
+      "transactions_summary": {
+        "total_spend": 29971.53,
+        "count": 10,
+        "by_category": {
+          "travel": 29321.58,
+          "ride": 649.95
+        },
+        "by_vendor": {
+          "IndiGo": 22312.0,
+          "MakeMyTrip": 7009.58,
+          "Uber": 621.95,
+          "Rapido": 28.0
+        }
+      },
+      "transactions": [
+        {
+          "id": "19dc5970e7c5abb6",
+          "category": "unknown",
+          "vendor": "Unknown",
+          "category_config": {
+            "icon": "📧",
+            "color": "#6b6560",
+            "label": "Transactional"
+          },
+          "subject": "",
+          "from_email": "Harvy Doshi <doshimeenal3@gmail.com>",
+          "date": "Sat, 25 Apr 2026 22:31:42 +0530",
+          "total": null,
+          "amounts": [],
+          "dates": [],
+          "order_id": null,
+          "details": {},
+          "snippet": "",
+          "body_preview": "",
+          "image_analyses": [],
+          "doc_analyses": [],
+          "attachment_count": 0,
+          "reimbursable": false,
+          "payment_method": "Unknown"
+        },
+        {
+          "id": "19dc520ba8c710ec",
+          "category": "unknown",
+          "vendor": "Unknown",
+          "category_config": {
+            "icon": "📧",
+            "color": "#6b6560",
+            "label": "Transactional"
+          },
+          "subject": "Get started with Google Antigravity",
+          "from_email": "Google Antigravity <antigravity-noreply@google.com>",
+          "date": "Sat, 25 Apr 2026 07:52:29 -0700",
+          "total": null,
+          "amounts": [],
+          "dates": [],
+          "order_id": "MessageViewBody",
+          "details": {},
+          "snippet": "Welcome to Google Antigravity! Unlock the full potential of your workflow and experience liftoff. Here are 3 ways to start elevating your development with Antigravity: Build with Browser Antigravity i",
+          "body_preview": "Hello from Antigravity\r\n\r\nIf you no longer wish to receive our emails, please use the link below to  \r\nunsubscribe:\r\nhttps://myaccount.google.com/communication-preferences/unsubscribe/gt/ADMV5J_HHUZkoebGilrRqr5E8sAJtw7bVLVeWWcIHerp3zMsmQRnntedU1RdoQQqbGfteEbQXmylT8IO1ALY1MiH7Yojplu0U6chAtpEf4qEqgDLcUivJ_XCOXJssszmR-gemTjWVd0ujtflI9Cy8AsGpFAcvFDeflW_PzSmBwfXTqBr2b8l6jUVKdQZJ_MqzT-yUdEVEmmz-M9igrCg1jVzKPaQQLWjAiS90Ln9k6lUJtf0dspePfhtXRhUR1ZgkGbXoUon8YgL?utm_source=gm&utm_medium=email&auto=true\r\n\n96 *{box-sizing:border-box}body{margin:0;padding:0}a[x-apple-data-detectors]{color:inherit!important;text-decoration:inherit!important}#MessageViewBody a{color:inherit;text-decoration:none}p{line-height:inherit}.desktop_hide,.desktop_hide table{mso-hide:all;display:none;max-height:0;overflow:hidden}.",
+          "image_analyses": [],
+          "doc_analyses": [],
+          "attachment_count": 0,
+          "reimbursable": false,
+          "payment_method": "Unknown"
+        },
+        {
+          "id": "19dc48839a675910",
+          "category": "travel",
+          "vendor": "IndiGo",
+          "category_config": {
+            "icon": "✈️",
+            "color": "#6d4c41",
+            "label": "Travel"
+          },
+          "subject": "Fwd: TaxInvoice - GJ1262704AB36056",
+          "from_email": "Harvy Doshi <harvymeenal@gmail.com>",
+          "date": "Sat, 25 Apr 2026 17:35:40 +0530",
+          "total": "₹22,312",
+          "amounts": [
+            "rs\n2",
+            "996425",
+            "22,312"
+          ],
+          "dates": [
+            "17 Apr 2026"
+          ],
+          "order_id": null,
+          "details": {
+            "pnr": "B31KNL",
+            "passenger": "Harvy Jignesh Doshi"
+          },
+          "snippet": "---------- Forwarded message --------- From: &lt;6EGSTInvoice@goindigo.in&gt; Date: Fri, 17 Apr 2026 at 17:55 Subject: TaxInvoice - GJ1262704AB36056 To: &lt;harvymeenal@gmail.com&gt; Dear IndiGo",
+          "body_preview": "---------- Forwarded message ---------\r\nFrom: <6EGSTInvoice@goindigo.in>\r\nDate: Fri, 17 Apr 2026 at 17:55\r\nSubject: TaxInvoice - GJ1262704AB36056\r\nTo: <harvymeenal@gmail.com>\r\n\r\n\r\nDear IndiGo Customer,\r\n\r\nPlease find attached the Tax Invoice/GST Credit Note for your booking.\r\nKindly note, that the Tax Invoice / GST credit note is issued as per the\r\napplicable GST laws. For more details on fare,\r\nchange/cancellation charges, refunds, please refer to your IndiGo Itinerary\r\nalso.\r\n\r\nRegards,\r\nTeam IndiGo\r\n\r\nDownload IndiGo mobile app now from Apple iPhone Store\r\n<https://itunes.apple.com/us/app/goindigo.in/id726070762?ls=1&mt=8> or Google\r\nPlay Store\r\n<https://play.google.com/store/apps/details?id=in.goindigo.android&hl=en> &\r\nenjoy the hassle free experience on the go!\r\n\r\n\r\nOr simply log on ",
+          "image_analyses": [],
+          "doc_analyses": [
+            {
+              "id": "doc_5d5c28cbf21a",
+              "filename": "TaxInvoiceGJ1262704AB36056.pdf",
+              "mime_type": "application/pdf",
+              "parser_used": "pymupdf",
+              "extracted_text": "--- Page 1 ---\nTax Invoice\n(Original For Recipient)\nInterGlobe Aviation Limited\nSardar Vallabhbhai Patel\nInternational Airport\n Near King Fisher Black Office\n Sardarnagar\n Ahmedabad\n Gujarat - 380003\nGSTIN : 24AABCI2726B1Z8\nNumber : GJ1262704AB36056\nDate  :  13-Apr-2026\nPassenger Name :  Harvy Jignesh Doshi\nPNR : B31KNL        Flight No : 6E - 863        From : AMD        To : BLR        Place of Supply : Gujarat\nGSTIN of Customer :\nGSTIN Customer Name :\nCurrency : INR\nDescription\nSAC\nCode\nTaxable\nValue\nNonTaxab\nle/Exempt\ned Value\nTotal\nIGST\nTax %\nAmount\nCGST\nTax %\nAmount\nSGST/UGST\nTax %\nAmount\nCESS\nTax %\nAmount\nTotal(Incl\nTaxes)\nAir Travel and\nrelated charges\n996425\n22,312.0\n0\n0.00 22,312.0\n0\n0.00\n0.00\n2.50\n558.00\n2.50\n558.00\n0\n0.00\n23,428.00\nAirport Charges\n0.00\n3,776.00 3,776.00\n0.00\n0.00\n0.00\n0.00\n0.00\n0.00\n0\n0.00\n3,776.00\nGrand Total\n22,312.\n00\n3,776.00 26,088.\n00\n0.00\n558.00\n558.00\n0.00 27,204.00\n1. Air Travel And Related Charges :- Includes all charges related to air transportation of passengers\n2. Airport Charges :- Includes ADF, UDF, PSF and other airport charges collected on behalf of Airport operator, as applicable\n3. Misc. Services :- Includes charges of lounge, medical assistance and travel certificate\n4. Meal :- Includes all prepaid meals purchased before travel\n5. Good Karma :- Includes contributions made towards IndiGo's good karma initiative and clear the air initiative\n  made at the time of reservation\n6. Amounts have been rounded off.\n7. Cess includes Kerala flood cess.\n8. The itinerary issued against this PNR forms a part of this invoice.\n9. I/We hereby declare that though our aggregate turnover in any preceding financial year from 2017-18 onwards is more than the aggregate\nturnover notified under sub-rule (4) of rule 48, we are not required to prepare an invoice in terms of the provisions of the said sub-rule.\n InterGlobe Aviation Limited\n Registered Office:  Upper Ground Floor, Thapar House, Gate No. 2, Western Wing, 124 Janpath, New Delhi –\n110001,India.\n F 011-43513200. Email: corporate@goindigo.in\n Corporate Office: Level 1, Tower C, Global Business park, MG Road, Gurgaon-122002, Haryana,India.\n T +91 124 435 2500. F +91 124 406 8536  goindigo.in\n CIN no. L62100DL2004PLC129768,  PAN no.  AABCI2726B,  FSSAI License number- 10013011001534\n",
+              "summary": "--- Page 1 ---\nTax Invoice\n(Original For Recipient)\nInterGlobe Aviation Limited\nSardar Vallabhbhai Patel\nInternational Airport\n Near King Fisher Black Office\n Sardarnagar\n Ahmedabad\n Gujarat - 380003\nGSTIN : 24AABCI2726B1Z8\nNumber : GJ1262704AB36056\nDate  :  13-Apr-2026\nPassenger Name :  Harvy Jigne",
+              "page_count": 1,
+              "images_found": 2,
+              "image_analyses": [],
+              "entities": {
+                "amounts": [
+                  "₹2"
+                ],
+                "dates": [],
+                "vendors": [],
+                "items": [],
+                "other": []
+              },
+              "error": null
+            }
+          ],
+          "attachment_count": 0,
+          "reimbursable": true,
+          "payment_method": "Credit Card"
+        },
+        {
+          "id": "19dc486ce6732794",
+          "category": "travel",
+          "vendor": "MakeMyTrip",
+          "category_config": {
+            "icon": "✈️",
+            "color": "#6d4c41",
+            "label": "Travel"
+          },
+          "subject": "Fwd: Tax Invoice for your Hotel Booking id NH78206479216648",
+          "from_email": "Harvy Doshi <harvymeenal@gmail.com>",
+          "date": "Sat, 25 Apr 2026 17:34:08 +0530",
+          "total": "₹3504.58",
+          "amounts": [
+            "₹4201.48",
+            "₹280.1",
+            "₹3504.58",
+            "3504.58"
+          ],
+          "dates": [
+            "24 Apr 2026",
+            "25 Apr 2026",
+            "April 18, 2026"
+          ],
+          "order_id": "NH78206479216648",
+          "details": {
+            "check_in": "Fri, 24 Apr 2026",
+            "check_out": "Sat, 25 Apr 2026",
+            "passenger": "Harvy Doshi\nHotel Name\nHotel Wellsuites"
+          },
+          "snippet": "---------- Forwarded message --------- From: MakeMyTrip &lt;noreply@makemytrip.com&gt; Date: Fri, 24 Apr 2026 at 12:04 Subject: Tax Invoice for your Hotel Booking id NH78206479216648 To: &lt;",
+          "body_preview": "---------- Forwarded message ---------\r\nFrom: MakeMyTrip <noreply@makemytrip.com>\r\nDate: Fri, 24 Apr 2026 at 12:04\r\nSubject: Tax Invoice for your Hotel Booking id NH78206479216648\r\nTo: <harvymeenal@gmail.com>\r\n\r\n\r\nImportant update [image: MakeMyTrip]\r\n\r\nDear Harvy Doshi,\r\n\r\nPlease find attached the Invoice for your Hotel booking (NH78206479216648)\r\nwith MakeMyTrip on April 18, 2026. *( Your Invoice is not a valid travel\r\ndocument )*.\r\n\r\nFor all further details, please visit MyTrips.\r\n\r\nRegards,\r\n\r\n*Team MakeMyTrip*\r\n\r\nP.S.: This is a system generated email. Please do not reply to this email.\r\n\n---------- Forwarded message --------- From: MakeMyTrip < noreply@makemytrip.com > Date: Fri, 24 Apr 2026 at 12:04 Subject: Tax Invoice for your Hotel Booking id NH78206479216648 To: < harvymeenal@gm",
+          "image_analyses": [],
+          "doc_analyses": [
+            {
+              "id": "doc_e50409fb26b4",
+              "filename": "NH78206479216648.pdf",
+              "mime_type": "application/pdf",
+              "parser_used": "pymupdf",
+              "extracted_text": "--- Page 1 ---\nTAX INVOICE\nMAKEMYTRIP (INDIA) PRIVATE LIMITED\n19th Floor, Epitome Building No.5,\nDLF Cybercity, DLF Phase III,\nGurgaon, Haryana, 122001\nBooking ID\nNH78206479216648\nInvoice No.\nM06HL27I01274152\nDate\n24 Apr 2026\nPlace of Supply\nHaryana\nTransactional Type/Category\nREG/B2C\nTransactional Details\nRG\nPAN\nAADCM5146R\nHSN/SAC\n998552\nGSTIN\n06AADCM5146R1ZZ\nCIN\nU63040HR2000PTC090846\nService Description\nReservation service for accommodation\nTax Payable under RCM\nNo\nAdvanced Receipt Voucher No.\nM06HL27A00955517\nCustomer Name\nHarvy Doshi\nHotel Name\nHotel Wellsuites \nElectronic City\nHotel City\nBANGALORE\nCheck-in\nFri, 24 Apr 2026\nCheck-Out\nSat, 25 Apr 2026\n*Accommodation Charges\n(Inclusive of applicable taxes collected on behalf of hotel)\n₹4201.48\nService Fees\n₹280.1\nReversal of MakeMyTrip Service Fee\n₹‑280.1\nEffective discount\n₹‑696.9\nGrand Total\n₹3504.58\nInput tax credit of GST charged by the original service provider is available only against the invoice issued by the respective service provider. \nMakeMyTrip acts only as a facilitator for these services.\n.\nThis is not a valid travel document\n1.\nAny dispute with respect to the invoice is to be reported back to MMT/GOIBIBO within 48 hours of receipt of invoice.\n2.\nQR code for B2B and SEZ category invoices can only be scanned using app downloaded from the link\nhttps://einvoice1.gst.gov.in/Others/QRCodeVerifyApp\n3.\nThis is system generated invoice and does not require signatures.\nRegistered Office\n19th Floor, Epitome Building No.5, DLF Cybercity, DLF Phase III, Gurgaon, Haryana, 122001\nM06HL27I01274152\nPage 1 of 1\nPAYMENT BREAKUP\nTERMS & CONDITIONS\n",
+              "summary": "--- Page 1 ---\nTAX INVOICE\nMAKEMYTRIP (INDIA) PRIVATE LIMITED\n19th Floor, Epitome Building No.5,\nDLF Cybercity, DLF Phase III,\nGurgaon, Haryana, 122001\nBooking ID\nNH78206479216648\nInvoice No.\nM06HL27I01274152\nDate\n24 Apr 2026\nPlace of Supply\nHaryana\nTransactional Type/Category\nREG/B2C\nTransactional",
+              "page_count": 1,
+              "images_found": 2,
+              "image_analyses": [],
+              "entities": {
+                "amounts": [
+                  "₹4201.48",
+                  "₹3504.58",
+                  "₹280.1"
+                ],
+                "dates": [],
+                "vendors": [],
+                "items": [],
+                "other": []
+              },
+              "error": null
+            }
+          ],
+          "attachment_count": 0,
+          "reimbursable": true,
+          "payment_method": "Credit Card"
+        },
+        {
+          "id": "19dc486a540b98c6",
+          "category": "travel",
+          "vendor": "MakeMyTrip",
+          "category_config": {
+            "icon": "✈️",
+            "color": "#6d4c41",
+            "label": "Travel"
+          },
+          "subject": "Fwd: Your Booking Confirmation Voucher for Hotel Wellsuites Electronic City",
+          "from_email": "Harvy Doshi <harvymeenal@gmail.com>",
+          "date": "Sat, 25 Apr 2026 17:33:56 +0530",
+          "total": "₹3,505",
+          "amounts": [
+            "INR 3,504",
+            "INR 1,198",
+            "INR 3,505",
+            "INR 697",
+            "INR 280",
+            "INR 221",
+            "INR 4,423",
+            "INR 2000",
+            "1",
+            "697"
+          ],
+          "dates": [
+            "18 Apr 2026",
+            "23 Apr 2026",
+            "25 Apr 2026",
+            "24 Apr 2026"
+          ],
+          "order_id": "NH78206479216648",
+          "details": {
+            "pnr": "01743919",
+            "check_in": "Fri, 24 Apr 2026",
+            "check_out": "Sat, 25 Apr 2026",
+            "passenger": "s are allowed at the property"
+          },
+          "snippet": "---------- Forwarded message --------- From: MakeMyTrip &lt;noreply@makemytrip.com&gt; Date: Sat, 18 Apr 2026 at 22:21 Subject: Your Booking Confirmation Voucher for Hotel Wellsuites Electronic City T",
+          "body_preview": "---------- Forwarded message ---------\r\nFrom: MakeMyTrip <noreply@makemytrip.com>\r\nDate: Sat, 18 Apr 2026 at 22:21\r\nSubject: Your Booking Confirmation Voucher for Hotel Wellsuites Electronic\r\nCity\r\nTo: <harvymeenal@gmail.com>\r\n\r\n\r\nVoucher\r\nHi Harvy,\r\nThank you for booking with us. Your booking is confirmed. Please see the\r\ndetails below.\r\nConfirmed : 1-Night Stay\r\nHotel Wellsuites Electronic City\r\nFri, 24 Apr - Sat, 25 Apr • 2 Rooms • 4 Adults\r\nPNR: 0174391920 Booking ID: NH78206479216648\r\n(Booked on 18 Apr, 2026)\r\nManage Your Booking on MyTrips\r\nChange dates, modify guest details, add rooms and more on MyTrips.\r\nManage Booking\r\n<https://supportz.makemytrip.com/MyAccount/Communication/param?eid=XAGXX5aK6fNX1VRUcXNtQ3XHsh82SRqGnevboJgFeqo=&act=1&cno=T2fdAihUpx7bXO5L6jBxbA==&cmp=mailc&bid=IP",
+          "image_analyses": [],
+          "doc_analyses": [
+            {
+              "id": "doc_e017dc7f9bff",
+              "filename": "Booking_Confirmation_Voucher.pdf",
+              "mime_type": "application/pdf",
+              "parser_used": "pymupdf",
+              "extracted_text": "--- Page 1 ---\nGST invoice can be collected directly from the property.\n•\nYou can download the MakemyTrip Advance Receipt from \n if the payment for this \nMyTrips,\nbooking has been done fully. Invoices and other relevant documents can be downloaded \nafter completion of the travel. Click here to visit MyTrips.\n•\nPassport, Aadhaar and Driving License are accepted as ID proof(s). Local ids are allowed\n•\nINR 3,504\nYou saved INR 1,198\nPaid INR 3,505 with ptyes\nPaid Amount\nExecutive Ac Room\nRoom Only\n1 Queen Bed\n2 Adults\nExecutive Ac Room\nRoom Only\n1 Queen Bed\n2 Adults\n2 Rooms\nMr Harvy Doshi  (Primary Guest)\nHarvy Doshi, Archi Patel, Ayush Dharaiya, Jignesh Doshi\nharvymeenal@gmail.com, 918866266978\n4 Guests\n(4 Adults)\nCheck-out\nSat, 25 Apr 2026\nBefore 11:00 AM\nCheck-in\nFri, 24 Apr 2026\nAfter 12:00 PM\n1-Night Stay\nHotel Wellsuites Electronic City\nBooking Id: NH78206479216648\nPNR: 0174391920\n(Booked on 18 Apr 2026)\nBooking Voucher\nNO 21, FORMED IN SY NO 35/1, KONAPPANA AGRAHARA VILLAGE, BEGUR HOBLI, \nBANGALORE SOUTH TALUK, BANGALORE,KARNATAKA- 560100., Bangalore, IN\n7975434715, 9325519910, +916361109761\nsalesvibrant09@gmail.com,wellsuits313@gmail.com\nFree Cancellation (100% refund) till Thu, 23 Apr 2026, 11:59 AM\nImportant information\nMakeMyTrip Support\n\n\n--- Page 2 ---\n+91124 4628747 / +91124 5045105 (India Fixed Line)\n",
+              "summary": "--- Page 1 ---\nGST invoice can be collected directly from the property.\n•\nYou can download the MakemyTrip Advance Receipt from \n if the payment for this \nMyTrips,\nbooking has been done fully. Invoices and other relevant documents can be downloaded \nafter completion of the travel. Click here to visit",
+              "page_count": 2,
+              "images_found": 46,
+              "image_analyses": [],
+              "entities": {
+                "amounts": [
+                  "₹3,505",
+                  "₹3,504",
+                  "₹1,198"
+                ],
+                "dates": [],
+                "vendors": [],
+                "items": [],
+                "other": []
+              },
+              "error": null
+            },
+            {
+              "id": "doc_43b0d48d8a81",
+              "filename": "Property_Rules_and_Policies.pdf",
+              "mime_type": "application/pdf",
+              "parser_used": "pymupdf",
+              "extracted_text": "--- Page 1 ---\nINR 3,505\nTOTAL\n- INR 697\nEffective discount (From Hotel & MMT)\n- INR 280\nReversal of MakeMyTrip service fee\n- INR 221\nHotelier and MMT Discount\nINR 280\nMMT Service Fee\nINR 4,423\nAccommodation charges collected on behalf of Hotel (incl. applicable Hotel \ntaxes)\n23 Apr\nNow\nFree Cancellation before 23 Apr, 11:59 AM\n2 X Executive Ac Room\nRoom Only\n1 Queen Bed\n4 Adults\nHotel Wellsuites Electronic City\nBooking Id: NH78206479216648\nPNR: 0174391920\n(Booked on 18 Apr 2026)\nFri, 24 Apr 2026 - Sat, 25 Apr 2026 • 2 Rooms • 4 Adults (Mr Harvy Doshi +3)\nRoom Type and Amenities\nHousekeeping, Toiletries, TV, Wi-Fi, Bathroom, Chair, Hot & Cold Water, Woollen Blanket, \nJetspray, Air Conditioning, Charging Points, Towels, Western Toilet Seat.\nCancellation Policy\nFree Cancellation (100% refund) till \n.\nThu, 23 Apr 2026, 11:59 AM\n24 Apr\nBooking Price Break-up\n\n\n--- Page 2 ---\nGuests are requested not to invite outside visitors in the room during their stay.\n• \nDoes not allow private parties or events\n• \nThis property is not accessible to guests who use a wheelchair. Please make arrangements \naccordingly.\n• \nThere are no pets living on the property\n• \nPets are not allowed\n• \nThere are no restrictions on alcohol consumption.\n• \nSmoking within the premises is allowed\n• \nFood Delivery is available\n• \nOutside food is allowed\n• \nNon veg food is allowed\n• \nIn room dining not available\n• \nLocal ids are allowed\n• \nPassport, Aadhaar and Driving License are accepted as ID proof(s)\n• \nGroups with only male guests are allowed at the property\n• \nUnmarried couples allowed\n• \nHotel Amenities\nCommon Area\nReception\nBasic Facilities\nAir Conditioning, Elevator/Lift, Housekeeping, Free Parking, Free Wi-Fi\nSafety and Security\nCCTV\nRoom Amenities\nAir Conditioning, Balcony, Toiletries\nRules and policies\nGuest Profile\nId Proof Related\nFood Arrangement\nSmoking/alcohol Consumption Rules\nPet(s) Related\nProperty Accessibility\nOther Rules\n\n\n--- Page 3 ---\nMakeMyTrip Support\n+91124 4628747 / +91124 5045105 (India Fixed Line)\nINR 2000 will be charged for an extra mattress per guest. (To be paid at the property)\n• \nAn extra bed will be provided to accommodate any additional guest included in the booking \nfor a charge mentioned below.\n• \nINR 2000 will be charged for an extra mattress per child. (To be paid at the property)\n• \nAn extra bed will be provided to accommodate any child included in the booking for a charge \nmentioned below. (Subject to availability)\n• \n1 infant (0-2 yrs) per room included without counting in total room capacity\n• \nUnmarried couples are allowed in hourly stay rooms\n• \nGuest Profile (hourly)\nInfant Policy\nChild / Extra Bed Policy\nAdult / Extra Bed Policy\n",
+              "summary": "--- Page 1 ---\nINR 3,505\nTOTAL\n- INR 697\nEffective discount (From Hotel & MMT)\n- INR 280\nReversal of MakeMyTrip service fee\n- INR 221\nHotelier and MMT Discount\nINR 280\nMMT Service Fee\nINR 4,423\nAccommodation charges collected on behalf of Hotel (incl. applicable Hotel \ntaxes)\n23 Apr\nNow\nFree Cancell",
+              "page_count": 3,
+              "images_found": 40,
+              "image_analyses": [],
+              "entities": {
+                "amounts": [
+                  "₹4,423",
+                  "₹3,505",
+                  "₹2000",
+                  "₹2000",
+                  "₹697",
+                  "₹280",
+                  "₹280",
+                  "₹221"
+                ],
+                "dates": [],
+                "vendors": [],
+                "items": [],
+                "other": []
+              },
+              "error": null
+            }
+          ],
+          "attachment_count": 0,
+          "reimbursable": true,
+          "payment_method": "Unknown"
+        },
+        {
+          "id": "19dc4212a0e493c0",
+          "category": "ride",
+          "vendor": "Rapido",
+          "category_config": {
+            "icon": "🚗",
+            "color": "#1a1a1a",
+            "label": "Ride"
+          },
+          "subject": "Fwd: Rapido Invoice",
+          "from_email": "Ayush Dharaiya <ayushd2910@gmail.com>",
+          "date": "Sat, 25 Apr 2026 15:43:07 +0530",
+          "total": "₹28.00",
+          "amounts": [
+            "₹ 28.00",
+            "₹ 20.23",
+            "₹ 7.77",
+            "₹ 19.27",
+            "₹ 0.48",
+            "₹ 0.00",
+            "₹ 1.00",
+            "₹ 5.59",
+            "₹ 6.59",
+            "₹ 0.59"
+          ],
+          "dates": [
+            "25 Apr 2026",
+            "0/1/0102"
+          ],
+          "order_id": null,
+          "details": {
+            "distance": "2.42 km",
+            "duration": "40 min",
+            "license_plate": "GJ27DJ3600",
+            "from": "<partner@rapido.bike>",
+            "to": "<ayushd2910@gmail.com>"
+          },
+          "snippet": "---------- Forwarded message --------- From: &lt;partner@rapido.bike&gt; Date: Sat, 25 Apr 2026 at 15:42 Subject: Rapido Invoice To: &lt;ayushd2910@gmail.com&gt; Payment Summary Ride ID",
+          "body_preview": "---------- Forwarded message ---------\r\nFrom: <partner@rapido.bike>\r\nDate: Sat, 25 Apr 2026 at 15:42\r\nSubject: Rapido Invoice\r\nTo: <ayushd2910@gmail.com>\r\n\r\n\r\nPayment Summary\r\nRide ID\r\nRD17734902005420664\r\nTime of Ride\r\nMar 14th 2026, 5:49 PM\r\nTotal\r\n₹ 28.00\r\n2.42 kms\r\nDISTANCE\r\n------------------------------\r\n6.40 mins\r\nDURATION\r\n\r\nDamubhai Shukla Society, 28-C, Damubhai colony, Bansidhar Society, Vasna,\r\nAhmedabad, Gujarat 380007, India\r\n\r\n35, Dr Jivraj Mehta Marg, B- Block, Jay Bhavani Society, Pavansut Society,\r\nJivraj Park, Ahmedabad, Gujarat 380007, India\r\nBill Details\r\nRide Charge\r\n₹ 20.23\r\nBooking Fees & Convenience Charges\r\n₹ 7.77\r\nTotal Amount\r\n₹ 28.00\r\n(Inclusive of Taxes)\r\nYou Paid Using\r\nQR Pay\r\n₹ 28.00\r\n<https://831m0rx7.r.eu-west-1.awstrack.me/L0/https:%2F%2Fm.rapido.cc%2FEw",
+          "image_analyses": [],
+          "doc_analyses": [
+            {
+              "id": "doc_f484d5268e73",
+              "filename": "ORDER_INVOICE_RD17734902005420664.pdf",
+              "mime_type": "application/pdf",
+              "parser_used": "pymupdf",
+              "extracted_text": "--- Page 1 ---\nRD17734902005420664\nMar 14th 2026, 5:49 PM\n2.42 kms\nDISTANCE\n6.40 mins\nDURATION\n₹ 20.23\n₹ 7.77\n₹ 28.00\n₹ 28.00\nPayment Summary\nRide ID\nTime of Ride\nTotal\n₹ 28.00\n   35, Dr Jivraj Mehta Marg, B- Block, Jay Bhavani Society, Pavansut Society, Jivraj\nPark, Ahmedabad, Gujarat 380007, India\nBill Details\nRide Charge\nBooking Fees & Convenience Charges\nTotal Amount\n(Inclusive of Taxes)\nYou Paid Using\nQR Pay\n   Damubhai Shukla Society, 28-C, Damubhai colony, Bansidhar Society, Vasna,\nAhmedabad, Gujarat 380007, India\n\n\n--- Page 2 ---\n2526GJ0050099281\nMar 14th 2026, 5:49 PM\nGujarat\nOther local transportation services of\npassengers n.e.c. (996419)\nGujarat\n24AAHCR1710J1ZM\nGJ27DJ3600\nSANKET Mahendrakumar Gunjal\nAyush Dharaiya\n₹ 19.27\n₹ 0.48\n₹ 0.48\n₹ 0.00\n₹ 20.23\nTax Invoice\nRD17734902005420664\nInvoice No.\nInvoice Date\nState\nTax Category\nPlace of Supply\nGST Number\nVehicle Number\nCaptain Name\nCustomer Name\nCustomer Pick Up Address\nDamubhai Shukla Society, 28-C, Damubhai\ncolony, Bansidhar Society, Vasna, Ahmedabad,\nGujarat 380007, India\nBill Details\nCaptain Fee\nCGST (2.5%)\nSGST (2.5%)\nIGST (0%)\nRide Charge\n(Inclusive of Taxes)\nThis document is issued by Transport Service Provider and not by Roppen Transportation Services\nPrivate Limited (Rapido). Rapido acts only as an Electronic Commerce Operator for the\ntransportation services.\n\n\n--- Page 3 ---\nRoppen Transportation Services Private Limited\nF/F/4, Opposite Stadium\nCircle,Navrangpura,\nAhmedabad, Gujarat,\n380009\nAyush Dharaiya\nDamubhai Shukla Society,\n28-C, Damubhai colony,\nBansidhar Society, Vasna,\nAhmedabad, Gujarat\n380007, India\n2526GJ0050099281\nMar 14th 2026, 5:49 PM\nOther services n.e.c. (999799)\nGujarat\n24AAHCR1710J1ZM\n₹ 1.00\n₹ 5.59\n₹ 6.59\n₹ 0.59\n₹ 0.59\n₹ 0.00\n₹ 7.77\nTax Invoice\nRD17734902005420664\nInvoice No.\nInvoice Date\nTax Category\nPlace of Supply\nGST\nBill Details\nBooking Fee\nConvenience Charges\nSub Total\nCGST (9%)\nSGST (9%)\nIGST (0%)\nFinal Amount\n(Inclusive of Taxes)\nThis is a system generated invoice and hence no signature required\nThank you Ayush Dharaiya\n",
+              "summary": "--- Page 1 ---\nRD17734902005420664\nMar 14th 2026, 5:49 PM\n2.42 kms\nDISTANCE\n6.40 mins\nDURATION\n₹ 20.23\n₹ 7.77\n₹ 28.00\n₹ 28.00\nPayment Summary\nRide ID\nTime of Ride\nTotal\n₹ 28.00\n   35, Dr Jivraj Mehta Marg, B- Block, Jay Bhavani Society, Pavansut Society, Jivraj\nPark, Ahmedabad, Gujarat 380007, India",
+              "page_count": 3,
+              "images_found": 7,
+              "image_analyses": [],
+              "entities": {
+                "amounts": [
+                  "₹28.00",
+                  "₹28.00",
+                  "₹28.00",
+                  "₹20.23",
+                  "₹20.23",
+                  "₹19.27",
+                  "₹7.77",
+                  "₹7.77",
+                  "₹6.59",
+                  "₹5.59",
+                  "₹1.00",
+                  "₹0.59",
+                  "₹0.59",
+                  "₹0.48",
+                  "₹0.48",
+                  "₹0.00",
+                  "₹0.00"
+                ],
+                "dates": [],
+                "vendors": [],
+                "items": [],
+                "other": []
+              },
+              "error": null
+            }
+          ],
+          "attachment_count": 0,
+          "reimbursable": true,
+          "payment_method": "Unknown"
+        },
+        {
+          "id": "19dc3e47915e79c9",
+          "category": "ride",
+          "vendor": "Uber",
+          "category_config": {
+            "icon": "🚗",
+            "color": "#1a1a1a",
+            "label": "Ride"
+          },
+          "subject": "Fwd: Your Friday evening trip with Uber",
+          "from_email": "Ayush Dharaiya <ayushd2910@gmail.com>",
+          "date": "Sat, 25 Apr 2026 14:36:50 +0530",
+          "total": "₹496.20",
+          "amounts": [
+            "₹496.20",
+            "₹491.30",
+            "₹4.90",
+            "RS1",
+            "496.20"
+          ],
+          "dates": [
+            "24 Apr 2026",
+            "24/04/2026"
+          ],
+          "order_id": null,
+          "details": {
+            "distance": "10.99 km",
+            "duration": "23 min",
+            "license_plate": "KA03AL6042",
+            "from": "Uber Receipts <noreply@uber.com>",
+            "to": "<ayushd2910@gmail.com>"
+          },
+          "snippet": "---------- Forwarded message --------- From: Uber Receipts &lt;noreply@uber.com&gt; Date: Fri, 24 Apr 2026 at 23:04 Subject: Your Friday evening trip with Uber To: &lt;ayushd2910@gmail.com&gt; 24 Apr",
+          "body_preview": "---------- Forwarded message ---------\r\nFrom: Uber Receipts <noreply@uber.com>\r\nDate: Fri, 24 Apr 2026 at 23:04\r\nSubject: Your Friday evening trip with Uber\r\nTo: <ayushd2910@gmail.com>\r\n\r\n\r\n24 Apr 2026\r\n22:36\r\n24 Apr 2026 , 22:36\r\nThanks for riding, Ayush\r\n\r\nWe hope you enjoyed your ride this evening.\r\nTotal ₹496.20\r\n\r\nSuggested fare ₹491.30\r\nBooking fee\r\n<https://tracking.ibt.uber.com/tracking/1/click/f3D6y_rg7JuB5yEeNzUHGCThDCO9IIOoXsYsb0AyqgxhNK4ivS8590tlE7-b-zelGPUF3qFucOndXiZK2i1A5k_Fa8F3y2E9K_r1SGeyssMEeOQ5xwXjGbQNVHmDF2I_ix4FoyudPS-fevMIdL3qpvTdV25xu65TMevWHUWDur99DWScDwIk8kTzk_RhxehTKhilvqZs_zmPaE6unV28e1dBZt4-sj-poylPxztEe5ZIzclmr-mC01zrFbpVr42_A1HYlioSUFneku3pQtqBYUnyx2YvxrqqxAhOTa9PoeFMwRySH2El-MFF0D1SF1GN>\r\n₹4.90\r\n\r\nPayments\r\n\r\nCash ₹496.20\r\n24/04/2026 23:04\r\n\r\nDownload the rec",
+          "image_analyses": [],
+          "doc_analyses": [],
+          "attachment_count": 0,
+          "reimbursable": true,
+          "payment_method": "Cash"
+        },
+        {
+          "id": "19dc3e3dd15a6a27",
+          "category": "ride",
+          "vendor": "Uber",
+          "category_config": {
+            "icon": "🚗",
+            "color": "#1a1a1a",
+            "label": "Ride"
+          },
+          "subject": "Fwd: Your Saturday morning trip with Uber",
+          "from_email": "Ayush Dharaiya <ayushd2910@gmail.com>",
+          "date": "Sat, 25 Apr 2026 14:36:11 +0530",
+          "total": "₹125.75",
+          "amounts": [
+            "₹125.75",
+            "₹120.85",
+            "₹4.90",
+            "125.75"
+          ],
+          "dates": [
+            "25 Apr 2026",
+            "25/04/2026"
+          ],
+          "order_id": null,
+          "details": {
+            "distance": "4.85 km",
+            "duration": "11 min",
+            "license_plate": "KA51AL7164",
+            "from": "Uber Receipts <noreply@uber.com>",
+            "to": "<ayushd2910@gmail.com>"
+          },
+          "snippet": "---------- Forwarded message --------- From: Uber Receipts &lt;noreply@uber.com&gt; Date: Sat, 25 Apr 2026 at 07:27 Subject: Your Saturday morning trip with Uber To: &lt;ayushd2910@gmail.com&gt; 25 Ap",
+          "body_preview": "---------- Forwarded message ---------\r\nFrom: Uber Receipts <noreply@uber.com>\r\nDate: Sat, 25 Apr 2026 at 07:27\r\nSubject: Your Saturday morning trip with Uber\r\nTo: <ayushd2910@gmail.com>\r\n\r\n\r\n25 Apr 2026\r\n07:07\r\n25 Apr 2026 , 07:07\r\nThanks for riding, Ayush\r\n\r\nWe hope you enjoyed your ride this morning.\r\nTotal ₹125.75\r\n\r\nSuggested fare ₹120.85\r\nBooking fee\r\n<https://tracking.ibt.uber.com/tracking/1/click/xGcdJZtD4oGnBC_NatPG5Hn8gvygY2hYsI7K6jsGkP-ZKUx-0UFNNnkZyIhaIM2tuXPdwT13SRKZFm9C4TO0FKs67uvY7b9-caeDj-hU0GKRrgNV5TKhSn6TPk2wX4lqpVtbF2LYgUeJgkQ29XwdhGx5AhhPvdiEavh2pWNk_ZevH65snJeHHE0Uj4pmtN5dB9Z7yeizurPLBJheLAhKStmjXhaZWxLtj181WL7HiW8XtjCk8cFnln_u8gZvgYp9gTHU64W47bjvqUTMEkMN2i3Yc_7Oxfz_HAIWDtmvFrYOPKrriTX3TSr6SyBCvAPqCOL4vDJS-GQdTeE_ysKw4Q==>\r\n₹4.90\r\n\r\nPayments\r\n\r\nCash ₹125.75\r\n25/04/2026",
+          "image_analyses": [],
+          "doc_analyses": [],
+          "attachment_count": 0,
+          "reimbursable": true,
+          "payment_method": "Cash"
+        },
+        {
+          "id": "19dc302e6978400d",
+          "category": "unknown",
+          "vendor": "Unknown",
+          "category_config": {
+            "icon": "📧",
+            "color": "#6b6560",
+            "label": "Transactional"
+          },
+          "subject": "Hackathon",
+          "from_email": "Ayush Dharaiya <ayushd2910@gmail.com>",
+          "date": "Sat, 25 Apr 2026 10:30:28 +0530",
+          "total": null,
+          "amounts": [],
+          "dates": [],
+          "order_id": null,
+          "details": {},
+          "snippet": "Trace models this as a reinforcement learning environment where an agent: Interacts with a Gmail-like system via MCP tools Incrementally retrieves and processes email data Builds a semantic world mode",
+          "body_preview": "*Trace* models this as a *reinforcement learning environment* where an\r\nagent:\r\n\r\n   - Interacts with a *Gmail-like system via MCP tools*\r\n   - Incrementally retrieves and processes email data\r\n   - Builds a *semantic world model* (people, events, timelines)\r\n   - Executes *multi-step reasoning plans*\r\n   - Produces a final answer to a user query\r\n\r\nThe agent is trained using a *multi-rubric reward system* that evaluates:\r\n\r\n   - retrieval quality\r\n   - planning efficiency\r\n   - reasoning depth\r\n   - correctness of final output\r\n\nTrace models this as a reinforcement learning environment where an agent: Interacts with a Gmail-like system via MCP tools Incrementally retrieves and processes email data Builds a semantic world model (people, events, timelines) Executes multi-step reasoning plan",
+          "image_analyses": [],
+          "doc_analyses": [],
+          "attachment_count": 0,
+          "reimbursable": false,
+          "payment_method": "Unknown"
+        },
+        {
+          "id": "19dc2e7b29ae5dd4",
+          "category": "unknown",
+          "vendor": "Unknown",
+          "category_config": {
+            "icon": "📧",
+            "color": "#6b6560",
+            "label": "Transactional"
+          },
+          "subject": "Fwd: Meta Hackthon",
+          "from_email": "Ayush Dharaiya <ayushd2910@gmail.com>",
+          "date": "Sat, 25 Apr 2026 10:00:45 +0530",
+          "total": null,
+          "amounts": [],
+          "dates": [],
+          "order_id": null,
+          "details": {},
+          "snippet": "Core Problem Modern users accumulate years of fragmented information in email, but extracting meaningful insights—such as financial summaries, travel timelines, or key relationships—requires multi-ste",
+          "body_preview": "*Core Problem*\r\n\r\nModern users accumulate years of fragmented information in email, but\r\nextracting meaningful insights—such as financial summaries, travel\r\ntimelines, or key relationships—requires *multi-step reasoning across\r\ndistributed threads and time ranges*.\r\n\r\nThis is challenging because:\r\n\r\n   - Data is *unstructured and noisy*\r\n   - Information is *spread across multiple emails and threads*\r\n   - Tasks require *long-horizon planning*, not single-step retrieval\r\n   - Users cannot centralize data due to *privacy constraints*\r\n\nCore Problem Modern users accumulate years of fragmented information in email, but extracting meaningful insights—such as financial summaries, travel timelines, or key relationships—requires multi-step reasoning across distributed threads and time ranges . Th",
+          "image_analyses": [],
+          "doc_analyses": [],
+          "attachment_count": 0,
+          "reimbursable": false,
+          "payment_method": "Unknown"
+        }
+      ],
+      "dashboard_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Trace · Transaction Dashboard</title>\n<style>\n\n@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,wght@0,300;0,600;1,300&display=swap');\n\n*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }\n\n:root {\n  --bg: #f0ebe3;\n  --card: #ffffff;\n  --border: #d4cec7;\n  --ink: #1a1a1a;\n  --muted: #6b6560;\n  --cream: #f0ebe3;\n}\n\nbody { font-family: 'DM Mono', monospace; background: var(--bg); color: var(--ink); }\n.app { max-width: 900px; margin: 0 auto; padding: 24px 20px; }\n\n/* Header */\n.header { display: flex; justify-content: space-between; align-items: flex-end;\n  border-bottom: 2px solid var(--ink); padding-bottom: 14px; margin-bottom: 20px; }\n.logo { font-family: 'Fraunces', serif; font-size: 26px; font-weight: 600; }\n.subtitle { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }\n.badge { font-size: 10px; background: var(--ink); color: white; padding: 4px 10px; border-radius: 2px; letter-spacing: 1px; }\n\n/* Episode bar */\n.episode-bar { background: var(--card); border: 1px solid var(--border); border-radius: 4px;\n  padding: 12px 16px; margin-bottom: 20px; }\n.ep-label { font-size: 9px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 10px; }\n.steps-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }\n.step-chip { font-size: 10px; padding: 4px 10px; border-radius: 2px; border: 1px solid var(--border); background: var(--cream); }\n.step-chip.done { background: #d4f0e0; border-color: #1a7a4a; color: #1a7a4a; }\n.step-chip.active { background: #fdf0d5; border-color: #c97b1a; color: #c97b1a; }\n.step-sep { color: var(--border); font-size: 12px; }\n\n/* Summary */\n.summary-strip { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-bottom: 20px; }\n.sum-card { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 14px 16px; }\n.sum-card.total { border-top: 3px solid var(--ink); }\n.sum-label { font-size: 9px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 6px; }\n.sum-value { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; line-height: 1; }\n.sum-sub { font-size: 10px; color: var(--muted); margin-top: 4px; }\n\n/* Chart */\n.chart-section { margin-bottom: 24px; }\n.chart { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 16px; }\n.chart-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }\n.chart-row:last-child { margin-bottom: 0; }\n.chart-label { width: 120px; font-size: 11px; flex-shrink: 0; }\n.chart-bar-wrap { flex: 1; height: 8px; background: var(--cream); border-radius: 2px; overflow: hidden; }\n.chart-bar { height: 100%; border-radius: 2px; transition: width 1s cubic-bezier(0.4,0,0.2,1); }\n.chart-amount { width: 80px; text-align: right; font-size: 11px; font-weight: 500; }\n\n/* Sheets Banner */\n.sheets-banner { display: flex; align-items: center; gap: 14px; background: #e8f0fe; border: 1px solid #d2e3fc; border-radius: 4px; padding: 14px 18px; margin-bottom: 24px; cursor: pointer; transition: background 0.2s, transform 0.2s; }\n.sheets-banner:hover { background: #d2e3fc; transform: translateY(-1px); }\n.sheets-icon { font-size: 24px; }\n.sheets-text { flex: 1; }\n.sheets-title { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; color: #174ea6; }\n.sheets-sub { font-size: 11px; color: #1967d2; margin-top: 4px; }\n.sheets-btn { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #174ea6; background: rgba(23,78,166,0.1); padding: 6px 12px; border-radius: 2px; }\n\n/* Section title */\n.section-title { display: flex; align-items: center; gap: 12px; font-size: 9px;\n  text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 14px; }\n.section-line { flex: 1; height: 1px; background: var(--border); }\n.count { color: var(--ink); }\n\n/* Cards */\n.cards { display: flex; flex-direction: column; gap: 16px; }\n\n.card { background: var(--card); border: 1px solid var(--border); border-radius: 4px;\n  overflow: hidden; animation: slideIn 0.4s ease both; }\n@keyframes slideIn { from { opacity:0; transform: translateY(12px); } to { opacity:1; transform:translateY(0); } }\n\n.card-header { display: flex; justify-content: space-between; align-items: center;\n  padding: 14px 18px; color: white; }\n.card-header-left { display: flex; align-items: center; gap: 12px; }\n.card-icon { font-size: 22px; }\n.card-vendor { font-family: 'Fraunces', serif; font-size: 16px; font-style: italic; }\n.card-meta { font-size: 10px; opacity: 0.65; margin-top: 2px; }\n.card-total { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; text-align: right; }\n.order-id { font-size: 10px; opacity: 0.6; text-align: right; display: block; margin-top: 2px; }\n\n.card-subject { padding: 10px 18px; font-size: 11px; border-bottom: 1px solid var(--border);\n  background: #fafaf8; color: var(--muted); }\n\n.card-body { display: grid; grid-template-columns: 1fr 1fr; }\n.card-section { padding: 14px 18px; border-right: 1px solid var(--border); }\n.card-section:last-child { border-right: none; }\n.section-header { font-size: 9px; text-transform: uppercase; letter-spacing: 1.5px;\n  color: var(--muted); margin-bottom: 10px; }\n\n.detail-row { display: flex; justify-content: space-between; padding: 4px 0;\n  border-bottom: 1px dashed var(--border); font-size: 11px; }\n.detail-row:last-child { border-bottom: none; }\n.dk { color: var(--muted); }\n.dv { font-weight: 500; text-align: right; max-width: 60%; }\n.detail-snippet { font-size: 11px; color: var(--muted); line-height: 1.5; }\n\n.amounts-row { display: flex; flex-wrap: wrap; gap: 6px; }\n.amount-chip { font-size: 10px; background: #f0ebe3; border: 1px solid var(--border);\n  padding: 3px 8px; border-radius: 2px; }\n\n.card-image-analysis { padding: 12px 18px; border-top: 1px solid var(--border); background: #fafaf8; }\n.img-analysis { font-size: 11px; color: var(--muted); line-height: 1.5; margin-top: 6px; }\n.img-type { background: var(--ink); color: white; font-size: 9px; padding: 1px 6px;\n  border-radius: 2px; margin-right: 6px; text-transform: uppercase; }\n\n.card-footer { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 18px;\n  border-top: 1px solid var(--border); background: #fafaf8; }\n.tag { font-size: 9px; padding: 3px 8px; border-radius: 2px; text-transform: uppercase;\n  letter-spacing: 0.5px; border: 1px solid var(--border); background: var(--cream); color: var(--muted); }\n.tag.reimb { background: #d4f0e0; border-color: #1a7a4a; color: #1a7a4a; }\n.tag.pay { background: #fdf0d5; border-color: #c97b1a; color: #c97b1a; }\n\n/* Insights */\n.insights-panel { background: var(--card); border: 1px solid var(--border); border-radius: 4px;\n  overflow: hidden; margin-top: 24px; }\n.insights-header { background: var(--ink); color: white; padding: 12px 18px;\n  font-size: 10px; text-transform: uppercase; letter-spacing: 2px; }\n.insight-row { display: flex; align-items: flex-start; gap: 10px; padding: 12px 18px;\n  border-top: 1px solid var(--border); font-size: 11px; line-height: 1.6; }\n.insight-icon { width: 24px; height: 24px; border-radius: 2px; display: flex;\n  align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; }\n.insight-icon.good { background: #d4f0e0; }\n.insight-icon.warn { background: #fdf0d5; }\n.insight-icon.info { background: #e8f0fe; }\n\n@media (max-width: 600px) {\n  .summary-strip { grid-template-columns: 1fr 1fr; }\n  .card-body { grid-template-columns: 1fr; }\n  .card-section { border-right: none; border-bottom: 1px solid var(--border); }\n}\n\n</style>\n</head>\n<body>\n<div class=\"app\">\n\n  <!-- Header -->\n  <header class=\"header\">\n    <div class=\"header-left\">\n      <div class=\"logo\">🕵️ Trace</div>\n      <div class=\"subtitle\">Gmail Transaction Intelligence</div>\n    </div>\n    <div class=\"header-right\">\n      <div class=\"badge\">REAL DATA · LIVE</div>\n    </div>\n  </header>\n\n  <!-- Episode bar -->\n  \n\n  <!-- Summary strip -->\n  \n<div class=\"summary-strip\">\n  <div class=\"sum-card total\">\n    <div class=\"sum-label\">Total Spend</div>\n    <div class=\"sum-value\">₹29,971.53</div>\n    <div class=\"sum-sub\">Across 10 transactions</div>\n  </div>\n  <div class=\"sum-card\">\n    <div class=\"sum-label\">Transactions</div>\n    <div class=\"sum-value\">10</div>\n    <div class=\"sum-sub\">Gmail emails parsed</div>\n  </div>\n  <div class=\"sum-card\">\n    <div class=\"sum-label\">Top Category</div>\n    <div class=\"sum-value\">Travel</div>\n    <div class=\"sum-sub\">₹29,321.58 spent</div>\n  </div>\n  <div class=\"sum-card\">\n    <div class=\"sum-label\">Categories</div>\n    <div class=\"sum-value\">2</div>\n    <div class=\"sum-sub\">Detected</div>\n  </div>\n</div>\n  \n  \n\n  <!-- Spend by category chart (simple CSS bars) -->\n  \n<div class=\"chart-section\">\n  <div class=\"section-title\"><span>Spend by Category</span><div class=\"section-line\"></div></div>\n  <div class=\"chart\">\n      <div class=\"chart-row\">\n        <div class=\"chart-label\">✈️ Travel</div>\n        <div class=\"chart-bar-wrap\">\n          <div class=\"chart-bar\" style=\"width:97.8%;background:#6d4c41\"></div>\n        </div>\n        <div class=\"chart-amount\">₹29,322</div>\n      </div>\n      <div class=\"chart-row\">\n        <div class=\"chart-label\">🚗 Ride</div>\n        <div class=\"chart-bar-wrap\">\n          <div class=\"chart-bar\" style=\"width:2.2%;background:#1a1a1a\"></div>\n        </div>\n        <div class=\"chart-amount\">₹650</div>\n      </div></div>\n</div>\n\n  <!-- Transaction cards -->\n  <div class=\"section-title\">\n    <span>Retrieved Transactions</span>\n    <div class=\"section-line\"></div>\n    <span class=\"count\">10 emails</span>\n  </div>\n\n  <div class=\"cards\">\n    \n<div class=\"card\" style=\"animation-delay:0ms\" data-category=\"unknown\">\n  <div class=\"card-header\" style=\"background:#6b6560\">\n    <div class=\"card-header-left\">\n      <div class=\"card-icon\">📧</div>\n      <div>\n        <div class=\"card-vendor\">Unknown</div>\n        <div class=\"card-meta\">Transactional · Sat, 25 Apr 2026 22:31</div>\n      </div>\n    </div>\n    <div class=\"card-header-right\">\n      <div class=\"card-total\">—</div>\n      \n    </div>\n  </div>\n\n  <div class=\"card-subject\">(No subject)</div>\n\n  <div class=\"card-body\">\n    <div class=\"card-section\">\n      <div class=\"section-header\">Details</div>\n      <div class=\"detail-snippet\">No details extracted.</div>\n    </div>\n    \n  </div>\n\n  \n\n  <div class=\"card-footer\">\n    <span class=\"tag cat\" style=\"background:#6b656022;color:#6b6560\">📧 Transactional</span>\n    \n    <span class=\"tag pay\">Unknown</span>\n    <span class=\"tag from\">doshimeenal3@gmail.com</span>\n  </div>\n</div>\n\n<div class=\"card\" style=\"animation-delay:80ms\" data-category=\"unknown\">\n  <div class=\"card-header\" style=\"background:#6b6560\">\n    <div class=\"card-header-left\">\n      <div class=\"card-icon\">📧</div>\n      <div>\n        <div class=\"card-vendor\">Unknown</div>\n        <div class=\"card-meta\">Transactional · Sat, 25 Apr 2026 07:52</div>\n      </div>\n    </div>\n    <div class=\"card-header-right\">\n      <div class=\"card-total\">—</div>\n      <span class=\"order-id\">#MessageViewBody</span>\n    </div>\n  </div>\n\n  <div class=\"card-subject\">Get started with Google Antigravity</div>\n\n  <div class=\"card-body\">\n    <div class=\"card-section\">\n      <div class=\"section-header\">Details</div>\n      <div class=\"detail-snippet\">Welcome to Google Antigravity! Unlock the full potential of your workflow and experience liftoff. Here are 3 ways to start elevating your development </div>\n    </div>\n    \n  </div>\n\n  \n\n  <div class=\"card-footer\">\n    <span class=\"tag cat\" style=\"background:#6b656022;color:#6b6560\">📧 Transactional</span>\n    \n    <span class=\"tag pay\">Unknown</span>\n    <span class=\"tag from\">antigravity-noreply@google.com</span>\n  </div>\n</div>\n\n<div class=\"card\" style=\"animation-delay:160ms\" data-category=\"travel\">\n  <div class=\"card-header\" style=\"background:#6d4c41\">\n    <div class=\"card-header-left\">\n      <div class=\"card-icon\">✈️</div>\n      <div>\n        <div class=\"card-vendor\">IndiGo</div>\n        <div class=\"card-meta\">Travel · Sat, 25 Apr 2026 17:35</div>\n      </div>\n    </div>\n    <div class=\"card-header-right\">\n      <div class=\"card-total\">₹22,312</div>\n      \n    </div>\n  </div>\n\n  <div class=\"card-subject\">Fwd: TaxInvoice - GJ1262704AB36056</div>\n\n  <div class=\"card-body\">\n    <div class=\"card-section\">\n      <div class=\"section-header\">Details</div>\n      <div class=\"detail-snippet\">---------- Forwarded message --------- From: &lt;6EGSTInvoice@goindigo.in&gt; Date: Fri, 17 Apr 2026 at 17:55 Subject: TaxInvoice - GJ1262704AB36056 T</div>\n    </div>\n    <div class=\"card-section\"><div class=\"section-header\">All Amounts</div><div class=\"amounts-row\"><span class=\"amount-chip\">rs\n2</span><span class=\"amount-chip\">996425</span><span class=\"amount-chip\">22,312</span></div></div>\n  </div>\n\n  \n\n  <div class=\"card-footer\">\n    <span class=\"tag cat\" style=\"background:#6d4c4122;color:#6d4c41\">✈️ Travel</span>\n    <span class=\"tag reimb\">✓ Reimbursable</span>\n    <span class=\"tag pay\">Credit Card</span>\n    <span class=\"tag from\">harvymeenal@gmail.com</span>\n  </div>\n</div>\n\n<div class=\"card\" style=\"animation-delay:240ms\" data-category=\"travel\">\n  <div class=\"card-header\" style=\"background:#6d4c41\">\n    <div class=\"card-header-left\">\n      <div class=\"card-icon\">✈️</div>\n      <div>\n        <div class=\"card-vendor\">MakeMyTrip</div>\n        <div class=\"card-meta\">Travel · Sat, 25 Apr 2026 17:34</div>\n      </div>\n    </div>\n    <div class=\"card-header-right\">\n      <div class=\"card-total\">₹3504.58</div>\n      <span class=\"order-id\">#NH78206479216648</span>\n    </div>\n  </div>\n\n  <div class=\"card-subject\">Fwd: Tax Invoice for your Hotel Booking id NH78206479216648</div>\n\n  <div class=\"card-body\">\n    <div class=\"card-section\">\n      <div class=\"section-header\">Details</div>\n      <div class=\"detail-snippet\">---------- Forwarded message --------- From: MakeMyTrip &lt;noreply@makemytrip.com&gt; Date: Fri, 24 Apr 2026 at 12:04 Subject: Tax Invoice for your H</div>\n    </div>\n    <div class=\"card-section\"><div class=\"section-header\">All Amounts</div><div class=\"amounts-row\"><span class=\"amount-chip\">₹4201.48</span><span class=\"amount-chip\">₹280.1</span><span class=\"amount-chip\">₹3504.58</span><span class=\"amount-chip\">3504.58</span></div></div>\n  </div>\n\n  \n\n  <div class=\"card-footer\">\n    <span class=\"tag cat\" style=\"background:#6d4c4122;color:#6d4c41\">✈️ Travel</span>\n    <span class=\"tag reimb\">✓ Reimbursable</span>\n    <span class=\"tag pay\">Credit Card</span>\n    <span class=\"tag from\">harvymeenal@gmail.com</span>\n  </div>\n</div>\n\n<div class=\"card\" style=\"animation-delay:320ms\" data-category=\"travel\">\n  <div class=\"card-header\" style=\"background:#6d4c41\">\n    <div class=\"card-header-left\">\n      <div class=\"card-icon\">✈️</div>\n      <div>\n        <div class=\"card-vendor\">MakeMyTrip</div>\n        <div class=\"card-meta\">Travel · Sat, 25 Apr 2026 17:33</div>\n      </div>\n    </div>\n    <div class=\"card-header-right\">\n      <div class=\"card-total\">₹3,505</div>\n      <span class=\"order-id\">#NH78206479216648</span>\n    </div>\n  </div>\n\n  <div class=\"card-subject\">Fwd: Your Booking Confirmation Voucher for Hotel Wellsuites Electronic City</div>\n\n  <div class=\"card-body\">\n    <div class=\"card-section\">\n      <div class=\"section-header\">Details</div>\n      <div class=\"detail-snippet\">---------- Forwarded message --------- From: MakeMyTrip &lt;noreply@makemytrip.com&gt; Date: Sat, 18 Apr 2026 at 22:21 Subject: Your Booking Confirmat</div>\n    </div>\n    <div class=\"card-section\"><div class=\"section-header\">All Amounts</div><div class=\"amounts-row\"><span class=\"amount-chip\">INR 3,504</span><span class=\"amount-chip\">INR 1,198</span><span class=\"amount-chip\">INR 3,505</span><span class=\"amount-chip\">INR 697</span><span class=\"amount-chip\">INR 280</span><span class=\"amount-chip\">INR 221</span></div></div>\n  </div>\n\n  \n\n  <div class=\"card-footer\">\n    <span class=\"tag cat\" style=\"background:#6d4c4122;color:#6d4c41\">✈️ Travel</span>\n    <span class=\"tag reimb\">✓ Reimbursable</span>\n    <span class=\"tag pay\">Unknown</span>\n    <span class=\"tag from\">harvymeenal@gmail.com</span>\n  </div>\n</div>\n\n<div class=\"card\" style=\"animation-delay:400ms\" data-category=\"ride\">\n  <div class=\"card-header\" style=\"background:#1a1a1a\">\n    <div class=\"card-header-left\">\n      <div class=\"card-icon\">🚗</div>\n      <div>\n        <div class=\"card-vendor\">Rapido</div>\n        <div class=\"card-meta\">Ride · Sat, 25 Apr 2026 15:43</div>\n      </div>\n    </div>\n    <div class=\"card-header-right\">\n      <div class=\"card-total\">₹28.00</div>\n      \n    </div>\n  </div>\n\n  <div class=\"card-subject\">Fwd: Rapido Invoice</div>\n\n  <div class=\"card-body\">\n    <div class=\"card-section\">\n      <div class=\"section-header\">Details</div>\n      <div class=\"detail-row\"><span class=\"dk\">Distance</span><span class=\"dv\">2.42 km</span></div>\n<div class=\"detail-row\"><span class=\"dk\">Duration</span><span class=\"dv\">40 min</span></div>\n<div class=\"detail-row\"><span class=\"dk\">Plate</span><span class=\"dv\">GJ27DJ3600</span></div>\n<div class=\"detail-row\"><span class=\"dk\">From</span><span class=\"dv\"><partner@rapido.bike></span></div>\n<div class=\"detail-row\"><span class=\"dk\">To</span><span class=\"dv\"><ayushd2910@gmail.com></span></div>\n    </div>\n    <div class=\"card-section\"><div class=\"section-header\">All Amounts</div><div class=\"amounts-row\"><span class=\"amount-chip\">₹ 28.00</span><span class=\"amount-chip\">₹ 20.23</span><span class=\"amount-chip\">₹ 7.77</span><span class=\"amount-chip\">₹ 19.27</span><span class=\"amount-chip\">₹ 0.48</span><span class=\"amount-chip\">₹ 0.00</span></div></div>\n  </div>\n\n  \n\n  <div class=\"card-footer\">\n    <span class=\"tag cat\" style=\"background:#1a1a1a22;color:#1a1a1a\">🚗 Ride</span>\n    <span class=\"tag reimb\">✓ Reimbursable</span>\n    <span class=\"tag pay\">Unknown</span>\n    <span class=\"tag from\">ayushd2910@gmail.com</span>\n  </div>\n</div>\n\n<div class=\"card\" style=\"animation-delay:480ms\" data-category=\"ride\">\n  <div class=\"card-header\" style=\"background:#1a1a1a\">\n    <div class=\"card-header-left\">\n      <div class=\"card-icon\">🚗</div>\n      <div>\n        <div class=\"card-vendor\">Uber</div>\n        <div class=\"card-meta\">Ride · Sat, 25 Apr 2026 14:36</div>\n      </div>\n    </div>\n    <div class=\"card-header-right\">\n      <div class=\"card-total\">₹496.20</div>\n      \n    </div>\n  </div>\n\n  <div class=\"card-subject\">Fwd: Your Friday evening trip with Uber</div>\n\n  <div class=\"card-body\">\n    <div class=\"card-section\">\n      <div class=\"section-header\">Details</div>\n      <div class=\"detail-row\"><span class=\"dk\">Distance</span><span class=\"dv\">10.99 km</span></div>\n<div class=\"detail-row\"><span class=\"dk\">Duration</span><span class=\"dv\">23 min</span></div>\n<div class=\"detail-row\"><span class=\"dk\">Plate</span><span class=\"dv\">KA03AL6042</span></div>\n<div class=\"detail-row\"><span class=\"dk\">From</span><span class=\"dv\">Uber Receipts <noreply@uber.com></span></div>\n<div class=\"detail-row\"><span class=\"dk\">To</span><span class=\"dv\"><ayushd2910@gmail.com></span></div>\n    </div>\n    <div class=\"card-section\"><div class=\"section-header\">All Amounts</div><div class=\"amounts-row\"><span class=\"amount-chip\">₹496.20</span><span class=\"amount-chip\">₹491.30</span><span class=\"amount-chip\">₹4.90</span><span class=\"amount-chip\">RS1</span><span class=\"amount-chip\">496.20</span></div></div>\n  </div>\n\n  \n\n  <div class=\"card-footer\">\n    <span class=\"tag cat\" style=\"background:#1a1a1a22;color:#1a1a1a\">🚗 Ride</span>\n    <span class=\"tag reimb\">✓ Reimbursable</span>\n    <span class=\"tag pay\">Cash</span>\n    <span class=\"tag from\">ayushd2910@gmail.com</span>\n  </div>\n</div>\n\n<div class=\"card\" style=\"animation-delay:560ms\" data-category=\"ride\">\n  <div class=\"card-header\" style=\"background:#1a1a1a\">\n    <div class=\"card-header-left\">\n      <div class=\"card-icon\">🚗</div>\n      <div>\n        <div class=\"card-vendor\">Uber</div>\n        <div class=\"card-meta\">Ride · Sat, 25 Apr 2026 14:36</div>\n      </div>\n    </div>\n    <div class=\"card-header-right\">\n      <div class=\"card-total\">₹125.75</div>\n      \n    </div>\n  </div>\n\n  <div class=\"card-subject\">Fwd: Your Saturday morning trip with Uber</div>\n\n  <div class=\"card-body\">\n    <div class=\"card-section\">\n      <div class=\"section-header\">Details</div>\n      <div class=\"detail-row\"><span class=\"dk\">Distance</span><span class=\"dv\">4.85 km</span></div>\n<div class=\"detail-row\"><span class=\"dk\">Duration</span><span class=\"dv\">11 min</span></div>\n<div class=\"detail-row\"><span class=\"dk\">Plate</span><span class=\"dv\">KA51AL7164</span></div>\n<div class=\"detail-row\"><span class=\"dk\">From</span><span class=\"dv\">Uber Receipts <noreply@uber.com></span></div>\n<div class=\"detail-row\"><span class=\"dk\">To</span><span class=\"dv\"><ayushd2910@gmail.com></span></div>\n    </div>\n    <div class=\"card-section\"><div class=\"section-header\">All Amounts</div><div class=\"amounts-row\"><span class=\"amount-chip\">₹125.75</span><span class=\"amount-chip\">₹120.85</span><span class=\"amount-chip\">₹4.90</span><span class=\"amount-chip\">125.75</span></div></div>\n  </div>\n\n  \n\n  <div class=\"card-footer\">\n    <span class=\"tag cat\" style=\"background:#1a1a1a22;color:#1a1a1a\">🚗 Ride</span>\n    <span class=\"tag reimb\">✓ Reimbursable</span>\n    <span class=\"tag pay\">Cash</span>\n    <span class=\"tag from\">ayushd2910@gmail.com</span>\n  </div>\n</div>\n\n<div class=\"card\" style=\"animation-delay:640ms\" data-category=\"unknown\">\n  <div class=\"card-header\" style=\"background:#6b6560\">\n    <div class=\"card-header-left\">\n      <div class=\"card-icon\">📧</div>\n      <div>\n        <div class=\"card-vendor\">Unknown</div>\n        <div class=\"card-meta\">Transactional · Sat, 25 Apr 2026 10:30</div>\n      </div>\n    </div>\n    <div class=\"card-header-right\">\n      <div class=\"card-total\">—</div>\n      \n    </div>\n  </div>\n\n  <div class=\"card-subject\">Hackathon</div>\n\n  <div class=\"card-body\">\n    <div class=\"card-section\">\n      <div class=\"section-header\">Details</div>\n      <div class=\"detail-snippet\">Trace models this as a reinforcement learning environment where an agent: Interacts with a Gmail-like system via MCP tools Incrementally retrieves and</div>\n    </div>\n    \n  </div>\n\n  \n\n  <div class=\"card-footer\">\n    <span class=\"tag cat\" style=\"background:#6b656022;color:#6b6560\">📧 Transactional</span>\n    \n    <span class=\"tag pay\">Unknown</span>\n    <span class=\"tag from\">ayushd2910@gmail.com</span>\n  </div>\n</div>\n\n<div class=\"card\" style=\"animation-delay:720ms\" data-category=\"unknown\">\n  <div class=\"card-header\" style=\"background:#6b6560\">\n    <div class=\"card-header-left\">\n      <div class=\"card-icon\">📧</div>\n      <div>\n        <div class=\"card-vendor\">Unknown</div>\n        <div class=\"card-meta\">Transactional · Sat, 25 Apr 2026 10:00</div>\n      </div>\n    </div>\n    <div class=\"card-header-right\">\n      <div class=\"card-total\">—</div>\n      \n    </div>\n  </div>\n\n  <div class=\"card-subject\">Fwd: Meta Hackthon</div>\n\n  <div class=\"card-body\">\n    <div class=\"card-section\">\n      <div class=\"section-header\">Details</div>\n      <div class=\"detail-snippet\">Core Problem Modern users accumulate years of fragmented information in email, but extracting meaningful insights—such as financial summaries, travel </div>\n    </div>\n    \n  </div>\n\n  \n\n  <div class=\"card-footer\">\n    <span class=\"tag cat\" style=\"background:#6b656022;color:#6b6560\">📧 Transactional</span>\n    \n    <span class=\"tag pay\">Unknown</span>\n    <span class=\"tag from\">ayushd2910@gmail.com</span>\n  </div>\n</div>\n  </div>\n\n  <!-- Analysis footer -->\n  \n<div class=\"insights-panel\">\n  <div class=\"insights-header\">🧠 Trace Intelligence Insights</div>\n  <div class=\"insight-row\"><div class=\"insight-icon good\">💡</div><div>Total retrievable spend: <strong>₹29,971.53</strong> across 10 transactions.</div></div><div class=\"insight-row\"><div class=\"insight-icon good\">🧾</div><div><strong>6 reimbursable</strong> receipts found totaling ₹29,971.53.</div></div><div class=\"insight-row\"><div class=\"insight-icon info\">📊</div><div>Highest spending category: <strong>Travel</strong> at ₹29,321.58.</div></div><div class=\"insight-row\"><div class=\"insight-icon warn\">⚠️</div><div>2 cash payment(s) detected — no digital trail for these transactions.</div></div>\n</div>\n\n</div>\n\n<script>\n\n// Animate chart bars on load\ndocument.addEventListener('DOMContentLoaded', function() {\n  const bars = document.querySelectorAll('.chart-bar');\n  bars.forEach(b => {\n    const w = b.style.width;\n    b.style.width = '0%';\n    setTimeout(() => { b.style.width = w; }, 300);\n  });\n});\n\n</script>\n</body>\n</html>",
+      "dashboard_generated": true
+    }
+  },
+  "final": {
+    "mode": "deep",
+    "preset": "latest",
+    "vendor_filter": null,
+    "category_filter": null,
+    "min_amount_filter": null,
+    "quick_query": "newer_than:90d  -category:promotions -in:chats",
+    "deep_query": "newer_than:90d  -category:promotions -in:chats",
+    "quick_observation": "Retrieved 10 Gmail items. Parsed 10 transactions | Total spend: ₹0.00 | Top category: unknown (₹0.00)",
+    "deep_observation": "Retrieved 10 Gmail items. Parsed 10 transactions | Total spend: ₹29,971.53 | Top category: travel (₹29,321.58)",
+    "transactions_summary": {
+      "total_spend": 187894.28,
+      "count": 46,
+      "by_category": {
+        "travel": 179434.48,
+        "ride": 4480.9,
+        "shopping": 1200.0,
+        "utility": 799.0,
+        "food": 660.5,
+        "payment": 500.0,
+        "subscription": 499.0,
+        "healthcare": 320.4
+      },
+      "by_vendor": {
+        "IndiGo": 133872.0,
+        "MakeMyTrip": 42057.48,
+        "Uber": 4227.9,
+        "Hotel Wellsuites": 3505.0,
+        "Amazon": 1200.0,
+        "Airtel": 799.0,
+        "PhonePe": 500.0,
+        "Netflix": 499.0,
+        "Zomato": 450.5,
+        "Apollo Pharmacy": 320.4,
+        "Rapido": 253.0,
+        "Swiggy": 210.0
+      }
+    },
+    "transactions": [
+      {
+        "id": "19dc5970e7c5abb6",
+        "category": "unknown",
+        "vendor": "Unknown",
+        "category_config": {
+          "icon": "📧",
+          "color": "#6b6560",
+          "label": "Transactional"
+        },
+        "subject": "",
+        "from_email": "Harvy Doshi <doshimeenal3@gmail.com>",
+        "date": "Sat, 25 Apr 2026 22:31:42 +0530",
+        "total": null,
+        "amounts": [],
+        "dates": [],
+        "order_id": null,
+        "details": {},
+        "snippet": "",
+        "body_preview": "",
+        "image_analyses": [],
+        "doc_analyses": [],
+        "attachment_count": 0,
+        "reimbursable": false,
+        "payment_method": "Unknown",
+        "normalized_amount": 0.0,
+        "normalized_date": "2026-04-25",
+        "evidence": {
+          "has_body_text": false,
+          "has_doc_analysis": false,
+          "has_image_analysis": false,
+          "has_attachments": false
+        },
+        "confidence": 0.5,
+        "dedupe_key": "19dc5970e7c5abb6"
+      },
+      {
+        "id": "19dc520ba8c710ec",
+        "category": "unknown",
+        "vendor": "Unknown",
+        "category_config": {
+          "icon": "📧",
+          "color": "#6b6560",
+          "label": "Transactional"
+        },
+        "subject": "Get started with Google Antigravity",
+        "from_email": "Google Antigravity <antigravity-noreply@google.com>",
+        "date": "Sat, 25 Apr 2026 07:52:29 -0700",
+        "total": null,
+        "amounts": [],
+        "dates": [],
+        "order_id": "MessageViewBody",
+        "details": {},
+        "snippet": "Welcome to Google Antigravity! Unlock the full potential of your workflow and experience liftoff. Here are 3 ways to start elevating your development with Antigravity: Build with Browser Antigravity i",
+        "body_preview": "Hello from Antigravity\r\n\r\nIf you no longer wish to receive our emails, please use the link below to  \r\nunsubscribe:\r\nhttps://myaccount.google.com/communication-preferences/unsubscribe/gt/ADMV5J_HHUZkoebGilrRqr5E8sAJtw7bVLVeWWcIHerp3zMsmQRnntedU1RdoQQqbGfteEbQXmylT8IO1ALY1MiH7Yojplu0U6chAtpEf4qEqgDLcUivJ_XCOXJssszmR-gemTjWVd0ujtflI9Cy8AsGpFAcvFDeflW_PzSmBwfXTqBr2b8l6jUVKdQZJ_MqzT-yUdEVEmmz-M9igrCg1jVzKPaQQLWjAiS90Ln9k6lUJtf0dspePfhtXRhUR1ZgkGbXoUon8YgL?utm_source=gm&utm_medium=email&auto=true\r\n\n96 *{box-sizing:border-box}body{margin:0;padding:0}a[x-apple-data-detectors]{color:inherit!important;text-decoration:inherit!important}#MessageViewBody a{color:inherit;text-decoration:none}p{line-height:inherit}.desktop_hide,.desktop_hide table{mso-hide:all;display:none;max-height:0;overflow:hidden}.",
+        "image_analyses": [],
+        "doc_analyses": [],
+        "attachment_count": 0,
+        "reimbursable": false,
+        "payment_method": "Unknown",
+        "normalized_amount": 0.0,
+        "normalized_date": "2026-04-25",
+        "evidence": {
+          "has_body_text": true,
+          "has_doc_analysis": false,
+          "has_image_analysis": false,
+          "has_attachments": false
+        },
+        "confidence": 0.5,
+        "dedupe_key": "19dc520ba8c710ec"
+      },
+      {
+        "id": "19dc48839a675910",
+        "category": "travel",
+        "vendor": "IndiGo",
+        "category_config": {
+          "icon": "✈️",
+          "color": "#6d4c41",
+          "label": "Travel"
+        },
+        "subject": "Fwd: TaxInvoice - GJ1262704AB36056",
+        "from_email": "Harvy Doshi <harvymeenal@gmail.com>",
+        "date": "Sat, 25 Apr 2026 17:35:40 +0530",
+        "total": "₹22,312",
+        "amounts": [
+          "rs\n2",
+          "996425",
+          "22,312"
+        ],
+        "dates": [
+          "17 Apr 2026"
+        ],
+        "order_id": null,
+        "details": {
+          "pnr": "B31KNL",
+          "passenger": "Harvy Jignesh Doshi"
+        },
+        "snippet": "---------- Forwarded message --------- From: &lt;6EGSTInvoice@goindigo.in&gt; Date: Fri, 17 Apr 2026 at 17:55 Subject: TaxInvoice - GJ1262704AB36056 To: &lt;harvymeenal@gmail.com&gt; Dear IndiGo",
+        "body_preview": "---------- Forwarded message ---------\r\nFrom: <6EGSTInvoice@goindigo.in>\r\nDate: Fri, 17 Apr 2026 at 17:55\r\nSubject: TaxInvoice - GJ1262704AB36056\r\nTo: <harvymeenal@gmail.com>\r\n\r\n\r\nDear IndiGo Customer,\r\n\r\nPlease find attached the Tax Invoice/GST Credit Note for your booking.\r\nKindly note, that the Tax Invoice / GST credit note is issued as per the\r\napplicable GST laws. For more details on fare,\r\nchange/cancellation charges, refunds, please refer to your IndiGo Itinerary\r\nalso.\r\n\r\nRegards,\r\nTeam IndiGo\r\n\r\nDownload IndiGo mobile app now from Apple iPhone Store\r\n<https://itunes.apple.com/us/app/goindigo.in/id726070762?ls=1&mt=8> or Google\r\nPlay Store\r\n<https://play.google.com/store/apps/details?id=in.goindigo.android&hl=en> &\r\nenjoy the hassle free experience on the go!\r\n\r\n\r\nOr simply log on ",
+        "image_analyses": [],
+        "doc_analyses": [
+          {
+            "id": "doc_5d5c28cbf21a",
+            "filename": "TaxInvoiceGJ1262704AB36056.pdf",
+            "mime_type": "application/pdf",
+            "parser_used": "pymupdf",
+            "extracted_text": "--- Page 1 ---\nTax Invoice\n(Original For Recipient)\nInterGlobe Aviation Limited\nSardar Vallabhbhai Patel\nInternational Airport\n Near King Fisher Black Office\n Sardarnagar\n Ahmedabad\n Gujarat - 380003\nGSTIN : 24AABCI2726B1Z8\nNumber : GJ1262704AB36056\nDate  :  13-Apr-2026\nPassenger Name :  Harvy Jignesh Doshi\nPNR : B31KNL        Flight No : 6E - 863        From : AMD        To : BLR        Place of Supply : Gujarat\nGSTIN of Customer :\nGSTIN Customer Name :\nCurrency : INR\nDescription\nSAC\nCode\nTaxable\nValue\nNonTaxab\nle/Exempt\ned Value\nTotal\nIGST\nTax %\nAmount\nCGST\nTax %\nAmount\nSGST/UGST\nTax %\nAmount\nCESS\nTax %\nAmount\nTotal(Incl\nTaxes)\nAir Travel and\nrelated charges\n996425\n22,312.0\n0\n0.00 22,312.0\n0\n0.00\n0.00\n2.50\n558.00\n2.50\n558.00\n0\n0.00\n23,428.00\nAirport Charges\n0.00\n3,776.00 3,776.00\n0.00\n0.00\n0.00\n0.00\n0.00\n0.00\n0\n0.00\n3,776.00\nGrand Total\n22,312.\n00\n3,776.00 26,088.\n00\n0.00\n558.00\n558.00\n0.00 27,204.00\n1. Air Travel And Related Charges :- Includes all charges related to air transportation of passengers\n2. Airport Charges :- Includes ADF, UDF, PSF and other airport charges collected on behalf of Airport operator, as applicable\n3. Misc. Services :- Includes charges of lounge, medical assistance and travel certificate\n4. Meal :- Includes all prepaid meals purchased before travel\n5. Good Karma :- Includes contributions made towards IndiGo's good karma initiative and clear the air initiative\n  made at the time of reservation\n6. Amounts have been rounded off.\n7. Cess includes Kerala flood cess.\n8. The itinerary issued against this PNR forms a part of this invoice.\n9. I/We hereby declare that though our aggregate turnover in any preceding financial year from 2017-18 onwards is more than the aggregate\nturnover notified under sub-rule (4) of rule 48, we are not required to prepare an invoice in terms of the provisions of the said sub-rule.\n InterGlobe Aviation Limited\n Registered Office:  Upper Ground Floor, Thapar House, Gate No. 2, Western Wing, 124 Janpath, New Delhi –\n110001,India.\n F 011-43513200. Email: corporate@goindigo.in\n Corporate Office: Level 1, Tower C, Global Business park, MG Road, Gurgaon-122002, Haryana,India.\n T +91 124 435 2500. F +91 124 406 8536  goindigo.in\n CIN no. L62100DL2004PLC129768,  PAN no.  AABCI2726B,  FSSAI License number- 10013011001534\n",
+            "summary": "--- Page 1 ---\nTax Invoice\n(Original For Recipient)\nInterGlobe Aviation Limited\nSardar Vallabhbhai Patel\nInternational Airport\n Near King Fisher Black Office\n Sardarnagar\n Ahmedabad\n Gujarat - 380003\nGSTIN : 24AABCI2726B1Z8\nNumber : GJ1262704AB36056\nDate  :  13-Apr-2026\nPassenger Name :  Harvy Jigne",
+            "page_count": 1,
+            "images_found": 2,
+            "image_analyses": [],
+            "entities": {
+              "amounts": [
+                "₹2"
+              ],
+              "dates": [],
+              "vendors": [],
+              "items": [],
+              "other": []
+            },
+            "error": null
+          }
+        ],
+        "attachment_count": 0,
+        "reimbursable": true,
+        "payment_method": "Credit Card",
+        "normalized_amount": 22312.0,
+        "normalized_date": "2026-04-25",
+        "evidence": {
+          "has_body_text": true,
+          "has_doc_analysis": true,
+          "has_image_analysis": false,
+          "has_attachments": true
+        },
+        "confidence": 1.0,
+        "dedupe_key": "19dc48839a675910"
+      },
+      {
+        "id": "19dc486ce6732794",
+        "category": "travel",
+        "vendor": "MakeMyTrip",
+        "category_config": {
+          "icon": "✈️",
+          "color": "#6d4c41",
+          "label": "Travel"
+        },
+        "subject": "Fwd: Tax Invoice for your Hotel Booking id NH78206479216648",
+        "from_email": "Harvy Doshi <harvymeenal@gmail.com>",
+        "date": "Sat, 25 Apr 2026 17:34:08 +0530",
+        "total": "₹3504.58",
+        "amounts": [
+          "₹4201.48",
+          "₹280.1",
+          "₹3504.58",
+          "3504.58"
+        ],
+        "dates": [
+          "24 Apr 2026",
+          "25 Apr 2026",
+          "April 18, 2026"
+        ],
+        "order_id": "NH78206479216648",
+        "details": {
+          "check_in": "Fri, 24 Apr 2026",
+          "check_out": "Sat, 25 Apr 2026",
+          "passenger": "Harvy Doshi\nHotel Name\nHotel Wellsuites"
+        },
+        "snippet": "---------- Forwarded message --------- From: MakeMyTrip &lt;noreply@makemytrip.com&gt; Date: Fri, 24 Apr 2026 at 12:04 Subject: Tax Invoice for your Hotel Booking id NH78206479216648 To: &lt;",
+        "body_preview": "---------- Forwarded message ---------\r\nFrom: MakeMyTrip <noreply@makemytrip.com>\r\nDate: Fri, 24 Apr 2026 at 12:04\r\nSubject: Tax Invoice for your Hotel Booking id NH78206479216648\r\nTo: <harvymeenal@gmail.com>\r\n\r\n\r\nImportant update [image: MakeMyTrip]\r\n\r\nDear Harvy Doshi,\r\n\r\nPlease find attached the Invoice for your Hotel booking (NH78206479216648)\r\nwith MakeMyTrip on April 18, 2026. *( Your Invoice is not a valid travel\r\ndocument )*.\r\n\r\nFor all further details, please visit MyTrips.\r\n\r\nRegards,\r\n\r\n*Team MakeMyTrip*\r\n\r\nP.S.: This is a system generated email. Please do not reply to this email.\r\n\n---------- Forwarded message --------- From: MakeMyTrip < noreply@makemytrip.com > Date: Fri, 24 Apr 2026 at 12:04 Subject: Tax Invoice for your Hotel Booking id NH78206479216648 To: < harvymeenal@gm",
+        "image_analyses": [],
+        "doc_analyses": [
+          {
+            "id": "doc_e50409fb26b4",
+            "filename": "NH78206479216648.pdf",
+            "mime_type": "application/pdf",
+            "parser_used": "pymupdf",
+            "extracted_text": "--- Page 1 ---\nTAX INVOICE\nMAKEMYTRIP (INDIA) PRIVATE LIMITED\n19th Floor, Epitome Building No.5,\nDLF Cybercity, DLF Phase III,\nGurgaon, Haryana, 122001\nBooking ID\nNH78206479216648\nInvoice No.\nM06HL27I01274152\nDate\n24 Apr 2026\nPlace of Supply\nHaryana\nTransactional Type/Category\nREG/B2C\nTransactional Details\nRG\nPAN\nAADCM5146R\nHSN/SAC\n998552\nGSTIN\n06AADCM5146R1ZZ\nCIN\nU63040HR2000PTC090846\nService Description\nReservation service for accommodation\nTax Payable under RCM\nNo\nAdvanced Receipt Voucher No.\nM06HL27A00955517\nCustomer Name\nHarvy Doshi\nHotel Name\nHotel Wellsuites \nElectronic City\nHotel City\nBANGALORE\nCheck-in\nFri, 24 Apr 2026\nCheck-Out\nSat, 25 Apr 2026\n*Accommodation Charges\n(Inclusive of applicable taxes collected on behalf of hotel)\n₹4201.48\nService Fees\n₹280.1\nReversal of MakeMyTrip Service Fee\n₹‑280.1\nEffective discount\n₹‑696.9\nGrand Total\n₹3504.58\nInput tax credit of GST charged by the original service provider is available only against the invoice issued by the respective service provider. \nMakeMyTrip acts only as a facilitator for these services.\n.\nThis is not a valid travel document\n1.\nAny dispute with respect to the invoice is to be reported back to MMT/GOIBIBO within 48 hours of receipt of invoice.\n2.\nQR code for B2B and SEZ category invoices can only be scanned using app downloaded from the link\nhttps://einvoice1.gst.gov.in/Others/QRCodeVerifyApp\n3.\nThis is system generated invoice and does not require signatures.\nRegistered Office\n19th Floor, Epitome Building No.5, DLF Cybercity, DLF Phase III, Gurgaon, Haryana, 122001\nM06HL27I01274152\nPage 1 of 1\nPAYMENT BREAKUP\nTERMS & CONDITIONS\n",
+            "summary": "--- Page 1 ---\nTAX INVOICE\nMAKEMYTRIP (INDIA) PRIVATE LIMITED\n19th Floor, Epitome Building No.5,\nDLF Cybercity, DLF Phase III,\nGurgaon, Haryana, 122001\nBooking ID\nNH78206479216648\nInvoice No.\nM06HL27I01274152\nDate\n24 Apr 2026\nPlace of Supply\nHaryana\nTransactional Type/Category\nREG/B2C\nTransactional",
+            "page_count": 1,
+            "images_found": 2,
+            "image_analyses": [],
+            "entities": {
+              "amounts": [
+                "₹4201.48",
+                "₹3504.58",
+                "₹280.1"
+              ],
+              "dates": [],
+              "vendors": [],
+              "items": [],
+              "other": []
+            },
+            "error": null
+          }
+        ],
+        "attachment_count": 0,
+        "reimbursable": true,
+        "payment_method": "Credit Card",
+        "normalized_amount": 3504.58,
+        "normalized_date": "2026-04-25",
+        "evidence": {
+          "has_body_text": true,
+          "has_doc_analysis": true,
+          "has_image_analysis": false,
+          "has_attachments": true
+        },
+        "confidence": 1.0,
+        "dedupe_key": "19dc486ce6732794"
+      },
+      {
+        "id": "19dc486a540b98c6",
+        "category": "travel",
+        "vendor": "MakeMyTrip",
+        "category_config": {
+          "icon": "✈️",
+          "color": "#6d4c41",
+          "label": "Travel"
+        },
+        "subject": "Fwd: Your Booking Confirmation Voucher for Hotel Wellsuites Electronic City",
+        "from_email": "Harvy Doshi <harvymeenal@gmail.com>",
+        "date": "Sat, 25 Apr 2026 17:33:56 +0530",
+        "total": "₹3,505",
+        "amounts": [
+          "INR 3,504",
+          "INR 1,198",
+          "INR 3,505",
+          "INR 697",
+          "INR 280",
+          "INR 221",
+          "INR 4,423",
+          "INR 2000",
+          "1",
+          "697"
+        ],
+        "dates": [
+          "18 Apr 2026",
+          "23 Apr 2026",
+          "25 Apr 2026",
+          "24 Apr 2026"
+        ],
+        "order_id": "NH78206479216648",
+        "details": {
+          "pnr": "01743919",
+          "check_in": "Fri, 24 Apr 2026",
+          "check_out": "Sat, 25 Apr 2026",
+          "passenger": "s are allowed at the property"
+        },
+        "snippet": "---------- Forwarded message --------- From: MakeMyTrip &lt;noreply@makemytrip.com&gt; Date: Sat, 18 Apr 2026 at 22:21 Subject: Your Booking Confirmation Voucher for Hotel Wellsuites Electronic City T",
+        "body_preview": "---------- Forwarded message ---------\r\nFrom: MakeMyTrip <noreply@makemytrip.com>\r\nDate: Sat, 18 Apr 2026 at 22:21\r\nSubject: Your Booking Confirmation Voucher for Hotel Wellsuites Electronic\r\nCity\r\nTo: <harvymeenal@gmail.com>\r\n\r\n\r\nVoucher\r\nHi Harvy,\r\nThank you for booking with us. Your booking is confirmed. Please see the\r\ndetails below.\r\nConfirmed : 1-Night Stay\r\nHotel Wellsuites Electronic City\r\nFri, 24 Apr - Sat, 25 Apr • 2 Rooms • 4 Adults\r\nPNR: 0174391920 Booking ID: NH78206479216648\r\n(Booked on 18 Apr, 2026)\r\nManage Your Booking on MyTrips\r\nChange dates, modify guest details, add rooms and more on MyTrips.\r\nManage Booking\r\n<https://supportz.makemytrip.com/MyAccount/Communication/param?eid=XAGXX5aK6fNX1VRUcXNtQ3XHsh82SRqGnevboJgFeqo=&act=1&cno=T2fdAihUpx7bXO5L6jBxbA==&cmp=mailc&bid=IP",
+        "image_analyses": [],
+        "doc_analyses": [
+          {
+            "id": "doc_e017dc7f9bff",
+            "filename": "Booking_Confirmation_Voucher.pdf",
+            "mime_type": "application/pdf",
+            "parser_used": "pymupdf",
+            "extracted_text": "--- Page 1 ---\nGST invoice can be collected directly from the property.\n•\nYou can download the MakemyTrip Advance Receipt from \n if the payment for this \nMyTrips,\nbooking has been done fully. Invoices and other relevant documents can be downloaded \nafter completion of the travel. Click here to visit MyTrips.\n•\nPassport, Aadhaar and Driving License are accepted as ID proof(s). Local ids are allowed\n•\nINR 3,504\nYou saved INR 1,198\nPaid INR 3,505 with ptyes\nPaid Amount\nExecutive Ac Room\nRoom Only\n1 Queen Bed\n2 Adults\nExecutive Ac Room\nRoom Only\n1 Queen Bed\n2 Adults\n2 Rooms\nMr Harvy Doshi  (Primary Guest)\nHarvy Doshi, Archi Patel, Ayush Dharaiya, Jignesh Doshi\nharvymeenal@gmail.com, 918866266978\n4 Guests\n(4 Adults)\nCheck-out\nSat, 25 Apr 2026\nBefore 11:00 AM\nCheck-in\nFri, 24 Apr 2026\nAfter 12:00 PM\n1-Night Stay\nHotel Wellsuites Electronic City\nBooking Id: NH78206479216648\nPNR: 0174391920\n(Booked on 18 Apr 2026)\nBooking Voucher\nNO 21, FORMED IN SY NO 35/1, KONAPPANA AGRAHARA VILLAGE, BEGUR HOBLI, \nBANGALORE SOUTH TALUK, BANGALORE,KARNATAKA- 560100., Bangalore, IN\n7975434715, 9325519910, +916361109761\nsalesvibrant09@gmail.com,wellsuits313@gmail.com\nFree Cancellation (100% refund) till Thu, 23 Apr 2026, 11:59 AM\nImportant information\nMakeMyTrip Support\n\n\n--- Page 2 ---\n+91124 4628747 / +91124 5045105 (India Fixed Line)\n",
+            "summary": "--- Page 1 ---\nGST invoice can be collected directly from the property.\n•\nYou can download the MakemyTrip Advance Receipt from \n if the payment for this \nMyTrips,\nbooking has been done fully. Invoices and other relevant documents can be downloaded \nafter completion of the travel. Click here to visit",
+            "page_count": 2,
+            "images_found": 46,
+            "image_analyses": [],
+            "entities": {
+              "amounts": [
+                "₹3,505",
+                "₹3,504",
+                "₹1,198"
+              ],
+              "dates": [],
+              "vendors": [],
+              "items": [],
+              "other": []
+            },
+            "error": null
+          },
+          {
+            "id": "doc_43b0d48d8a81",
+            "filename": "Property_Rules_and_Policies.pdf",
+            "mime_type": "application/pdf",
+            "parser_used": "pymupdf",
+            "extracted_text": "--- Page 1 ---\nINR 3,505\nTOTAL\n- INR 697\nEffective discount (From Hotel & MMT)\n- INR 280\nReversal of MakeMyTrip service fee\n- INR 221\nHotelier and MMT Discount\nINR 280\nMMT Service Fee\nINR 4,423\nAccommodation charges collected on behalf of Hotel (incl. applicable Hotel \ntaxes)\n23 Apr\nNow\nFree Cancellation before 23 Apr, 11:59 AM\n2 X Executive Ac Room\nRoom Only\n1 Queen Bed\n4 Adults\nHotel Wellsuites Electronic City\nBooking Id: NH78206479216648\nPNR: 0174391920\n(Booked on 18 Apr 2026)\nFri, 24 Apr 2026 - Sat, 25 Apr 2026 • 2 Rooms • 4 Adults (Mr Harvy Doshi +3)\nRoom Type and Amenities\nHousekeeping, Toiletries, TV, Wi-Fi, Bathroom, Chair, Hot & Cold Water, Woollen Blanket, \nJetspray, Air Conditioning, Charging Points, Towels, Western Toilet Seat.\nCancellation Policy\nFree Cancellation (100% refund) till \n.\nThu, 23 Apr 2026, 11:59 AM\n24 Apr\nBooking Price Break-up\n\n\n--- Page 2 ---\nGuests are requested not to invite outside visitors in the room during their stay.\n• \nDoes not allow private parties or events\n• \nThis property is not accessible to guests who use a wheelchair. Please make arrangements \naccordingly.\n• \nThere are no pets living on the property\n• \nPets are not allowed\n• \nThere are no restrictions on alcohol consumption.\n• \nSmoking within the premises is allowed\n• \nFood Delivery is available\n• \nOutside food is allowed\n• \nNon veg food is allowed\n• \nIn room dining not available\n• \nLocal ids are allowed\n• \nPassport, Aadhaar and Driving License are accepted as ID proof(s)\n• \nGroups with only male guests are allowed at the property\n• \nUnmarried couples allowed\n• \nHotel Amenities\nCommon Area\nReception\nBasic Facilities\nAir Conditioning, Elevator/Lift, Housekeeping, Free Parking, Free Wi-Fi\nSafety and Security\nCCTV\nRoom Amenities\nAir Conditioning, Balcony, Toiletries\nRules and policies\nGuest Profile\nId Proof Related\nFood Arrangement\nSmoking/alcohol Consumption Rules\nPet(s) Related\nProperty Accessibility\nOther Rules\n\n\n--- Page 3 ---\nMakeMyTrip Support\n+91124 4628747 / +91124 5045105 (India Fixed Line)\nINR 2000 will be charged for an extra mattress per guest. (To be paid at the property)\n• \nAn extra bed will be provided to accommodate any additional guest included in the booking \nfor a charge mentioned below.\n• \nINR 2000 will be charged for an extra mattress per child. (To be paid at the property)\n• \nAn extra bed will be provided to accommodate any child included in the booking for a charge \nmentioned below. (Subject to availability)\n• \n1 infant (0-2 yrs) per room included without counting in total room capacity\n• \nUnmarried couples are allowed in hourly stay rooms\n• \nGuest Profile (hourly)\nInfant Policy\nChild / Extra Bed Policy\nAdult / Extra Bed Policy\n",
+            "summary": "--- Page 1 ---\nINR 3,505\nTOTAL\n- INR 697\nEffective discount (From Hotel & MMT)\n- INR 280\nReversal of MakeMyTrip service fee\n- INR 221\nHotelier and MMT Discount\nINR 280\nMMT Service Fee\nINR 4,423\nAccommodation charges collected on behalf of Hotel (incl. applicable Hotel \ntaxes)\n23 Apr\nNow\nFree Cancell",
+            "page_count": 3,
+            "images_found": 40,
+            "image_analyses": [],
+            "entities": {
+              "amounts": [
+                "₹4,423",
+                "₹3,505",
+                "₹2000",
+                "₹2000",
+                "₹697",
+                "₹280",
+                "₹280",
+                "₹221"
+              ],
+              "dates": [],
+              "vendors": [],
+              "items": [],
+              "other": []
+            },
+            "error": null
+          }
+        ],
+        "attachment_count": 0,
+        "reimbursable": true,
+        "payment_method": "Unknown",
+        "normalized_amount": 3505.0,
+        "normalized_date": "2026-04-25",
+        "evidence": {
+          "has_body_text": true,
+          "has_doc_analysis": true,
+          "has_image_analysis": false,
+          "has_attachments": true
+        },
+        "confidence": 1.0,
+        "dedupe_key": "19dc486a540b98c6"
+      },
+      {
+        "id": "19dc4212a0e493c0",
+        "category": "ride",
+        "vendor": "Rapido",
+        "category_config": {
+          "icon": "🚗",
+          "color": "#1a1a1a",
+          "label": "Ride"
+        },
+        "subject": "Fwd: Rapido Invoice",
+        "from_email": "Ayush Dharaiya <ayushd2910@gmail.com>",
+        "date": "Sat, 25 Apr 2026 15:43:07 +0530",
+        "total": "₹28.00",
+        "amounts": [
+          "₹ 28.00",
+          "₹ 20.23",
+          "₹ 7.77",
+          "₹ 19.27",
+          "₹ 0.48",
+          "₹ 0.00",
+          "₹ 1.00",
+          "₹ 5.59",
+          "₹ 6.59",
+          "₹ 0.59"
+        ],
+        "dates": [
+          "25 Apr 2026",
+          "0/1/0102"
+        ],
+        "order_id": null,
+        "details": {
+          "distance": "2.42 km",
+          "duration": "40 min",
+          "license_plate": "GJ27DJ3600",
+          "from": "<partner@rapido.bike>",
+          "to": "<ayushd2910@gmail.com>"
+        },
+        "snippet": "---------- Forwarded message --------- From: &lt;partner@rapido.bike&gt; Date: Sat, 25 Apr 2026 at 15:42 Subject: Rapido Invoice To: &lt;ayushd2910@gmail.com&gt; Payment Summary Ride ID",
+        "body_preview": "---------- Forwarded message ---------\r\nFrom: <partner@rapido.bike>\r\nDate: Sat, 25 Apr 2026 at 15:42\r\nSubject: Rapido Invoice\r\nTo: <ayushd2910@gmail.com>\r\n\r\n\r\nPayment Summary\r\nRide ID\r\nRD17734902005420664\r\nTime of Ride\r\nMar 14th 2026, 5:49 PM\r\nTotal\r\n₹ 28.00\r\n2.42 kms\r\nDISTANCE\r\n------------------------------\r\n6.40 mins\r\nDURATION\r\n\r\nDamubhai Shukla Society, 28-C, Damubhai colony, Bansidhar Society, Vasna,\r\nAhmedabad, Gujarat 380007, India\r\n\r\n35, Dr Jivraj Mehta Marg, B- Block, Jay Bhavani Society, Pavansut Society,\r\nJivraj Park, Ahmedabad, Gujarat 380007, India\r\nBill Details\r\nRide Charge\r\n₹ 20.23\r\nBooking Fees & Convenience Charges\r\n₹ 7.77\r\nTotal Amount\r\n₹ 28.00\r\n(Inclusive of Taxes)\r\nYou Paid Using\r\nQR Pay\r\n₹ 28.00\r\n<https://831m0rx7.r.eu-west-1.awstrack.me/L0/https:%2F%2Fm.rapido.cc%2FEw",
+        "image_analyses": [],
+        "doc_analyses": [
+          {
+            "id": "doc_f484d5268e73",
+            "filename": "ORDER_INVOICE_RD17734902005420664.pdf",
+            "mime_type": "application/pdf",
+            "parser_used": "pymupdf",
+            "extracted_text": "--- Page 1 ---\nRD17734902005420664\nMar 14th 2026, 5:49 PM\n2.42 kms\nDISTANCE\n6.40 mins\nDURATION\n₹ 20.23\n₹ 7.77\n₹ 28.00\n₹ 28.00\nPayment Summary\nRide ID\nTime of Ride\nTotal\n₹ 28.00\n   35, Dr Jivraj Mehta Marg, B- Block, Jay Bhavani Society, Pavansut Society, Jivraj\nPark, Ahmedabad, Gujarat 380007, India\nBill Details\nRide Charge\nBooking Fees & Convenience Charges\nTotal Amount\n(Inclusive of Taxes)\nYou Paid Using\nQR Pay\n   Damubhai Shukla Society, 28-C, Damubhai colony, Bansidhar Society, Vasna,\nAhmedabad, Gujarat 380007, India\n\n\n--- Page 2 ---\n2526GJ0050099281\nMar 14th 2026, 5:49 PM\nGujarat\nOther local transportation services of\npassengers n.e.c. (996419)\nGujarat\n24AAHCR1710J1ZM\nGJ27DJ3600\nSANKET Mahendrakumar Gunjal\nAyush Dharaiya\n₹ 19.27\n₹ 0.48\n₹ 0.48\n₹ 0.00\n₹ 20.23\nTax Invoice\nRD17734902005420664\nInvoice No.\nInvoice Date\nState\nTax Category\nPlace of Supply\nGST Number\nVehicle Number\nCaptain Name\nCustomer Name\nCustomer Pick Up Address\nDamubhai Shukla Society, 28-C, Damubhai\ncolony, Bansidhar Society, Vasna, Ahmedabad,\nGujarat 380007, India\nBill Details\nCaptain Fee\nCGST (2.5%)\nSGST (2.5%)\nIGST (0%)\nRide Charge\n(Inclusive of Taxes)\nThis document is issued by Transport Service Provider and not by Roppen Transportation Services\nPrivate Limited (Rapido). Rapido acts only as an Electronic Commerce Operator for the\ntransportation services.\n\n\n--- Page 3 ---\nRoppen Transportation Services Private Limited\nF/F/4, Opposite Stadium\nCircle,Navrangpura,\nAhmedabad, Gujarat,\n380009\nAyush Dharaiya\nDamubhai Shukla Society,\n28-C, Damubhai colony,\nBansidhar Society, Vasna,\nAhmedabad, Gujarat\n380007, India\n2526GJ0050099281\nMar 14th 2026, 5:49 PM\nOther services n.e.c. (999799)\nGujarat\n24AAHCR1710J1ZM\n₹ 1.00\n₹ 5.59\n₹ 6.59\n₹ 0.59\n₹ 0.59\n₹ 0.00\n₹ 7.77\nTax Invoice\nRD17734902005420664\nInvoice No.\nInvoice Date\nTax Category\nPlace of Supply\nGST\nBill Details\nBooking Fee\nConvenience Charges\nSub Total\nCGST (9%)\nSGST (9%)\nIGST (0%)\nFinal Amount\n(Inclusive of Taxes)\nThis is a system generated invoice and hence no signature required\nThank you Ayush Dharaiya\n",
+            "summary": "--- Page 1 ---\nRD17734902005420664\nMar 14th 2026, 5:49 PM\n2.42 kms\nDISTANCE\n6.40 mins\nDURATION\n₹ 20.23\n₹ 7.77\n₹ 28.00\n₹ 28.00\nPayment Summary\nRide ID\nTime of Ride\nTotal\n₹ 28.00\n   35, Dr Jivraj Mehta Marg, B- Block, Jay Bhavani Society, Pavansut Society, Jivraj\nPark, Ahmedabad, Gujarat 380007, India",
+            "page_count": 3,
+            "images_found": 7,
+            "image_analyses": [],
+            "entities": {
+              "amounts": [
+                "₹28.00",
+                "₹28.00",
+                "₹28.00",
+                "₹20.23",
+                "₹20.23",
+                "₹19.27",
+                "₹7.77",
+                "₹7.77",
+                "₹6.59",
+                "₹5.59",
+                "₹1.00",
+                "₹0.59",
+                "₹0.59",
+                "₹0.48",
+                "₹0.48",
+                "₹0.00",
+                "₹0.00"
+              ],
+              "dates": [],
+              "vendors": [],
+              "items": [],
+              "other": []
+            },
+            "error": null
+          }
+        ],
+        "attachment_count": 0,
+        "reimbursable": true,
+        "payment_method": "Unknown",
+        "normalized_amount": 28.0,
+        "normalized_date": "2026-04-25",
+        "evidence": {
+          "has_body_text": true,
+          "has_doc_analysis": true,
+          "has_image_analysis": false,
+          "has_attachments": true
+        },
+        "confidence": 1.0,
+        "dedupe_key": "19dc4212a0e493c0"
+      },
+      {
+        "id": "19dc3e47915e79c9",
+        "category": "ride",
+        "vendor": "Uber",
+        "category_config": {
+          "icon": "🚗",
+          "color": "#1a1a1a",
+          "label": "Ride"
+        },
+        "subject": "Fwd: Your Friday evening trip with Uber",
+        "from_email": "Ayush Dharaiya <ayushd2910@gmail.com>",
+        "date": "Sat, 25 Apr 2026 14:36:50 +0530",
+        "total": "₹496.20",
+        "amounts": [
+          "₹496.20",
+          "₹491.30",
+          "₹4.90",
+          "RS1",
+          "496.20"
+        ],
+        "dates": [
+          "24 Apr 2026",
+          "24/04/2026"
+        ],
+        "order_id": null,
+        "details": {
+          "distance": "10.99 km",
+          "duration": "23 min",
+          "license_plate": "KA03AL6042",
+          "from": "Uber Receipts <noreply@uber.com>",
+          "to": "<ayushd2910@gmail.com>"
+        },
+        "snippet": "---------- Forwarded message --------- From: Uber Receipts &lt;noreply@uber.com&gt; Date: Fri, 24 Apr 2026 at 23:04 Subject: Your Friday evening trip with Uber To: &lt;ayushd2910@gmail.com&gt; 24 Apr",
+        "body_preview": "---------- Forwarded message ---------\r\nFrom: Uber Receipts <noreply@uber.com>\r\nDate: Fri, 24 Apr 2026 at 23:04\r\nSubject: Your Friday evening trip with Uber\r\nTo: <ayushd2910@gmail.com>\r\n\r\n\r\n24 Apr 2026\r\n22:36\r\n24 Apr 2026 , 22:36\r\nThanks for riding, Ayush\r\n\r\nWe hope you enjoyed your ride this evening.\r\nTotal ₹496.20\r\n\r\nSuggested fare ₹491.30\r\nBooking fee\r\n<https://tracking.ibt.uber.com/tracking/1/click/f3D6y_rg7JuB5yEeNzUHGCThDCO9IIOoXsYsb0AyqgxhNK4ivS8590tlE7-b-zelGPUF3qFucOndXiZK2i1A5k_Fa8F3y2E9K_r1SGeyssMEeOQ5xwXjGbQNVHmDF2I_ix4FoyudPS-fevMIdL3qpvTdV25xu65TMevWHUWDur99DWScDwIk8kTzk_RhxehTKhilvqZs_zmPaE6unV28e1dBZt4-sj-poylPxztEe5ZIzclmr-mC01zrFbpVr42_A1HYlioSUFneku3pQtqBYUnyx2YvxrqqxAhOTa9PoeFMwRySH2El-MFF0D1SF1GN>\r\n₹4.90\r\n\r\nPayments\r\n\r\nCash ₹496.20\r\n24/04/2026 23:04\r\n\r\nDownload the rec",
+        "image_analyses": [],
+        "doc_analyses": [],
+        "attachment_count": 0,
+        "reimbursable": true,
+        "payment_method": "Cash",
+        "normalized_amount": 496.2,
+        "normalized_date": "2026-04-25",
+        "evidence": {
+          "has_body_text": true,
+          "has_doc_analysis": false,
+          "has_image_analysis": false,
+          "has_attachments": false
+        },
+        "confidence": 0.8,
+        "dedupe_key": "19dc3e47915e79c9"
+      },
+      {
+        "id": "19dc3e3dd15a6a27",
+        "category": "ride",
+        "vendor": "Uber",
+        "category_config": {
+          "icon": "🚗",
+          "color": "#1a1a1a",
+          "label": "Ride"
+        },
+        "subject": "Fwd: Your Saturday morning trip with Uber",
+        "from_email": "Ayush Dharaiya <ayushd2910@gmail.com>",
+        "date": "Sat, 25 Apr 2026 14:36:11 +0530",
+        "total": "₹125.75",
+        "amounts": [
+          "₹125.75",
+          "₹120.85",
+          "₹4.90",
+          "125.75"
+        ],
+        "dates": [
+          "25 Apr 2026",
+          "25/04/2026"
+        ],
+        "order_id": null,
+        "details": {
+          "distance": "4.85 km",
+          "duration": "11 min",
+          "license_plate": "KA51AL7164",
+          "from": "Uber Receipts <noreply@uber.com>",
+          "to": "<ayushd2910@gmail.com>"
+        },
+        "snippet": "---------- Forwarded message --------- From: Uber Receipts &lt;noreply@uber.com&gt; Date: Sat, 25 Apr 2026 at 07:27 Subject: Your Saturday morning trip with Uber To: &lt;ayushd2910@gmail.com&gt; 25 Ap",
+        "body_preview": "---------- Forwarded message ---------\r\nFrom: Uber Receipts <noreply@uber.com>\r\nDate: Sat, 25 Apr 2026 at 07:27\r\nSubject: Your Saturday morning trip with Uber\r\nTo: <ayushd2910@gmail.com>\r\n\r\n\r\n25 Apr 2026\r\n07:07\r\n25 Apr 2026 , 07:07\r\nThanks for riding, Ayush\r\n\r\nWe hope you enjoyed your ride this morning.\r\nTotal ₹125.75\r\n\r\nSuggested fare ₹120.85\r\nBooking fee\r\n<https://tracking.ibt.uber.com/tracking/1/click/xGcdJZtD4oGnBC_NatPG5Hn8gvygY2hYsI7K6jsGkP-ZKUx-0UFNNnkZyIhaIM2tuXPdwT13SRKZFm9C4TO0FKs67uvY7b9-caeDj-hU0GKRrgNV5TKhSn6TPk2wX4lqpVtbF2LYgUeJgkQ29XwdhGx5AhhPvdiEavh2pWNk_ZevH65snJeHHE0Uj4pmtN5dB9Z7yeizurPLBJheLAhKStmjXhaZWxLtj181WL7HiW8XtjCk8cFnln_u8gZvgYp9gTHU64W47bjvqUTMEkMN2i3Yc_7Oxfz_HAIWDtmvFrYOPKrriTX3TSr6SyBCvAPqCOL4vDJS-GQdTeE_ysKw4Q==>\r\n₹4.90\r\n\r\nPayments\r\n\r\nCash ₹125.75\r\n25/04/2026",
+        "image_analyses": [],
+        "doc_analyses": [],
+        "attachment_count": 0,
+        "reimbursable": true,
+        "payment_method": "Cash",
+        "normalized_amount": 125.75,
+        "normalized_date": "2026-04-25",
+        "evidence": {
+          "has_body_text": true,
+          "has_doc_analysis": false,
+          "has_image_analysis": false,
+          "has_attachments": false
+        },
+        "confidence": 0.8,
+        "dedupe_key": "19dc3e3dd15a6a27"
+      },
+      {
+        "id": "19dc302e6978400d",
+        "category": "unknown",
+        "vendor": "Unknown",
+        "category_config": {
+          "icon": "📧",
+          "color": "#6b6560",
+          "label": "Transactional"
+        },
+        "subject": "Hackathon",
+        "from_email": "Ayush Dharaiya <ayushd2910@gmail.com>",
+        "date": "Sat, 25 Apr 2026 10:30:28 +0530",
+        "total": null,
+        "amounts": [],
+        "dates": [],
+        "order_id": null,
+        "details": {},
+        "snippet": "Trace models this as a reinforcement learning environment where an agent: Interacts with a Gmail-like system via MCP tools Incrementally retrieves and processes email data Builds a semantic world mode",
+        "body_preview": "*Trace* models this as a *reinforcement learning environment* where an\r\nagent:\r\n\r\n   - Interacts with a *Gmail-like system via MCP tools*\r\n   - Incrementally retrieves and processes email data\r\n   - Builds a *semantic world model* (people, events, timelines)\r\n   - Executes *multi-step reasoning plans*\r\n   - Produces a final answer to a user query\r\n\r\nThe agent is trained using a *multi-rubric reward system* that evaluates:\r\n\r\n   - retrieval quality\r\n   - planning efficiency\r\n   - reasoning depth\r\n   - correctness of final output\r\n\nTrace models this as a reinforcement learning environment where an agent: Interacts with a Gmail-like system via MCP tools Incrementally retrieves and processes email data Builds a semantic world model (people, events, timelines) Executes multi-step reasoning plan",
+        "image_analyses": [],
+        "doc_analyses": [],
+        "attachment_count": 0,
+        "reimbursable": false,
+        "payment_method": "Unknown",
+        "normalized_amount": 0.0,
+        "normalized_date": "2026-04-25",
+        "evidence": {
+          "has_body_text": true,
+          "has_doc_analysis": false,
+          "has_image_analysis": false,
+          "has_attachments": false
+        },
+        "confidence": 0.5,
+        "dedupe_key": "19dc302e6978400d"
+      },
+      {
+        "id": "19dc2e7b29ae5dd4",
+        "category": "unknown",
+        "vendor": "Unknown",
+        "category_config": {
+          "icon": "📧",
+          "color": "#6b6560",
+          "label": "Transactional"
+        },
+        "subject": "Fwd: Meta Hackthon",
+        "from_email": "Ayush Dharaiya <ayushd2910@gmail.com>",
+        "date": "Sat, 25 Apr 2026 10:00:45 +0530",
+        "total": null,
+        "amounts": [],
+        "dates": [],
+        "order_id": null,
+        "details": {},
+        "snippet": "Core Problem Modern users accumulate years of fragmented information in email, but extracting meaningful insights—such as financial summaries, travel timelines, or key relationships—requires multi-ste",
+        "body_preview": "*Core Problem*\r\n\r\nModern users accumulate years of fragmented information in email, but\r\nextracting meaningful insights—such as financial summaries, travel\r\ntimelines, or key relationships—requires *multi-step reasoning across\r\ndistributed threads and time ranges*.\r\n\r\nThis is challenging because:\r\n\r\n   - Data is *unstructured and noisy*\r\n   - Information is *spread across multiple emails and threads*\r\n   - Tasks require *long-horizon planning*, not single-step retrieval\r\n   - Users cannot centralize data due to *privacy constraints*\r\n\nCore Problem Modern users accumulate years of fragmented information in email, but extracting meaningful insights—such as financial summaries, travel timelines, or key relationships—requires multi-step reasoning across distributed threads and time ranges . Th",
+        "image_analyses": [],
+        "doc_analyses": [],
+        "attachment_count": 0,
+        "reimbursable": false,
+        "payment_method": "Unknown",
+        "normalized_amount": 0.0,
+        "normalized_date": "2026-04-25",
+        "evidence": {
+          "has_body_text": true,
+          "has_doc_analysis": false,
+          "has_image_analysis": false,
+          "has_attachments": false
+        },
+        "confidence": 0.5,
+        "dedupe_key": "19dc2e7b29ae5dd4"
+      }
+    ]
+  }
+}

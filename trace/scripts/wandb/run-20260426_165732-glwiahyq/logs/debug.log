@@ -1,0 +1,9 @@
+2026-04-26 16:57:32,948 INFO    MainThread:28620 [wandb_setup.py:_flush():81] Current SDK version is 0.26.1
+2026-04-26 16:57:32,949 INFO    MainThread:28620 [wandb_setup.py:_flush():81] Configure stats pid to 28620
+2026-04-26 16:57:32,949 INFO    MainThread:28620 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-04-26 16:57:32,949 INFO    MainThread:28620 [wandb_init.py:setup_run_log_directory():723] Logging user logs to C:\Users\harvy\Downloads\trace_project\trace\scripts\wandb\run-20260426_165732-glwiahyq\logs\debug.log
+2026-04-26 16:57:32,949 INFO    MainThread:28620 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to C:\Users\harvy\Downloads\trace_project\trace\scripts\wandb\run-20260426_165732-glwiahyq\logs\debug-internal.log
+2026-04-26 16:57:32,949 INFO    MainThread:28620 [wandb_init.py:init():850] calling init triggers
+2026-04-26 16:57:32,950 INFO    MainThread:28620 [wandb_init.py:init():855] wandb.init called with sweep_config: {}
+config: {'dataset': '../data/sft_demos_v2.jsonl', 'type': 'Supervised Fine-Tuning Demonstrations', 'note': 'Analysis of the generated expert trajectories including adversarial cases.', '_wandb': {}}
+2026-04-26 16:57:32,950 INFO    MainThread:28620 [wandb_init.py:init():898] starting backend

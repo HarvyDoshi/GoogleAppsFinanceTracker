@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openenv-trace"
+version = "1.0.0"
+description = "Gmail Transaction Intelligence RL Environment — Meta OpenEnv Hackathon 2026"
+requires-python = ">=3.10"
+dependencies = [
+    # Core OpenEnv runtime
+    "openenv-core[core]>=0.2.1",
+    # FastAPI server
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.29.0",
+    "pydantic>=2.0.0",
+    "pyyaml>=6.0",
+    "requests>=2.31.0",
+    # Google API
+    "google-api-python-client",
+    "google-auth-oauthlib",
+    # Document & Image tools
+    "Pillow>=10.0.0",
+    "PyMuPDF>=1.24.0",
+    "python-docx>=1.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[project.scripts]
+server = "server.app:main"
+
+[tool.setuptools]
+include-package-data = true
+packages = ["server"]
+package-dir = { "server" = "server" }

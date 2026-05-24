@@ -1,0 +1,44 @@
+_wandb:
+    value:
+        cli_version: 0.26.1
+        e:
+            wzvey2a2plglyl53s9cdfz8x2e4sz8xv:
+                codePath: scripts\wandb_reward_curve_demo.py
+                codePathLocal: scripts\wandb_reward_curve_demo.py
+                cpu_count: 12
+                cpu_count_logical: 16
+                disk:
+                    /:
+                        total: "1001228595200"
+                        used: "419438751744"
+                email: 22bce084@nirmauni.ac.in
+                executable: C:\Users\harvy\AppData\Local\Programs\Python\Python312\python.exe
+                host: DESKTOP-3BOGI92
+                memory:
+                    total: "16849256448"
+                os: Windows-11-10.0.22631-SP0
+                program: C:\Users\harvy\Downloads\trace_project\trace\scripts\wandb_reward_curve_demo.py
+                python: CPython 3.12.5
+                root: C:\Users\harvy\Downloads\trace_project\trace
+                startedAt: "2026-04-26T06:50:46.661449Z"
+                writerId: wzvey2a2plglyl53s9cdfz8x2e4sz8xv
+        m: []
+        python_version: 3.12.5
+        t:
+            "3":
+                - 2
+                - 13
+                - 16
+                - 61
+            "4": 3.12.5
+            "5": 0.26.1
+            "8":
+                - 3
+            "12": 0.26.1
+            "13": windows-amd64
+mode:
+    value: cpu_demo
+note:
+    value: This simulates learning by improving answer accuracy over time.
+uses_actual_reward_fn:
+    value: true

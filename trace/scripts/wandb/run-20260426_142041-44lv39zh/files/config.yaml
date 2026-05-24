@@ -1,0 +1,133 @@
+_wandb:
+    value:
+        cli_version: 0.26.1
+        e:
+            86izbzt6m71vba5pnbzj81h51raaw373:
+                codePath: wandb_sft_dataset_analyzer.py
+                codePathLocal: wandb_sft_dataset_analyzer.py
+                cpu_count: 12
+                cpu_count_logical: 16
+                disk:
+                    /:
+                        total: "1001228595200"
+                        used: "417103335424"
+                email: 22bce084@nirmauni.ac.in
+                executable: C:\Users\harvy\AppData\Local\Programs\Python\Python312\python.exe
+                host: DESKTOP-3BOGI92
+                memory:
+                    total: "16849256448"
+                os: Windows-11-10.0.22631-SP0
+                program: C:\Users\harvy\Downloads\trace_project\trace\scripts\wandb_sft_dataset_analyzer.py
+                python: CPython 3.12.5
+                root: C:\Users\harvy\Downloads\trace_project\trace\scripts
+                startedAt: "2026-04-26T08:50:41.697757Z"
+                writerId: 86izbzt6m71vba5pnbzj81h51raaw373
+        m: []
+        python_version: 3.12.5
+        t:
+            "3":
+                - 2
+                - 13
+                - 16
+                - 61
+                - 62
+            "4": 3.12.5
+            "5": 0.26.1
+            "8":
+                - 3
+            "12": 0.26.1
+            "13": windows-amd64
+        visualize:
+            summary/action_dist:
+                panel_config:
+                    fieldSettings:
+                        label: action
+                        value: count
+                    panelDefId: wandb/bar/v0
+                    stringSettings:
+                        title: Action distribution (final)
+                    transform:
+                        name: tableWithLeafColNames
+                    userQuery:
+                        queryFields:
+                            - args:
+                                - name: runSets
+                                  value: ${runSets}
+                              fields:
+                                - fields: []
+                                  name: id
+                                - fields: []
+                                  name: name
+                                - fields: []
+                                  name: _defaultColorIndex
+                                - args:
+                                    - name: tableKey
+                                      value: summary/action_dist_table
+                                  fields: []
+                                  name: summaryTable
+                              name: runSets
+                panel_type: Vega2
+            summary/difficulty_dist:
+                panel_config:
+                    fieldSettings:
+                        label: difficulty
+                        value: count
+                    panelDefId: wandb/bar/v0
+                    stringSettings:
+                        title: Curriculum mix (inferred from goals)
+                    transform:
+                        name: tableWithLeafColNames
+                    userQuery:
+                        queryFields:
+                            - args:
+                                - name: runSets
+                                  value: ${runSets}
+                              fields:
+                                - fields: []
+                                  name: id
+                                - fields: []
+                                  name: name
+                                - fields: []
+                                  name: _defaultColorIndex
+                                - args:
+                                    - name: tableKey
+                                      value: summary/difficulty_dist_table
+                                  fields: []
+                                  name: summaryTable
+                              name: runSets
+                panel_type: Vega2
+            summary/source_dist:
+                panel_config:
+                    fieldSettings:
+                        label: source
+                        value: count
+                    panelDefId: wandb/bar/v0
+                    stringSettings:
+                        title: Source distribution (final)
+                    transform:
+                        name: tableWithLeafColNames
+                    userQuery:
+                        queryFields:
+                            - args:
+                                - name: runSets
+                                  value: ${runSets}
+                              fields:
+                                - fields: []
+                                  name: id
+                                - fields: []
+                                  name: name
+                                - fields: []
+                                  name: _defaultColorIndex
+                                - args:
+                                    - name: tableKey
+                                      value: summary/source_dist_table
+                                  fields: []
+                                  name: summaryTable
+                              name: runSets
+                panel_type: Vega2
+dataset:
+    value: ../data/sft_demos_v2.jsonl
+note:
+    value: Analysis of the generated expert trajectories including adversarial cases.
+type:
+    value: Supervised Fine-Tuning Demonstrations

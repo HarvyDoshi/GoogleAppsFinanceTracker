@@ -1,0 +1,12 @@
+
+✅ Dataset Analysis Complete!
+  Total Examples:          502
+  Avg length (chars):      969
+  Multi-source examples:   322 (64.1%)
+  Action Distribution:     {'PLAN': 0, 'RETRIEVE': 0, 'MEMORIZE': 0, 'VERIFY': 0, 'ANSWER': 0, 'UNKNOWN': 502}
+  Source Distribution:     {'gmail': 0, 'sheets': 0, 'null': 502}
+  Difficulty Distribution: {'easy': 178, 'medium': 74, 'hard': 250}
+  Adversarial Cases:       0 (0.0%)
+  Adversarial Breakdown:   {'noise': 0, 'refund': 0, 'schema_drift': 0, 'conflict': 0, 'multi_item': 0}
+
+  ⚠️  >5% UNKNOWN actions — assistant JSON may not be parseable. Check chat-template formatting in generate_sft_data.py.

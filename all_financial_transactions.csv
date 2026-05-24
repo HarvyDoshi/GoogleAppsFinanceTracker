@@ -1,0 +1,11 @@
+id,vendor,category,date,normalized_date,total,normalized_amount,payment_method,reimbursable,confidence,has_body_text,has_doc_analysis,has_image_analysis,has_attachments,subject,from_email,dedupe_key
+19dc5970e7c5abb6,Unknown,unknown,"Sat, 25 Apr 2026 22:31:42 +0530",2026-04-25,,0.0,Unknown,False,0.5,False,False,False,False,,Harvy Doshi <doshimeenal3@gmail.com>,19dc5970e7c5abb6
+19dc520ba8c710ec,Unknown,unknown,"Sat, 25 Apr 2026 07:52:29 -0700",2026-04-25,,0.0,Unknown,False,0.5,True,False,False,False,Get started with Google Antigravity,Google Antigravity <antigravity-noreply@google.com>,19dc520ba8c710ec
+19dc48839a675910,IndiGo,travel,"Sat, 25 Apr 2026 17:35:40 +0530",2026-04-25,"₹22,312",22312.0,Credit Card,True,1.0,True,True,False,True,Fwd: TaxInvoice - GJ1262704AB36056,Harvy Doshi <harvymeenal@gmail.com>,19dc48839a675910
+19dc486ce6732794,MakeMyTrip,travel,"Sat, 25 Apr 2026 17:34:08 +0530",2026-04-25,₹3504.58,3504.58,Credit Card,True,1.0,True,True,False,True,Fwd: Tax Invoice for your Hotel Booking id NH78206479216648,Harvy Doshi <harvymeenal@gmail.com>,19dc486ce6732794
+19dc486a540b98c6,MakeMyTrip,travel,"Sat, 25 Apr 2026 17:33:56 +0530",2026-04-25,"₹3,505",3505.0,Unknown,True,1.0,True,True,False,True,Fwd: Your Booking Confirmation Voucher for Hotel Wellsuites Electronic City,Harvy Doshi <harvymeenal@gmail.com>,19dc486a540b98c6
+19dc4212a0e493c0,Rapido,ride,"Sat, 25 Apr 2026 15:43:07 +0530",2026-04-25,₹28.00,28.0,Unknown,True,1.0,True,True,False,True,Fwd: Rapido Invoice,Ayush Dharaiya <ayushd2910@gmail.com>,19dc4212a0e493c0
+19dc3e47915e79c9,Uber,ride,"Sat, 25 Apr 2026 14:36:50 +0530",2026-04-25,₹496.20,496.2,Cash,True,0.8,True,False,False,False,Fwd: Your Friday evening trip with Uber,Ayush Dharaiya <ayushd2910@gmail.com>,19dc3e47915e79c9
+19dc3e3dd15a6a27,Uber,ride,"Sat, 25 Apr 2026 14:36:11 +0530",2026-04-25,₹125.75,125.75,Cash,True,0.8,True,False,False,False,Fwd: Your Saturday morning trip with Uber,Ayush Dharaiya <ayushd2910@gmail.com>,19dc3e3dd15a6a27
+19dc302e6978400d,Unknown,unknown,"Sat, 25 Apr 2026 10:30:28 +0530",2026-04-25,,0.0,Unknown,False,0.5,True,False,False,False,Hackathon,Ayush Dharaiya <ayushd2910@gmail.com>,19dc302e6978400d
+19dc2e7b29ae5dd4,Unknown,unknown,"Sat, 25 Apr 2026 10:00:45 +0530",2026-04-25,,0.0,Unknown,False,0.5,True,False,False,False,Fwd: Meta Hackthon,Ayush Dharaiya <ayushd2910@gmail.com>,19dc2e7b29ae5dd4

@@ -1,0 +1,18 @@
+{"time":"2026-04-26T12:20:51.8239702+05:30","level":"INFO","msg":"wandb-core"}
+{"time":"2026-04-26T12:20:51.8256801+05:30","level":"INFO","msg":"stream: starting","core version":"0.26.1"}
+{"time":"2026-04-26T12:20:53.1013519+05:30","level":"INFO","msg":"stream: created new stream","id":"dv61ah8y"}
+{"time":"2026-04-26T12:20:53.1013519+05:30","level":"INFO","msg":"handler: started"}
+{"time":"2026-04-26T12:20:53.1030877+05:30","level":"INFO","msg":"stream: started"}
+{"time":"2026-04-26T12:20:53.1037057+05:30","level":"INFO","msg":"writer: started","stream_id":"dv61ah8y"}
+{"time":"2026-04-26T12:20:53.1037057+05:30","level":"INFO","msg":"sender: started"}
+{"time":"2026-04-26T12:20:54.6331466+05:30","level":"INFO","msg":"filestream: sending request","total_files":1,"console_offset":0,"console_lines":1}
+{"time":"2026-04-26T12:20:55.4637925+05:30","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-26T12:20:57.5171513+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-04-26T12:20:57.5176806+05:30","level":"INFO","msg":"filestream: sending request","total_files":3,"history_offset":0,"history_lines":120,"console_offset":1,"console_lines":239,"uploaded_len":5,"complete":true,"exit_code":0}
+{"time":"2026-04-26T12:20:57.8242737+05:30","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/22bce084-nirma/trace-grpo/dv61ah8y/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2026-04-26T12:21:00.7962891+05:30","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-26T12:21:00.8011297+05:30","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-04-26T12:21:00.8133012+05:30","level":"INFO","msg":"stream: finishing up"}
+{"time":"2026-04-26T12:21:00.8133012+05:30","level":"INFO","msg":"handler: closed"}
+{"time":"2026-04-26T12:21:00.8143787+05:30","level":"INFO","msg":"sender: closed"}
+{"time":"2026-04-26T12:21:00.8143787+05:30","level":"INFO","msg":"stream: all finished"}

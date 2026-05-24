@@ -1,0 +1,96 @@
+# configs/env_config.yaml
+# Trace — Environment Configuration (OpenEnv + RLVR)
+
+# ── Episode settings ──────────────────────────────────────────────────────────
+max_steps: 20
+timeout_seconds: 300                    # total episode wall-clock timeout
+per_step_timeout_seconds: 60            # per-step wall-clock limit (enforced)
+retrieval_mode: real
+
+# ── Data sources ──────────────────────────────────────────────────────────────
+sources:
+  gmail:
+    enabled: true
+    max_results_per_query: 10
+  sheets:
+    enabled: true
+
+# ── Schema drift (Patronus AI sub-theme) ──────────────────────────────────────
+schema_drift:
+  enabled: true
+  hard_only: true        # only apply schema drift in hard tasks
+
+# ── Reward weights (per-component, used by env-side compute_reward) ───────────
+reward_weights:
+  plan_quality: 1.0
+  retrieval_coverage: 1.0
+  answer_correctness: 1.0
+  step_efficiency: 1.0
+  verification_bonus: 1.0
+  format_compliance: 1.0
+  process_reward: 1.0
+
+# ── Difficulty-scaled reward multipliers ──────────────────────────────────────
+# Per guide: harder tasks should yield higher potential reward
+difficulty_reward_scale:
+  easy: 1.0
+  medium: 1.5
+  hard: 2.0
+
+# ── Anti-hack settings (hardened per guide) ───────────────────────────────────
+anti_hack:
+  max_memorize_calls: 5
+  max_consecutive_same_action: 4
+  enable_injection_detection: true
+  max_duplicate_queries: 3             # same query repeated N times → flag
+  max_empty_retrieval_streak: 3        # N consecutive empty retrievals → flag
+  hallucination_amounts:               # known suspicious placeholder amounts
+    - "1234.56"
+    - "3456.78"
+    - "999.99"
+    - "100.00"
+    - "0.00"
+
+# ── Image Analysis — Hybrid Local Pipeline (via Ollama) ──────────────────────
+# No GPU or HF token required. Runs on 16GB RAM.
+# Install Ollama: https://ollama.com  then run: ollama serve
+image_analysis:
+  enabled: true
+
+  # ── Stage 1: Router (classifies image type — lightest model, ~1.7GB RAM)
+  router_model: "moondream"
+
+  # ── Stage 2A: Financial branch (receipts, invoices, statements — ~3.2GB RAM)
+  # High-precision OCR, temperature=0.0 (no hallucination on numbers)
+  # Note: qwen2.5vl is the correct name (qwen2-vl does NOT exist in Ollama)
+  financial_model: "qwen2.5vl:3b"
+  financial_temp: 0.0
+
+  # ── Stage 2B: General / Technical branch (photos, screenshots — ~1.7GB RAM)
+  # Using moondream here as well for maximum stability on 16GB RAM.
+  general_model: "moondream"
+  general_temp: 0.7
+
+  # Ollama server address (default local)
+  ollama_host: "http://localhost:11434"
+
+  # Auto-analyse image attachments found in Gmail during RETRIEVE
+  # DISABLED: slow on CPU (30-60s/image), amounts come from PDF text layer
+  analyse_gmail_attachments: false
+
+# ── Document Extraction — Docling (IBM) Universal Parser ─────────────────────
+# Handles PDF, DOCX, PPTX → Markdown (preserves layout, tables, reading order)
+# Install: pip install docling
+# Fallbacks: PyMuPDF (PDF), python-docx (DOCX) if Docling is not installed
+document_extraction:
+  enabled: true
+
+  # Analyse embedded images in documents via the Ollama VLM pipeline
+  # DISABLED: logos/QR codes/maps don't contain amounts. PyMuPDF gets text.
+  analyse_embedded_images: false
+
+  # Max images to analyse per document (VLM calls are slow)
+  max_images_per_doc: 2
+
+  # Max text length to keep (truncate very long documents)
+  max_text_length: 50000
